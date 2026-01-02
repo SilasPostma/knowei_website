@@ -8,6 +8,20 @@
   --color-10: #FAF7F3;
 
   --background: #ffffff;
+
+  --header-button-gap: 15px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-button-gap: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --header-button-gap: 50px;
+  }
 }
 
 @theme inline {
@@ -26,5 +40,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
