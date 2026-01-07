@@ -41,27 +41,36 @@ export default function HeroSection() {
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         
         {/* Main Centered Content Container */}
-        <div className="relative flex flex-col items-center justify-center w-full max-w-4xl px-4">
+        <div className="relative flex flex-col items-center justify-center w-full px-4">
             
             {/* Logos Component */}
             <div className="relative z-20 flex items-center justify-center gap-8 mb-12">
-               {/* L70 Logo - Moves Up */}
-               <motion.div style={{ y: l70Y }} className="relative z-30">
-                  <Image src="/L 70.png" alt="Logo L 70" width={120} height={120} className="w-auto h-24 md:h-32" />
-               </motion.div>
 
-               {/* W70 Logo - Fades Out */}
-               <motion.div style={{ opacity: w70Opacity }} className="relative z-20">
-                 <Image src="/W 70.png" alt="Logo W 70" width={300} height={100} className="w-auto h-24 md:h-32" />
-               </motion.div>
+              {/* W70 Logo - Fades Out */}
+              <motion.div 
+                style={{ opacity: w70Opacity }} 
+                className="flex-1 flex justify-start pl-12 z-20"
+              >
+                <Image src="/W 70.png" alt="Logo W 70" width={300} height={100} className="w-auto h-24 md:h-32 max-w-none" />
+              </motion.div>
+              
+              {/* L70 Logo - Moves Up */}
+              <motion.div 
+                style={{ y: l70Y }} 
+                className="flex-1 flex justify-end pr-12 z-30"
+              >
+                <Image src="/L 70.png" alt="Logo L 70" width={300} height={100} className="w-auto h-24 md:h-32 max-w-none" />
+              </motion.div>
+
+
             </div>
 
             {/* Frame 1: Intro Text - Fades Out */}
             <motion.div 
               style={{ opacity: introTextOpacity }} 
-              className="absolute top-[60%] text-center text-[var(--color-90)] max-w-2xl"
+              className="absolute top-[70%] text-center text-[var(--color-90)] max-w-2xl"
             >
-              <p className="text-xl md:text-2xl font-light leading-relaxed">
+              <p className="text-l md:text-xl font-light leading-relaxed">
                 Je voelt dat het anders kan.<br/>
                 Je wil geen standaard advies, maar zelf doorbouwen op wat werkt.<br/>
                 Jij bouwt, wij geven de onderdelen en het zetje.
@@ -73,12 +82,12 @@ export default function HeroSection() {
               style={{ opacity: narrativeTextOpacity }} 
               className="absolute top-[40%] text-center text-[var(--color-90)] max-w-3xl space-y-6"
             >
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg md:text-xl leading-relaxed">
                 Je loopt vast. Op school, thuis of op je werk gaat iets niet zoals je wilt. 
                 Je voelt dat het anders kan, maar je weet niet hoe. Je vraagt hulp aan leraren, coaches of consultants. 
                 Hun antwoorden helpen niet genoeg. Het blijft lastig en je energie stroomt weg.
               </p>
-              <p className="text-lg leading-relaxed font-semibold">
+              <p className="text-lg md:text-xl leading-relaxed font-semibold">
                 Maar het moet toch kunnen!
               </p>
               <p className="text-lg leading-relaxed">
