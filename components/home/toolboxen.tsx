@@ -4,6 +4,7 @@ import React, { useCallback, useRef, useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import BestellenButton from '@/components/ui/bestellenButton'
+import { getAssetPath } from '@/lib/utils'
 
 // SVG Icons
 const PlayIcon = () => (
@@ -54,7 +55,7 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
         <div className="relative h-48 w-full bg-black cursor-pointer" onClick={togglePlay}>
           <video 
             ref={videoRef}
-            src={slide.video}
+            src={getAssetPath(slide.video)}
             loop 
             playsInline
             className="w-full h-full object-cover"

@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
+import { getAssetPath } from "@/lib/utils";
+
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -37,7 +39,7 @@ export default function HeroSection() {
           style={{ opacity: bgOpacity }}
           className="absolute inset-0 w-full h-full pointer-events-none"
         >
-          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/bg-fade.jpg")' }}></div>
+          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url("${getAssetPath('/bg-fade.jpg')}")` }}></div>
         </motion.div>
         
         {/* Main Centered Content Container */}
