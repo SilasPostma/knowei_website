@@ -1,6 +1,7 @@
 import Section from "@/components/home/section";
 import Header from "@/components/home/header";
 import HeroSection from "@/components/home/hero-section";
+import ToolboxenSection from "@/components/home/toolboxen";
 
 export default function Home() {
   return (
@@ -11,11 +12,8 @@ export default function Home() {
       <HeroSection />
 
       {/* Standard Sections with unique children */}
-      <Section id="toolboxen" color="var(--color-10)">
-        <div className="grid grid-cols-3 gap-4">
-          {/* Your Toolbox content here */}
-        </div>
-      </Section>
+      <ToolboxenSection />
+
 
       <Section id="contact" color="var(--color-50)">
         <form>{/* Your Form */}</form>
