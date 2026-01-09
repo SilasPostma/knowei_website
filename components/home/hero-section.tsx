@@ -20,46 +20,46 @@ export default function HeroSection() {
   // Opacities
   const introTextOpacity = useTransform(scrollYProgress, [0.33, 0.45], [1, 0]);
   const bgOpacity = useTransform(scrollYProgress, [0.33, 0.5], [0, 1]);
-  const w70Opacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
+  const w10Opacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
   const narrativeTextOpacity = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
 
   // Movements
   // L70 moves from center (50%) to top third (approx 30%)
-  const l70Y = useTransform(scrollYProgress, [0.6, 0.8], ["0%", "-120%"]);
+  const l10Y = useTransform(scrollYProgress, [0.6, 0.8], ["20%", "-20%"]);
 
   return (
     <div ref={containerRef} className="h-[300vh] w-full relative bg-[var(--color-50)]">
       
-      {/* Background Fade Layer */}
-      <motion.div 
-        style={{ opacity: bgOpacity }}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-      >
-        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/bg-fade.jpg")' }}></div>
-      </motion.div>
-
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         
+        {/* Background Fade Layer */}
+        <motion.div 
+          style={{ opacity: bgOpacity }}
+          className="absolute inset-0 w-full h-full pointer-events-none"
+        >
+          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/bg-fade.jpg")' }}></div>
+        </motion.div>
+        
         {/* Main Centered Content Container */}
-        <div className="relative flex flex-col items-center justify-center w-full px-4">
+        <div className="relative flex flex-col items-center justify-center w-full px-16">
             
             {/* Logos Component */}
-            <div className="relative z-20 flex items-center justify-center gap-8 mb-12">
+            <div className="relative z-20 flex items-center justify-between w-full gap-8 mb-12 bottom-25">
 
               {/* W70 Logo - Fades Out */}
               <motion.div 
-                style={{ opacity: w70Opacity }} 
+                style={{ opacity: w10Opacity }} 
                 className="flex-1 flex justify-start pl-12 z-20"
               >
-                <Image src="/W 70.png" alt="Logo W 70" width={300} height={100} className="w-auto h-24 md:h-32 max-w-none" />
-              </motion.div>
+                <Image src="/W 10.png" alt="Logo W 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
+              </motion.div> 
               
               {/* L70 Logo - Moves Up */}
               <motion.div 
-                style={{ y: l70Y }} 
+                style={{ y: l10Y }} 
                 className="flex-1 flex justify-end pr-12 z-30"
               >
-                <Image src="/L 70.png" alt="Logo L 70" width={300} height={100} className="w-auto h-24 md:h-32 max-w-none" />
+                <Image src="/L 10.png" alt="Logo L 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
               </motion.div>
 
 
@@ -80,9 +80,9 @@ export default function HeroSection() {
             {/* Frame 3: Narrative Text - Fades In */}
             <motion.div 
               style={{ opacity: narrativeTextOpacity }} 
-              className="absolute top-[40%] text-center text-[var(--color-90)] max-w-3xl space-y-6"
+              className="absolute -top-20 text-left text-[var(--color-90)] max-w-3xl space-y-6"
             >
-              <p className="text-lg md:text-xl leading-relaxed">
+              <p className="text-lg md:text-xl leading-relaxed ">
                 Je loopt vast. Op school, thuis of op je werk gaat iets niet zoals je wilt. 
                 Je voelt dat het anders kan, maar je weet niet hoe. Je vraagt hulp aan leraren, coaches of consultants. 
                 Hun antwoorden helpen niet genoeg. Het blijft lastig en je energie stroomt weg.

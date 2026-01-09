@@ -11,19 +11,19 @@ export default function Home() {
       <HeroSection />
 
       {/* Standard Sections with unique children */}
-      <Section id="Toolboxen" color="var(--color-10)">
+      <Section id="toolboxen" color="var(--color-10)">
         <div className="grid grid-cols-3 gap-4">
           {/* Your Toolbox content here */}
         </div>
       </Section>
 
-      <Section id="Contact" color="var(--color-50)">
+      <Section id="contact" color="var(--color-50)">
         <form>{/* Your Form */}</form>
       </Section>
 
-      <Section id="Testemonials" color="var(--color-10)"></Section>
+      <Section id="testemonials" color="var(--color-10)"></Section>
 
-      <Section id="About" color="var(--color-30)"></Section>
+      <Section id="about" color="var(--color-30)"></Section>
     </main>
   );
 }
