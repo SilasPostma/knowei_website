@@ -4,7 +4,6 @@ const isGithubPages = process.env.NODE_ENV === "production";
 const repoPath = isGithubPages ? "/knowei_website" : "";
 
 const nextConfig: NextConfig = {
-  basePath: isGithubPages ? "/knowei_website" : "",
   basePath: repoPath,
   assetPrefix: isGithubPages ? "/knowei_website/" : "",
   output: 'export',
