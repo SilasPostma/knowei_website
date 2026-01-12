@@ -28,7 +28,7 @@ export default function Header() {
     >
       
       <div className="z-10">
-        <Image src="/W 70.png" alt="KNOWEI" width={120} height={80} />
+        <Image src="/W_70.png" alt="KNOWEI" width={120} height={80} />
       </div>
 
       <div className="absolute right-1/2 flex gap-[var(--header-button-gap)] pr-[calc(var(--header-button-gap)/2)] items-end h-full">
@@ -42,7 +42,7 @@ export default function Header() {
       </div>
 
       <div className="ml-auto z-10">
-        <Image src="/L 70.png" alt="LOGO" width={35} height={35} />
+        <Image src="/L_70.png" alt="LOGO" width={35} height={35} />
       </div>
 
     </motion.header>

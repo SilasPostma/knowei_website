@@ -51,7 +51,7 @@ export default function HeroSection() {
                 style={{ opacity: w10Opacity }} 
                 className="flex-1 flex justify-start pl-12 z-20"
               >
-                <Image src="/W 10.png" alt="Logo W 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
+                <Image src="/W_10.png" alt="Logo W 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
               </motion.div> 
               
               {/* L70 Logo - Moves Up */}
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 style={{ y: l10Y }} 
                 className="flex-1 flex justify-end pr-12 z-30"
               >
-                <Image src="/L 10.png" alt="Logo L 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
+                <Image src="/L_10.png" alt="Logo L 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
               </motion.div>
 
 
