@@ -2,6 +2,8 @@ import Section from "@/components/home/section";
 import Header from "@/components/home/header";
 import HeroSection from "@/components/home/hero-section";
 import ToolboxenSection from "@/components/home/toolboxen";
+import ContactSection from "@/components/home/contact-section";
+import TestemonialSection from "@/components/home/testamonial-section";
 
 export default function Home() {
   return (
@@ -15,11 +17,9 @@ export default function Home() {
       <ToolboxenSection />
 
 
-      <Section id="contact" color="var(--color-50)">
-        <form>{/* Your Form */}</form>
-      </Section>
+      <ContactSection />
 
-      <Section id="testemonials" color="var(--color-10)"></Section>
+      <TestemonialSection />
 
       <Section id="about" color="var(--color-30)"></Section>
     </main>
