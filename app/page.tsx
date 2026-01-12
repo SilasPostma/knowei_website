@@ -4,6 +4,7 @@ import HeroSection from "@/components/home/hero-section";
 import ToolboxenSection from "@/components/home/toolboxen";
 import ContactSection from "@/components/home/contact-section";
 import TestemonialSection from "@/components/home/testamonial-section";
+import AboutSection from "@/components/home/about-section";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
 
       <TestemonialSection />
 
-      <Section id="about" color="var(--color-30)"></Section>
+      <AboutSection />
     </main>
   );
 }

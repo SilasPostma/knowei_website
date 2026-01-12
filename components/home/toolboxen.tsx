@@ -27,19 +27,174 @@ const ArrowRightIcon = () => (
   </svg>
 )
 
-const slides = [
-  { id: 1, video: `${basePath}/test_video.mp4`, title: 'CHEMIE VAN OVERLEGGEN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 2, video: `${basePath}/test_video_2.mp4`, title: 'SAMEN INNOVEREN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 3, video: `${basePath}/test_video.mp4`, title: 'GROWTH HACKING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 4, video: `${basePath}/test_video_2.mp4`, title: 'TEAM BUILDING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 5, video: `${basePath}/test_video.mp4`, title: 'LEADERSHIP', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+const CloseIcon = ({ color }: { color: string }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="4" strokeLinecap="butt" strokeLinejoin="butt">
+    <line x1="23" y1="2" x2="2" y2="22"></line>
+    <line x1="2" y1="3" x2="22" y2="22"></line>
+  </svg>
+)
+
+interface Slide {
+  id: number;
+  video: string;
+  title: string;
+  desc: string;
+  price: string; 
+  format: string; 
+  details: string; 
+  content: string[]; // Changed to array for bullet points
+  image?: string; 
+}
+
+// Updated slides data
+const slides: Slide[] = [
+  { 
+    id: 1, 
+    video: `${basePath}/test_video.mp4`, 
+    title: 'CHEMIE VAN OVERLEGGEN', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 149,-',
+    format: 'Fysieke Box',
+    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    content: [
+      '1x Handleiding',
+      '1x Set gesprekskaarten',
+      '1x Zandloper',
+      '1x Notitieblok'
+    ]
+  },
+  { 
+    id: 2, 
+    video: `${basePath}/test_video_2.mp4`, 
+    title: 'SAMEN INNOVEREN', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 199,-',
+    format: 'Digitaal & Fysiek',
+    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    content: [
+      '5x Innovatie canvassen',
+      '1x Brainstorm gids',
+      'Access tot online portal'
+    ]
+  },
+  { 
+    id: 3, 
+    video: `${basePath}/test_video.mp4`, 
+    title: 'GROWTH HACKING', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 129,-',
+    format: 'Online Course',
+    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    content: [
+      'Toegang tot 10 modules',
+      'Werkboeken',
+      'Growth templates'
+    ]
+  },
+  { 
+    id: 4, 
+    video: `${basePath}/test_video_2.mp4`, 
+    title: 'TEAM BUILDING', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 249,-',
+    format: 'Event Box',
+    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    content: [
+      'Spelmaterialen',
+      'Teamgids',
+      'Nabesprekingsvragen'
+    ]
+  },
+  { 
+    id: 5, 
+    video: `${basePath}/test_video.mp4`, 
+    title: 'LEADERSHIP', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 299,-',
+    format: 'Masterclass',
+    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    content: [
+      'Reflectiekaarten',
+      'Leiderschapsboek',
+      '1-op-1 coachingsessie'
+    ]
+  },
 ]
 
-const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
+const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void }) => {
+  // Prevent body scroll when popup is open
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 transition-opacity animate-in fade-in duration-200" onClick={onClose}>
+      <div 
+        className="bg-[var(--color-30)] w-full max-w-[80%] relative flex flex-col shadow-2xl overflow-hidden border-[8px] border-[var(--color-70)] h-[80%]" 
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button 
+          onClick={onClose}
+          className="absolute -top-[8px] -right-[8px] w-14 h-14 flex items-center justify-center bg-[var(--color-70)] transition-all z-10 group text-[var(--color-30)] hover:text-[var(--color-50)]"
+        >
+          <CloseIcon color="currentColor" /> 
+        </button>
+
+        <div className="p-8 overflow-y-auto custom-scrollbar">
+          <h2 className="text-2xl font-bold text-[var(--color-70)] uppercase mb-2">{slide.title}</h2>
+          
+          <div>
+            <p className="text-lg text-[var(--color-90)] font-medium">Prijs: {slide.price}</p>
+          </div>
+          <div>
+            <p className="text-lg text-[var(--color-90)] font-medium mb-4">Formaat: {slide.format}</p>
+          </div>
+          <div>
+            <p className="bg-[var(--color-10)] w-fit mb-6 px-2 text-lg text-[var(--color-90)] font-medium">{slide.details}</p>
+          </div>
+
+          <div className="mb-8">
+            <span className="block text-md font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
+            <ul className="list-disc list-inside text-[var(--color-90)] pl-2">
+              {slide.content.map((item, index) => (
+                <li key={index} className="leading-snug">{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col justify-end absolute bottom-10">
+            <div>
+              <p className="text-md mt-8 text-[var(--color-90)] font-medium">Is dit precies wat je nodig hebt?</p>
+            </div>
+
+            <div className="flex items-end justify-between my-1 relative">
+              <BestellenButton href="/" />
+              
+              {slide.image && (
+                <div className="absolute right-0 bottom-0 md:relative md:block w-32 h-32 ml-4">
+                    <img src={slide.image} alt="" className="w-full h-full object-contain" />
+                </div>
+              )}
+            </div>
+
+            <div>
+              <p className="text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande toolboxen of laten we samen een toolbox op maat ontwerpen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const togglePlay = () => {
+  const togglePlay = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
@@ -51,17 +206,18 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
   };
 
   return (
-    <div className="bg-[var(--color-30)] overflow-hidden flex flex-col h-full relative group">
+    <div 
+      className="bg-[var(--color-30)] hover:bg-[var(--color-50)] overflow-hidden flex flex-col h-full relative group cursor-pointer transition-colors duration-300"
+      onClick={onClick}
+    >
       <div className="pt-6 px-6 w-full shrink-0 relative">
-        <div className="relative h-48 w-full bg-black cursor-pointer" onClick={togglePlay}>
+        <div className="relative h-48 w-full bg-black" onClick={togglePlay}>
           <video 
             ref={videoRef}
             src={slide.video}
             loop 
             playsInline
             className="w-full h-full object-cover"
-            // Default muted if autoplay is desired, but for play button we usually want sound. 
-            // We start paused, so no autoplay.
           />
           
           {/* Play Button Overlay */}
@@ -80,7 +236,11 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
         
         {/* Button */}
         <div className="flex justify-center mt-auto">
-          <BestellenButton href="/" />
+          {/* Prevent opening popup when directly clicking buy, or let it happen? 
+              Assuming user intends to navigate. */}
+          <div onClick={(e) => e.stopPropagation()}>
+            <BestellenButton href="/" />
+          </div>
         </div>
       </div>
     </div>
@@ -89,6 +249,7 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
 
 export default function VideoCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
+  const [selectedSlide, setSelectedSlide] = useState<Slide | null>(null);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -99,44 +260,53 @@ export default function VideoCarousel() {
   }, [emblaApi])
 
   return (
-    <div className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20 relative">
-        <div className="absolute top-20 w-full px-4 z-10">
-            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
-                Onze toolboxen. {/* TODO: Wil je dit (consitentie met andere secties  ) */}
-            </h2>
-        </div>
-      <div className="flex items-center gap-4 w-full max-w-[95%]">
-        
-        {/* Prev Button */}
-        <button 
-          onClick={scrollPrev}
-          className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
-          aria-label="Previous slide"
-        >
-          <ArrowLeftIcon />
-        </button>
-
-        {/* Carousel Viewport */}
-        <div className="overflow-hidden flex-1" ref={emblaRef}>
-          <div className="flex -ml-4">
-            {slides.map((slide) => (
-              <div key={slide.id} className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_25%] min-w-0 pl-4">
-                <VideoCard slide={slide} />
-              </div>
-            ))}
+    <>
+      <div className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20 relative">
+          <div className="absolute top-20 w-full px-4 z-10">
+              <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
+                  Onze toolboxen.
+              </h2>
           </div>
-        </div>
+        <div className="flex items-center gap-4 w-full max-w-[95%]">
+          
+          {/* Prev Button */}
+          <button 
+            onClick={scrollPrev}
+            className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
+            aria-label="Previous slide"
+          >
+            <ArrowLeftIcon />
+          </button>
 
-        {/* Next Button */}
-        <button 
-          onClick={scrollNext}
-          className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
-          aria-label="Next slide"
-        >
-          <ArrowRightIcon />
-        </button>
-        
+          {/* Carousel Viewport */}
+          <div className="overflow-hidden flex-1" ref={emblaRef}>
+            <div className="flex -ml-4">
+              {slides.map((slide) => (
+                <div key={slide.id} className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_25%] min-w-0 pl-4">
+                  <VideoCard slide={slide} onClick={() => setSelectedSlide(slide)} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Next Button */}
+          <button 
+            onClick={scrollNext}
+            className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
+            aria-label="Next slide"
+          >
+            <ArrowRightIcon />
+          </button>
+          
+        </div>
       </div>
-    </div>
+
+      {selectedSlide && (
+        <ToolboxPopup 
+          slide={selectedSlide} 
+          onClose={() => setSelectedSlide(null)} 
+        />
+      )}
+    </>
   )
 }

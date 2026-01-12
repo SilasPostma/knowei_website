@@ -40,7 +40,7 @@ export default function HeroSection() {
           style={{ opacity: bgOpacity }}
           className="absolute inset-0 w-full h-full pointer-events-none"
         >
-          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/bg-fade.jpg")' }}></div>
+          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/bg_fade.jpg")' }}></div>
         </motion.div>
         
         {/* Main Centered Content Container */}
