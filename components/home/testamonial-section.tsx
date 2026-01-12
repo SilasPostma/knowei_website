@@ -2,8 +2,6 @@
 
 import React, { useCallback, useRef, useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
-import BestellenButton from '@/components/ui/bestellenButton'
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = isProd ? '/knowei_website' : '';
@@ -28,15 +26,16 @@ const ArrowRightIcon = () => (
   </svg>
 )
 
-const slides = [
-  { id: 1, video: `${basePath}/test_video.mp4`, title: 'CHEMIE VAN OVERLEGGEN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 2, video: `${basePath}/test_video_2.mp4`, title: 'SAMEN INNOVEREN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 3, video: `${basePath}/test_video.mp4`, title: 'GROWTH HACKING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 4, video: `${basePath}/test_video_2.mp4`, title: 'TEAM BUILDING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 5, video: `${basePath}/test_video.mp4`, title: 'LEADERSHIP', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+const vids = [
+  { id: 1, video: `${basePath}/test_video.mp4`, name: 'Janny de Vries' },
+  { id: 2, video: `${basePath}/test_video_2.mp4`, name: 'Johny van der Weesp' },
+  { id: 3, video: `${basePath}/test_video.mp4`, name: 'Hachmid Youra' },
+  { id: 4, video: `${basePath}/test_video_2.mp4`, name: 'Janny de Vries' },
+  { id: 5, video: `${basePath}/test_video.mp4`, name: 'Johny van der Weesp' },
+  { id: 6, video: `${basePath}/test_video_2.mp4`, name: 'Hachmid Youra' },
 ]
 
-const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
+const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -52,9 +51,9 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
   };
 
   return (
-    <div className="bg-[var(--color-30)] overflow-hidden flex flex-col h-full relative group">
-      <div className="pt-6 px-6 w-full shrink-0 relative">
-        <div className="relative h-48 w-full bg-black cursor-pointer" onClick={togglePlay}>
+    <div className="overflow-hidden flex flex-col h-full relative group">
+      <div className="pt-6 px-2 w-full shrink-0 relative">
+        <div className="relative h-auto w-full bg-black cursor-pointer" onClick={togglePlay}>
           <video 
             ref={videoRef}
             src={slide.video}
@@ -75,21 +74,15 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
       </div>
 
       {/* Text Section */}
-      <div className="p-6 flex flex-col grow">
-        <h3 className="text-xl font-bold mb-2 truncate text-[var(--color-70)]">{slide.title}</h3>
-        <p className="mb-6 line-clamp-2 text-[var(--color-70)]">{slide.desc}</p>
-        
-        {/* Button */}
-        <div className="flex justify-center mt-auto">
-          <BestellenButton href="/" />
-        </div>
+      <div className="pt-2 px-2 flex flex-col grow items-end">
+        <h3 className="text-l font-semibold mb-2 truncate text-[var(--color-90)]">{slide.name}</h3>
       </div>
     </div>
   );
 };
 
 export default function VideoCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 4000, stopOnInteraction: true })])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -100,7 +93,20 @@ export default function VideoCarousel() {
   }, [emblaApi])
 
   return (
-    <div className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20">
+    <div className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-20 relative">
+        <div className="absolute top-20 w-full px-4 z-10">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
+                Zie hoe onze toolboxen gebruikt worden. 
+            </h2>
+
+            {/* Description Text */}
+            <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto mb-16 space-y-2">
+            <p className="text-base md:text-lg leading-relaxed">
+                Wie kan het beter vertellen dan wie het zelf mee heeft gemaakt?
+            </p>
+            </div>
+        </div>
+      
       <div className="flex items-center gap-4 w-full max-w-[95%]">
         
         {/* Prev Button */}
@@ -114,9 +120,9 @@ export default function VideoCarousel() {
 
         {/* Carousel Viewport */}
         <div className="overflow-hidden flex-1" ref={emblaRef}>
-          <div className="flex -ml-4">
-            {slides.map((slide) => (
-              <div key={slide.id} className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_25%] min-w-0 pl-4">
+          <div className="flex">
+            {vids.map((slide) => (
+              <div key={slide.id} className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_35%] min-w-0">
                 <VideoCard slide={slide} />
               </div>
             ))}

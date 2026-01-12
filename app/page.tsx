@@ -10,12 +10,9 @@ export default function Home() {
     <main className="">
       <Header/>
       
-      {/* Special Hero (Self-contained scroll logic) */}
       <HeroSection />
 
-      {/* Standard Sections with unique children */}
       <ToolboxenSection />
-
 
       <ContactSection />
 

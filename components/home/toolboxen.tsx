@@ -2,7 +2,6 @@
 
 import React, { useCallback, useRef, useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
 import BestellenButton from '@/components/ui/bestellenButton'
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -76,8 +75,8 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
 
       {/* Text Section */}
       <div className="p-6 flex flex-col grow">
-        <h3 className="text-xl font-bold mb-2 truncate text-[var(--color-70)]">{slide.title}</h3>
-        <p className="mb-6 line-clamp-2 text-[var(--color-70)]">{slide.desc}</p>
+        <h3 className="text-lg font-bold mb-2 truncate text-[var(--color-70)]">{slide.title}</h3>
+        <p className="text-sm mb-6 line-clamp-2 text-[var(--color-70)]">{slide.desc}</p>
         
         {/* Button */}
         <div className="flex justify-center mt-auto">
@@ -89,7 +88,7 @@ const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
 };
 
 export default function VideoCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 4000, stopOnInteraction: true })])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -100,7 +99,12 @@ export default function VideoCarousel() {
   }, [emblaApi])
 
   return (
-    <div className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20">
+    <div className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20 relative">
+        <div className="absolute top-20 w-full px-4 z-10">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
+                Onze toolboxen. {/* TODO: Wil je dit (consitentie met andere secties  ) */}
+            </h2>
+        </div>
       <div className="flex items-center gap-4 w-full max-w-[95%]">
         
         {/* Prev Button */}
