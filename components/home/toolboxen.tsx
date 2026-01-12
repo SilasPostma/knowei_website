@@ -5,6 +5,8 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import BestellenButton from '@/components/ui/bestellenButton'
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/knowei_website' : '';
 
 // SVG Icons
 const PlayIcon = () => (
@@ -27,11 +29,11 @@ const ArrowRightIcon = () => (
 )
 
 const slides = [
-  { id: 1, video: '/test_video.mp4', title: 'CHEMIE VAN OVERLEGGEN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 2, video: '/test_video.mp4', title: 'SAMEN INNOVEREN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 3, video: '/test_video.mp4', title: 'GROWTH HACKING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 4, video: '/test_video.mp4', title: 'TEAM BUILDING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
-  { id: 5, video: '/test_video.mp4', title: 'LEADERSHIP', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+  { id: 1, video: `${basePath}/test_video.mp4`, title: 'CHEMIE VAN OVERLEGGEN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+  { id: 2, video: `${basePath}/test_video_2.mp4`, title: 'SAMEN INNOVEREN', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+  { id: 3, video: `${basePath}/test_video.mp4`, title: 'GROWTH HACKING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+  { id: 4, video: `${basePath}/test_video_2.mp4`, title: 'TEAM BUILDING', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
+  { id: 5, video: `${basePath}/test_video.mp4`, title: 'LEADERSHIP', desc: 'Deze box daagt je uit en maakt je actief oph et gebied van overleggen enzo.' },
 ]
 
 const VideoCard = ({ slide }: { slide: typeof slides[0] }) => {
