@@ -28,7 +28,7 @@ const ArrowRightIcon = () => (
 )
 
 const CloseIcon = ({ color }: { color: string }) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="4" strokeLinecap="butt" strokeLinejoin="butt">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="4">
     <line x1="23" y1="2" x2="2" y2="22"></line>
     <line x1="2" y1="3" x2="22" y2="22"></line>
   </svg>
