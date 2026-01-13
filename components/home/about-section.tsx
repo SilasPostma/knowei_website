@@ -15,12 +15,12 @@ export default function AboutSection() {
             alt="Nicolas" 
             width={200} 
             height={200} 
-            className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover rounded-lg"
+            className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover"
           />
         </div>
 
         {/* Text Content */}
-        <div className="flex-1 p-4 md:p-6 lg:p-8 text-[var(--color-90)] text-sm md:text-base">
+        <div className="flex-1 p-4 md:p-6 md:pt-15 lg:p-8 lg:pt-20 text-[var(--color-90)] text-sm md:text-base">
           <p className="mb-3">
             Als jongste van vijf jongens vroeg ik me af hoe ik iets kon krijgen als ik de zwakste was. Als student wilde ik iets doen dat leuk was. Als partner zocht ik balans tussen mijn wensen en die van de ander. Als vader wilde ik opvoeden dat leuk, gezond en veilig was. Als consultant wilde ik mensen en bedrijven helpen groeien.
           </p>

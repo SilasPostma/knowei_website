@@ -17,7 +17,7 @@ export default function HeroSection() {
 
   // Opacities
   const introTextOpacity = useTransform(scrollYProgress, [0.05, 0.25], [1, 0]);
-  const bgOpacity = useTransform(scrollYProgress, [0.05, 0.5 , 0.75], [0, 1, 0]);
+  const bgOpacity = useTransform(scrollYProgress, [0.05, 0.35,0.5, 0.75], [0, 1,1,  0]);
   const w10Opacity = useTransform(scrollYProgress, [0.5, 0.7], [1, 0]);
   const narrativeTextOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
 
