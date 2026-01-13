@@ -59,9 +59,8 @@ const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
             src={slide.video}
             loop 
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
-            // Default muted if autoplay is desired, but for play button we usually want sound. 
-            // We start paused, so no autoplay.
           />
           
           {/* Play Button Overlay */}
@@ -93,15 +92,15 @@ export default function VideoCarousel() {
   }, [emblaApi])
 
   return (
-    <div id="voorbeelden" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-20 relative">
-        <div className="absolute top-20 w-full px-4 z-10">
-            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
+    <div id="voorbeelden" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-12 md:py-20">
+        <div className="w-full px-4 mb-8 md:mb-12 pt-8">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-4">
                 Zie hoe onze toolboxen gebruikt worden. 
             </h2>
 
             {/* Description Text */}
-            <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto mb-16 space-y-2">
-            <p className="text-base md:text-lg leading-relaxed">
+            <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
+            <p className="text-sm md:text-lg leading-relaxed">
                 Wie kan het beter vertellen dan wie het zelf mee heeft gemaakt?
             </p>
             </div>

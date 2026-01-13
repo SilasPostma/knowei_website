@@ -131,56 +131,57 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 transition-opacity animate-in fade-in duration-200" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-2 md:p-4 transition-opacity animate-in fade-in duration-200" onClick={onClose}>
       <div 
-        className="bg-[var(--color-30)] w-full max-w-[80%] relative flex flex-col shadow-2xl overflow-hidden border-[8px] border-[var(--color-70)] h-[80%]" 
+        className="bg-[var(--color-30)] w-full max-w-[95%] md:max-w-[80%] relative flex flex-col shadow-2xl overflow-hidden border-[4px] md:border-[8px] border-[var(--color-70)] h-[90%] md:h-[80%]" 
         onClick={(e) => e.stopPropagation()}
       >
         <button 
           onClick={onClose}
-          className="absolute -top-[8px] -right-[8px] w-14 h-14 flex items-center justify-center bg-[var(--color-70)] transition-all z-10 group text-[var(--color-30)] hover:text-[var(--color-50)]"
+          className="absolute -top-[4px] -right-[4px] md:-top-[8px] md:-right-[8px] w-10 h-10 md:w-14 md:h-14 flex items-center justify-center bg-[var(--color-70)] transition-all z-10 group text-[var(--color-30)] hover:text-[var(--color-50)]"
         >
           <CloseIcon color="currentColor" /> 
         </button>
 
-        <div className="p-8 overflow-y-auto custom-scrollbar">
-          <h2 className="text-2xl font-bold text-[var(--color-70)] uppercase mb-2">{slide.title}</h2>
+        <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar flex flex-col h-full">
+          <h2 className="text-lg md:text-2xl font-bold text-[var(--color-70)] uppercase mb-2 pr-10">{slide.title}</h2>
           
           <div>
-            <p className="text-lg text-[var(--color-90)] font-medium">Prijs: {slide.price}</p>
+            <p className="text-sm md:text-lg text-[var(--color-90)] font-medium">Prijs: {slide.price}</p>
           </div>
           <div>
-            <p className="text-lg text-[var(--color-90)] font-medium mb-4">Formaat: {slide.format}</p>
+            <p className="text-sm md:text-lg text-[var(--color-90)] font-medium mb-2 md:mb-4">Formaat: {slide.format}</p>
           </div>
           <div>
-            <p className="bg-[var(--color-10)] w-fit mb-6 px-2 text-lg text-[var(--color-90)] font-medium">{slide.details}</p>
+            <p className="bg-[var(--color-10)] w-fit mb-4 md:mb-6 px-2 text-xs md:text-lg text-[var(--color-90)] font-medium">{slide.details}</p>
           </div>
 
-          <div className="mb-8">
-            <span className="block text-md font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
-            <ul className="list-disc list-inside text-[var(--color-90)] pl-2">
+          <div className="mb-4 md:mb-8">
+            <span className="block text-sm md:text-md font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
+            <ul className="list-disc list-inside text-[var(--color-90)] pl-2 text-sm md:text-base">
               {slide.content.map((item, index) => (
                 <li key={index} className="leading-snug">{item}</li>
               ))}
             </ul>
           </div>
-          <div className="flex flex-col justify-end absolute bottom-10">
+          
+          <div className="flex flex-col mt-auto">
             <div>
-              <p className="text-md mt-8 text-[var(--color-90)] font-medium">Is dit precies wat je nodig hebt?</p>
+              <p className="text-sm md:text-md text-[var(--color-90)] font-medium">Is dit precies wat je nodig hebt?</p>
             </div>
 
             <div className="flex items-end justify-between my-1 relative">
               <BestellenButton href="/" />
               
               {slide.image && (
-                <div className="absolute right-0 bottom-0 md:relative md:block w-32 h-32 ml-4">
+                <div className="hidden md:block w-32 h-32 ml-4">
                     <img src={slide.image} alt="" className="w-full h-full object-contain" />
                 </div>
               )}
             </div>
 
             <div>
-              <p className="text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande toolboxen of laten we samen een toolbox op maat ontwerpen.</p>
+              <p className="text-xs md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande toolboxen of laten we samen een toolbox op maat ontwerpen.</p>
             </div>
           </div>
         </div>
@@ -217,6 +218,7 @@ const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) =>
             src={slide.video}
             loop 
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
           />
           
@@ -261,19 +263,18 @@ export default function VideoCarousel() {
 
   return (
     <>
-      <div id="toolboxen" className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20 relative">
-          <div className="absolute top-20 w-full px-4 z-10">
+      <div id="toolboxen" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-12 md:py-20">
+          <div className="w-full px-4 mb-8 md:mb-12 pt-8">
               <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-2">
                   Ontdek de toolboxen van anderen.
               </h2>
-              <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto mb-4 space-y-2">
-
-                <p className="text-base md:text-lg leading-relaxed text-center text-[var(--color-90)]">
+              <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
+                <p className="text-sm md:text-lg leading-relaxed text-center text-[var(--color-90)]">
                   In deze shop vind je toolboxen van mensen zoals jij. Blader, kies en ontdek welke toolboxen voor anderen werken en misschien ook voor jou.
                 </p>
               </div>
           </div>
-        <div className="flex items-center gap-4 mt-8 w-full max-w-[95%]">
+        <div className="flex items-center gap-4 w-full max-w-[95%]">
           
           {/* Prev Button */}
           <button 
