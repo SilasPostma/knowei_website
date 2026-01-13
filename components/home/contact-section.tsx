@@ -18,7 +18,7 @@ export default function ContactSection() {
     };
 
     return (
-    <div className="bg-[var(--color-50)] min-h-screen flex items-center justify-center px-8 py-20">
+    <div id="toolbox_op_maat" className="bg-[var(--color-50)] min-h-screen flex items-center justify-center px-8 py-20">
       <div className="max-w-6xl w-full">
         {/* Header */}
         <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">

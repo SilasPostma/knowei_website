@@ -1,6 +1,6 @@
 export default function AboutSection() {
     return (
-    <div className="bg-[var(--color-30)] min-h-screen flex flex-col items-center justify-center px-50 pt-35 pb-20">
+    <div id="mijn_verhaal" className="bg-[var(--color-30)] min-h-screen flex flex-col items-center justify-center px-50 pt-35 pb-20">
       <div className="bg-[var(--color-10)] w-full grow min-h-[50vh]">
         <div className=" pl-70 py-20 pr-10 text-[var(--color-90)] text-sm">
           <p className=" md:text-sm mb-3">

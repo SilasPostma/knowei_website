@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import HeaderButton from '../ui/headerButton';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
@@ -31,21 +32,25 @@ export default function Header() {
     >
       
       <div className="z-10">
-        <Image src={W70} alt="KNOWEI" width={120} height={80} />
+        <Link href="/#home">
+          <Image src={W70} alt="KNOWEI" width={120} height={80} />
+        </Link>
       </div>
 
       <div className="absolute right-1/2 flex gap-[var(--header-button-gap)] pr-[calc(var(--header-button-gap)/2)] items-end h-full">
-        <HeaderButton href="/#home" text='toolboxen'/>
-        <HeaderButton href="/#home" text='toolbox op maat'/>
+        <HeaderButton href="/#toolboxen" text='toolboxen'/>
+        <HeaderButton href="/#toolbox_op_maat" text='toolbox op maat'/>
       </div>
 
       <div className="absolute left-1/2 flex gap-[var(--header-button-gap)] pl-[calc(var(--header-button-gap)/2)] items-end h-full">
-        <HeaderButton href="/#home" text='voorbeelden'/>
-        <HeaderButton href="/#home" text='mijn verhaal'/>
+        <HeaderButton href="/#voorbeelden" text='voorbeelden'/>
+        <HeaderButton href="/#mijn_verhaal" text='mijn verhaal'/>
       </div>
 
       <div className="ml-auto z-10">
-        <Image src={L70} alt="LOGO" width={35} height={35} />
+        <Link href="/#home">
+          <Image src={L70} alt="LOGO" width={35} height={35} />
+        </Link>
       </div>
 
     </motion.header>

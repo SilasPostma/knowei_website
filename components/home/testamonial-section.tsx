@@ -93,7 +93,7 @@ export default function VideoCarousel() {
   }, [emblaApi])
 
   return (
-    <div className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-20 relative">
+    <div id="voorbeelden" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-20 relative">
         <div className="absolute top-20 w-full px-4 z-10">
             <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
                 Zie hoe onze toolboxen gebruikt worden. 
