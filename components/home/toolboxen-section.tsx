@@ -9,21 +9,28 @@ const basePath = isProd ? '/knowei_website' : '';
 
 // SVG Icons
 const PlayIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-80 hover:opacity-100 transition-opacity">
-    <circle cx="12" cy="12" r="10"></circle>
-    <polygon points="10 8 16 12 10 16 10 8" fill="white"></polygon>
+  <svg 
+    width="64" height="64" viewBox="0 0 64 64" fill="none" 
+    stroke="#FAF7F3"
+    strokeWidth="8"
+  >
+    <line x1="16" y1="10" x2="52" y2="34"></line>
+    <line x1="48" y1="30" x2="18" y2="54"></line>
+    <line x1="14" y1="52" x2="15" y2="12"></line>
   </svg>
 )
 
 const ArrowLeftIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M15 18l-6-6 6-6" />
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
+    <line x1="23" y1="4" x2="8" y2="19"></line>
+    <line x1="23" y1="28" x2="7" y2="14"></line>
   </svg>
 )
 
 const ArrowRightIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 18l6-6-6-6" />
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
+    <line x1="9" y1="4" x2="24" y2="19"></line>
+    <line x1="9" y1="28" x2="25" y2="14"></line>
   </svg>
 )
 
@@ -171,7 +178,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
             </div>
 
             <div className="flex items-end justify-between my-1 relative">
-              <BestellenButton href="/" />
+              <BestellenButton/>
               
               {slide.image && (
                 <div className="hidden md:block w-32 h-32 ml-4">
@@ -241,7 +248,7 @@ const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) =>
           {/* Prevent opening popup when directly clicking buy, or let it happen? 
               Assuming user intends to navigate. */}
           <div onClick={(e) => e.stopPropagation()}>
-            <BestellenButton href="/" />
+            <BestellenButton/>
           </div>
         </div>
       </div>
@@ -279,7 +286,7 @@ export default function VideoCarousel() {
           {/* Prev Button */}
           <button 
             onClick={scrollPrev}
-            className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
+            className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors hidden md:block"
             aria-label="Previous slide"
           >
             <ArrowLeftIcon />
@@ -299,7 +306,7 @@ export default function VideoCarousel() {
           {/* Next Button */}
           <button 
             onClick={scrollNext}
-            className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
+            className="p-3  rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors hidden md:block"
             aria-label="Next slide"
           >
             <ArrowRightIcon />
