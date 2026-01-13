@@ -15,20 +15,12 @@ export default function HeroSection() {
     offset: ["start start", "end end"]
   });
 
-  // Animation Ranges
-  // Frame 1 [0 - 0.33]: Initial State (Logos + Intro Text)
-  // Transition 1->2 [0.33 - 0.5]: Fade out Intro Text, Fade in BG
-  // Frame 2 [0.5 - 0.66]: BG is separate, Logos Static
-  // Transition 2->3 [0.66 - 0.8]: Fade out W70, Move L70 Up, Fade in Narrative Text
-
   // Opacities
   const introTextOpacity = useTransform(scrollYProgress, [0.05, 0.25], [1, 0]);
   const bgOpacity = useTransform(scrollYProgress, [0.05, 0.5 , 0.75], [0, 1, 0]);
   const w10Opacity = useTransform(scrollYProgress, [0.5, 0.7], [1, 0]);
   const narrativeTextOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
 
-  // Movements
-  // L70 moves from center (50%) to top third (approx 30%)
   const l10Y = useTransform(scrollYProgress, [0.7, 0.9], ["20%", "-20%"]);
 
   return (
