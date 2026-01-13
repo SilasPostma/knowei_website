@@ -8,21 +8,28 @@ const basePath = isProd ? '/knowei_website' : '';
 
 // SVG Icons
 const PlayIcon = () => (
-  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-80 hover:opacity-100 transition-opacity">
-    <circle cx="12" cy="12" r="10"></circle>
-    <polygon points="10 8 16 12 10 16 10 8" fill="white"></polygon>
+  <svg 
+    width="64" height="64" viewBox="0 0 64 64" fill="none" 
+    stroke="#FAF7F3"
+    strokeWidth="8"
+  >
+    <line x1="16" y1="10" x2="52" y2="34"></line>
+    <line x1="48" y1="30" x2="18" y2="54"></line>
+    <line x1="14" y1="52" x2="15" y2="12"></line>
   </svg>
 )
 
 const ArrowLeftIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M15 18l-6-6 6-6" />
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
+    <line x1="23" y1="4" x2="8" y2="19"></line>
+    <line x1="23" y1="28" x2="7" y2="14"></line>
   </svg>
 )
 
 const ArrowRightIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 18l6-6-6-6" />
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
+    <line x1="9" y1="4" x2="24" y2="19"></line>
+    <line x1="9" y1="28" x2="25" y2="14"></line>
   </svg>
 )
 
@@ -53,15 +60,14 @@ const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
   return (
     <div className="overflow-hidden flex flex-col h-full relative group">
       <div className="pt-6 px-2 w-full shrink-0 relative">
-        <div className="relative h-auto w-full bg-black cursor-pointer" onClick={togglePlay}>
+        <div className="relative w-full bg-black cursor-pointer" onClick={togglePlay}>
           <video 
             ref={videoRef}
             src={slide.video}
             loop 
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
-            // Default muted if autoplay is desired, but for play button we usually want sound. 
-            // We start paused, so no autoplay.
           />
           
           {/* Play Button Overlay */}
@@ -93,15 +99,15 @@ export default function VideoCarousel() {
   }, [emblaApi])
 
   return (
-    <div id="voorbeelden" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-20 relative">
-        <div className="absolute top-20 w-full px-4 z-10">
-            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
+    <div id="voorbeelden" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-12 md:py-20">
+        <div className="w-full px-4 mb-8 md:mb-12 pt-8">
+            <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-4">
                 Zie hoe onze toolboxen gebruikt worden. 
             </h2>
 
             {/* Description Text */}
-            <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto mb-16 space-y-2">
-            <p className="text-base md:text-lg leading-relaxed">
+            <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
+            <p className="text-sm md:text-lg leading-relaxed">
                 Wie kan het beter vertellen dan wie het zelf mee heeft gemaakt?
             </p>
             </div>
@@ -112,7 +118,7 @@ export default function VideoCarousel() {
         {/* Prev Button */}
         <button 
           onClick={scrollPrev}
-          className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
+          className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors hidden md:block"
           aria-label="Previous slide"
         >
           <ArrowLeftIcon />
@@ -132,7 +138,7 @@ export default function VideoCarousel() {
         {/* Next Button */}
         <button 
           onClick={scrollNext}
-          className="p-3 bg-[var(--color-30)] rounded-full hover:bg-[var(--color-50)] text-[var(--color-70)] transition-colors hidden md:block"
+          className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors hidden md:block"
           aria-label="Next slide"
         >
           <ArrowRightIcon />
