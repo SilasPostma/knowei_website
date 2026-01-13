@@ -263,11 +263,17 @@ export default function VideoCarousel() {
     <>
       <div id="toolboxen" className="w-full bg-[var(--color-10)] flex items-center justify-center min-h-screen py-20 relative">
           <div className="absolute top-20 w-full px-4 z-10">
-              <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
-                  Onze toolboxen.
+              <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-2">
+                  Ontdek de toolboxen van anderen.
               </h2>
+              <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto mb-4 space-y-2">
+
+                <p className="text-base md:text-lg leading-relaxed text-center text-[var(--color-90)]">
+                  In deze shop vind je toolboxen van mensen zoals jij. Blader, kies en ontdek welke toolboxen voor anderen werken en misschien ook voor jou.
+                </p>
+              </div>
           </div>
-        <div className="flex items-center gap-4 w-full max-w-[95%]">
+        <div className="flex items-center gap-4 mt-8 w-full max-w-[95%]">
           
           {/* Prev Button */}
           <button 

@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import W10 from '@/public/W_10.png';
 import L10 from '@/public/L_10.png';
+import BgFade from '@/public/bg_fade.jpg';
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,17 +22,17 @@ export default function HeroSection() {
   // Transition 2->3 [0.66 - 0.8]: Fade out W70, Move L70 Up, Fade in Narrative Text
 
   // Opacities
-  const introTextOpacity = useTransform(scrollYProgress, [0.33, 0.45], [1, 0]);
-  const bgOpacity = useTransform(scrollYProgress, [0.33, 0.5], [0, 1]);
-  const w10Opacity = useTransform(scrollYProgress, [0.6, 0.7], [1, 0]);
-  const narrativeTextOpacity = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
+  const introTextOpacity = useTransform(scrollYProgress, [0.05, 0.25], [1, 0]);
+  const bgOpacity = useTransform(scrollYProgress, [0.05, 0.5 , 0.75], [0, 1, 0]);
+  const w10Opacity = useTransform(scrollYProgress, [0.5, 0.7], [1, 0]);
+  const narrativeTextOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
 
   // Movements
   // L70 moves from center (50%) to top third (approx 30%)
-  const l10Y = useTransform(scrollYProgress, [0.6, 0.8], ["20%", "-20%"]);
+  const l10Y = useTransform(scrollYProgress, [0.7, 0.9], ["20%", "-20%"]);
 
   return (
-    <div ref={containerRef} className="h-[300vh] w-full relative bg-[var(--color-50)]">
+    <div id="home" ref={containerRef} className="h-[300vh] w-full relative bg-[var(--color-50)]">
       
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         
@@ -40,7 +41,7 @@ export default function HeroSection() {
           style={{ opacity: bgOpacity }}
           className="absolute inset-0 w-full h-full pointer-events-none"
         >
-          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("/bg_fade.jpg")' }}></div>
+          <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('${BgFade.src}')` }}></div>
         </motion.div>
         
         {/* Main Centered Content Container */}
