@@ -73,7 +73,7 @@ export default function HeroSection() {
 
   // Logic Selectors
   // Mobile-specific transform for L10 logo to move up as soon as main text reaches full opacity
-  const l10YMB = useTransform(scrollYProgress, [0.6, 0.7], ["0%", "-150%"]);
+  const l10YMB = useTransform(scrollYProgress, [0.5, 0.55], ["0%", "-150%"]);
 
   const introTextOpacity = isMobile ? introTextOpacityMB : introTextOpacityDT;
   const bgOpacity = isMobile ? bgOpacityMB : bgOpacityDT;
