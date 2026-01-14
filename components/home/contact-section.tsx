@@ -20,7 +20,7 @@ export default function ContactSection() {
     <div id="toolbox_op_maat" className="bg-[var(--color-50)] min-h-screen flex flex-col items-center pb-12 md:pb-20 pt-8 md:pt-16">
       {/* Top half area - centers text between top and grid */}
       <div className="flex-1 flex flex-col justify-center w-full">
-        <div className="max-w-6xl w-full mx-auto">
+        <div className="max-w-6xl w-full mx-auto pb-4 px-4">
           {/* Header */}
           <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
             Elke praktijkvraag een andere oplossing.

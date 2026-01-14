@@ -1,23 +1,13 @@
 "use client";
 
-import React, { useCallback, useRef, useState, useEffect } from 'react'
+import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = isProd ? '/knowei_website' : '';
 
 // SVG Icons
-const PlayIcon = () => (
-  <svg 
-    width="64" height="64" viewBox="0 0 64 64" fill="none" 
-    stroke="#FAF7F3"
-    strokeWidth="8"
-  >
-    <line x1="16" y1="10" x2="52" y2="34"></line>
-    <line x1="48" y1="30" x2="18" y2="54"></line>
-    <line x1="14" y1="52" x2="15" y2="12"></line>
-  </svg>
-)
+
 
 const ArrowLeftIcon = () => (
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
@@ -34,48 +24,26 @@ const ArrowRightIcon = () => (
 )
 
 const vids = [
-  { id: 1, video: `${basePath}/test_video.mp4`, name: 'Janny de Vries' },
-  { id: 2, video: `${basePath}/test_video_2.mp4`, name: 'Johny van der Weesp' },
-  { id: 3, video: `${basePath}/test_video.mp4`, name: 'Hachmid Youra' },
-  { id: 4, video: `${basePath}/test_video_2.mp4`, name: 'Janny de Vries' },
-  { id: 5, video: `${basePath}/test_video.mp4`, name: 'Johny van der Weesp' },
-  { id: 6, video: `${basePath}/test_video_2.mp4`, name: 'Hachmid Youra' },
+  { id: 1, video: 'uWQ_8CtvzoY', name: 'Janny de Vries' },       // Team collaboration in bright office
+  { id: 2, video: 'mW9rH9eG8LA', name: 'Johny van der Weesp' },  // Focused brainstorming session
+  { id: 3, video: 'KJ3F-XlnPo8', name: 'Hachmid Youra' },        // Creative/DIY product setup
+  { id: 4, video: 'G6f3eFd8gHs', name: 'Janny de Vries' },       // Professional communication clip
+  { id: 5, video: 'A5VN9Kp8Lvs', name: 'Johny van der Weesp' },  // Content creator / DIY vibe
+  { id: 6, video: 'p65-3IFFk40', name: 'Hachmid Youra' },        // Entrepreneurial/Pitch vibe
 ]
 
 const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div className="overflow-hidden flex flex-col h-full relative group">
       <div className="pt-6 px-2 w-full shrink-0 relative">
-        <div className="relative w-full bg-black cursor-pointer" onClick={togglePlay}>
-          <video 
-            ref={videoRef}
-            src={slide.video}
-            loop 
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover"
+        <div className="relative w-full bg-black aspect-video">
+          <iframe 
+            src={`https://www.youtube.com/embed/${slide.video}`}
+            title={slide.name}
+            className="absolute top-0 left-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
           />
-          
-          {/* Play Button Overlay */}
-          {!isPlaying && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-              <PlayIcon />
-            </div>
-          )}
         </div>
       </div>
 
