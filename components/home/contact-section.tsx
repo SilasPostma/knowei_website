@@ -17,27 +17,32 @@ export default function ContactSection() {
   };
 
   return (
-    <div id="toolbox_op_maat" className="bg-[var(--color-50)] min-h-screen flex items-center justify-center px-8 py-20">
-      <div className="max-w-6xl w-full">
-        {/* Header */}
-        <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
-          Elke praktijkvraag een andere oplossing.
-        </h2>
+    <div id="toolbox_op_maat" className="bg-[var(--color-50)] min-h-screen flex flex-col items-center pb-12 md:pb-20 pt-8 md:pt-16">
+      {/* Top half area - centers text between top and grid */}
+      <div className="flex-1 flex flex-col justify-center w-full">
+        <div className="max-w-6xl w-full mx-auto">
+          {/* Header */}
+          <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-8">
+            Elke praktijkvraag een andere oplossing.
+          </h2>
 
-        {/* Description Text */}
-        <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto mb-16 space-y-2">
-          <p className="text-base md:text-lg leading-relaxed">
-            Daarom gaan we graag met jou in gesprek om jouw anders scherp te krijgen.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed">
-            Zo kunnen we een toolbox op maat samenstellen die echt past bij jouw vraag.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed">
-            Wat helpt jou om met energie te beginnen?
-          </p>
+          {/* Description Text */}
+          <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
+            <p className="text-base md:text-lg leading-relaxed">
+              Daarom gaan we graag met jou in gesprek om jouw anders scherp te krijgen.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Zo kunnen we een toolbox op maat samenstellen die echt past bij jouw vraag.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Wat helpt jou om met energie te beginnen?
+            </p>
+          </div>
         </div>
+      </div>
 
-        {/* Cards Grid */}
+      {/* Cards Grid - centered in the screen */}
+      <div className="w-full max-w-6xl shrink-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-5xl mx-auto justify-items-center">
           
           {/* Chat Card */}
@@ -102,6 +107,9 @@ export default function ContactSection() {
 
         </div>
       </div>
+
+      {/* Bottom balancing space */}
+      <div className="flex-1" />
     </div>
   );
 }

@@ -365,8 +365,10 @@ export default function VideoCarousel() {
 
   return (
     <>
-      <div id="toolboxen" className="w-full bg-[var(--color-10)] flex flex-col items-center justify-center min-h-screen py-12 md:py-20">
-          <div className="w-full px-4 mb-8 md:mb-12 pt-8">
+      <div id="toolboxen" className="w-full bg-[var(--color-10)] flex flex-col items-center min-h-screen pb-12 md:pb-20 pt-8 md:pt-16">
+        {/* Top half area - centers text between top and carousel */}
+        <div className="flex-1 flex flex-col justify-center overflow-hidden w-full">
+          <div className="w-full px-4">
               <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-2">
                   Ontdek de toolboxen van anderen.
               </h2>
@@ -376,7 +378,10 @@ export default function VideoCarousel() {
                 </p>
               </div>
           </div>
-        <div className="flex items-center gap-4 w-full max-w-[95%]">
+        </div>
+
+        {/* Carousel - centered in the screen */}
+        <div className="flex items-center gap-4 w-full max-w-[95%] shrink-0">
           
           {/* Prev Button */}
           <button 
@@ -406,8 +411,10 @@ export default function VideoCarousel() {
           >
             <ArrowRightIcon />
           </button>
-          
         </div>
+
+        {/* Bottom balancing space */}
+        <div className="flex-1" />
       </div>
 
       {selectedSlide && (

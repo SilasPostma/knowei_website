@@ -20,6 +20,7 @@ export default function HeroSection() {
   const bgOpacity = useTransform(scrollYProgress, [0.05, 0.35,0.5, 0.75], [0, 1,1,  0]);
   const w10Opacity = useTransform(scrollYProgress, [0.5, 0.7], [1, 0]);
   const narrativeTextOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
+  const scrollOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   const l10Y = useTransform(scrollYProgress, [0.7, 0.9], ["20%", "-20%"]);
 
@@ -47,7 +48,7 @@ export default function HeroSection() {
                 style={{ opacity: w10Opacity }} 
                 className="flex-1 flex justify-start pl-12 z-20"
               >
-                <Image src={W10} alt="Logo W 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
+                <Image src={W10} alt="Logo" width={500} height={175} className="w-auto h-40 md:h-56 lg:h-64 max-w-none" />
               </motion.div> 
               
               {/* L70 Logo - Moves Up */}
@@ -55,7 +56,7 @@ export default function HeroSection() {
                 style={{ y: l10Y }} 
                 className="flex-1 flex justify-end pr-12 z-30"
               >
-                <Image src={L10} alt="Logo L 10" width={500} height={175} className="w-auto h-40 md:h-56 max-w-none" />
+                <Image src={L10} alt="Logo" width={500} height={175} className="w-auto h-40 md:h-56 lg:h-64 max-w-none" />
               </motion.div>
 
 
@@ -105,7 +106,21 @@ export default function HeroSection() {
             </motion.div>
 
         </div>
-        
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          style={{ opacity: scrollOpacity }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
+        >
+          <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-90)] opacity-60">
+            Scroll
+          </span>
+          <motion.div 
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-px h-10 bg-[var(--color-90)] opacity-40"
+          />
+        </motion.div>
       </div>
     </div>
   );
