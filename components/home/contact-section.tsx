@@ -58,8 +58,8 @@ export default function ContactSection() {
               <h3 className="text-xl font-bold text-white mb-2">Chat</h3>
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Kort en direct afstemmen.</p>
             </div>
-            <a href="https://wa.me/31657747434" target="_blank" rel="noopener noreferrer">
-              <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors">
+            <a href="https://wa.me/31640393757" target="_blank" rel="noopener noreferrer">
+              <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 START CHAT
               </button>
             </a>
@@ -81,9 +81,11 @@ export default function ContactSection() {
               <h3 className="text-xl font-bold text-white mb-2 text-center">Persoonlijk gesprek</h3>
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Eerst even samen overleggen</p>
             </div>
-            <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors">
-              INPLANNEN
-            </button>
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake" target="_blank" rel="noopener noreferrer">
+              <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
+                INPLANNEN
+              </button>
+            </a>
           </div>
 
           {/* Email Card */}
@@ -99,7 +101,7 @@ export default function ContactSection() {
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Rustig op papier zetten</p>
             </div>
             <a href="mailto:info@knowei.nl" onClick={handleMailClick} target="_blank" rel="noopener noreferrer">
-              <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors">
+              <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 {copied ? "GEKOPIEERD" : "STARTEN"}
               </button>
             </a>
