@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useRef, useState, useEffect } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import BestellenButton from '@/components/ui/bestellenButton'
 
@@ -8,17 +8,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const basePath = isProd ? '/knowei_website' : '';
 
 // SVG Icons
-const PlayIcon = () => (
-  <svg 
-    width="64" height="64" viewBox="0 0 64 64" fill="none" 
-    stroke="#FAF7F3"
-    strokeWidth="8"
-  >
-    <line x1="16" y1="10" x2="52" y2="34"></line>
-    <line x1="48" y1="30" x2="18" y2="54"></line>
-    <line x1="14" y1="52" x2="15" y2="12"></line>
-  </svg>
-)
+
 
 const ArrowLeftIcon = () => (
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
@@ -57,7 +47,7 @@ interface Slide {
 const slides: Slide[] = [
   { 
     id: 1, 
-    video: `${basePath}/test_video_2.mp4`, // TODO AANPASSEN VIDEO
+    video: 'z83nU-3uCe8', 
     title: 'CLOSING THE STRATEGY EXECUTIE GAP (JA ZEGGEN JA DOEN)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 1.900',
@@ -71,7 +61,7 @@ const slides: Slide[] = [
   },
   { 
     id: 2, 
-    video: `${basePath}/test_video_2.mp4`, 
+    video: 'Y7cpCDlRfV0', 
     title: 'TACTISCH JAARPLAN (VAN  PLAN NAAR PRAKTIJK)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 250',
@@ -85,7 +75,7 @@ const slides: Slide[] = [
   },
   { 
     id: 3, 
-    video: `${basePath}/Box_Chemie_van_overleggen.mp4`, // TODO AANPASSEN VIDEO 
+    video: 'IxRVa1DbSAg', 
     title: 'CHEMIE VAN OVERLEGGEN', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 1.900',
@@ -99,7 +89,7 @@ const slides: Slide[] = [
   },
   { 
     id: 4, 
-    video: `${basePath}/test_video_2.mp4`, // TODO AANPASSEN VIDEO 
+    video: 'BOG_CbEDhag', 
     title: 'DNA VAN TEAMS', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 3.900',
@@ -113,7 +103,7 @@ const slides: Slide[] = [
   },
   { 
     id: 5, 
-    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    video: 'D0wAVPZVJ2A', 
     title: 'VEILIG TEAM (having each other’s back)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 1.900',
@@ -127,7 +117,7 @@ const slides: Slide[] = [
   },
   { 
     id: 6, 
-    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    video: 'oAD8KLoeIzI', 
     title: 'LEREN VAN DE TOEKOMST (EXPERIMENTEREN)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 1.900',
@@ -141,7 +131,7 @@ const slides: Slide[] = [
   },
   { 
     id: 7, 
-    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    video: '2DDk0e7gduw', 
     title: 'SAMEN ROOSTEREN, VRIJHEID EN VERANTWOORDELIJKHEID', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 1.900',
@@ -155,21 +145,21 @@ const slides: Slide[] = [
   },
   { 
     id: 8, 
-    video: `${basePath}/test_video_2.mp4`, 
+    video: 'wPHZctJ6NAA', 
     title: 'KERSTPAKKET', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 200',
     format: 'M',
     details: '1- 12 deelnemers - 4 onderwerpen - specifiek',
     content: [
-      'Beschrijving:  Aan het eind van het jaar staan we stil bij alles wat mensen het hele jaar hebben gedaan. Het is een moment om samen af te sluiten en met een goed gevoel het nieuwe jaar in te gaan. Daarom krijgen 7,4 miljoen werknemers in Nederland een kerstpakket.',
+      'Beschrijving:  Aan het eind van het jaar staan we stil bij alles wat mensen het hele jaar hebben gedaan. Het is met zorg samengesteld om alles wat de feestdagen soms zwaar maakt te verlichten en samen de mooiste periode mogelijk te maken. Daarom krijgen 7,4 miljoen werknemers in Nederland een kerstpakket.',
       'Nu: Toch voelt een kerstpakket vaak te standaard en onpersoonlijk. Je krijgt kortingsbonnen waarbij je moet bijbetalen, of producten die je nooit gebruikt. Het gebaar is mooi, maar het raakt je niet echt.',
       'Anders: Dit pakket is anders. Het is met zorg samengesteld om alles wat de feestdagen soms zwaar maakt te verlichten en samen de mooiste periode mogelijk te maken.  Vanaf nu staat jullie nieuwsgierigheid centraal. Je vindt cadeaus die je kunnen verwonderen, je iets nieuws laten ontdekken en je helpen om te bouwen aan wat voor jou werkt.  Alle cadeaus zijn gemaakt om te delen met je dierbaren — oud, jong, mens en dier — zodat jullie samen kunnen vragen, helpen, spelen en bouwen. Er is altijd een vonkje nodig om tot vuurwerk te komen. Knallen maar.',
     ]
   },
   { 
     id: 9, 
-    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    video: 'E-B10EVjw0M', 
     title: 'CURIOUSITY CABINET/CAMPUS', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 15.990',
@@ -183,7 +173,7 @@ const slides: Slide[] = [
   },
   { 
     id: 10, 
-    video: `${basePath}/test_video_2.mp4`, 
+    video: 'rHuCs12BSZE8', 
     title: 'RADI(C)AL', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 99',
@@ -197,7 +187,7 @@ const slides: Slide[] = [
   },
   { 
     id: 11, 
-    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    video: 'lCMntOPnkL4', 
     title: 'NOWAY ABBONNEMENT', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
     price: '€ 149',
@@ -233,7 +223,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
           <CloseIcon color="currentColor" /> 
         </button>
 
-        <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar flex flex-col h-full">
+        <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar flex flex-col h-full no-scrollbar">
           <h2 className="text-lg md:text-2xl font-bold text-[var(--color-70)] uppercase mb-2 pr-10">{slide.title}</h2>
           
           <div>
@@ -265,6 +255,18 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
                 );
               })}
             </ul>
+
+            <div className="mt-8 mb-8 justify-center flex">
+              <div className="relative w-full md:w-[75%] lg:w-[50%] aspect-video bg-black shadow-lg border-2 border-[var(--color-70)]">
+                <iframe
+                  src={`https://www.youtube.com/embed/${slide.video}?rel=0`}
+                  title={slide.title}
+                  className="absolute top-0 left-0 w-full h-full "
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
           
           <div className="flex flex-col mt-auto">
@@ -293,49 +295,26 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
 }
 
 const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlay = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div 
       className="bg-[var(--color-30)] hover:bg-[var(--color-50)] overflow-hidden flex flex-col h-full relative group cursor-pointer transition-colors duration-300"
       onClick={onClick}
     >
       <div className="pt-6 px-6 w-full shrink-0 relative">
-        <div className="relative h-48 w-full bg-black" onClick={togglePlay}>
-          <video 
-            ref={videoRef}
-            src={slide.video}
-            loop 
-            playsInline
-            preload="metadata"
+        <div className="relative h-48 w-full bg-black">
+          <iframe
+            src={`https://www.youtube.com/embed/${slide.video}`}
+            title={slide.title}
             className="w-full h-full object-cover"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
-          
-          {/* Play Button Overlay */}
-          {!isPlaying && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-              <PlayIcon />
-            </div>
-          )}
         </div>
       </div>
 
       {/* Text Section */}
       <div className="p-6 flex flex-col grow">
-        <h3 className="text-lg font-bold mb-2 truncate text-[var(--color-70)]">{slide.title}</h3>
+        <h3 className="text-lg font-bold mb-2 line-clamp-3 min-h-[3.5rem] text-[var(--color-70)]">{slide.title}</h3>
         <p className="text-sm mb-6 line-clamp-2 text-[var(--color-70)]">{slide.desc}</p>
         
         {/* Button */}
@@ -373,7 +352,7 @@ export default function VideoCarousel() {
                   Ontdek de toolboxen van anderen.
               </h2>
               <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
-                <p className="text-sm md:text-lg leading-relaxed text-center text-[var(--color-90)]">
+                <p className="text-sm md:text-lg leading-relaxed text-center text-[var(--color-90)] pb-4">
                   In deze shop vind je toolboxen van mensen zoals jij. Blader, kies en ontdek welke toolboxen voor anderen werken en misschien ook voor jou.
                 </p>
               </div>
