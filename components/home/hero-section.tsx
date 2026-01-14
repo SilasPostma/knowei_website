@@ -7,6 +7,15 @@ import W10 from '@/public/W_10.png';
 import L10 from '@/public/L_10.png';
 import BgFade from '@/public/bg_fade.jpg';
 
+const ScrollArrowIcon = () => (
+  <svg width="24" height="64" viewBox="0 0 24 64" fill="none" stroke="currentColor" strokeWidth="4">
+    <line x1="12" y1="4" x2="12" y2="60"></line>
+    <line x1="2" y1="50" x2="14" y2="61"></line>
+    <line x1="22" y1="50" x2="9" y2="61"></line>
+  </svg>
+)
+
+
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -112,14 +121,16 @@ export default function HeroSection() {
           style={{ opacity: scrollOpacity }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-90)] opacity-60">
-            Scroll
+          <span className="text-sm uppercase tracking-[0.2em] text-[var(--color-70)] font-semibold">
+            SCROLL
           </span>
           <motion.div 
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-px h-10 bg-[var(--color-90)] opacity-40"
-          />
+            className="text-[var(--color-70)]"
+          >
+            <ScrollArrowIcon />
+          </motion.div>
         </motion.div>
       </div>
     </div>
