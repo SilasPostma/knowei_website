@@ -115,7 +115,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={handleNavClick}
-                  className="px-6 py-3 text-[var(--color-70)] hover:bg-[var(--color-50)] transition-colors uppercase text-sm font-medium tracking-wide"
+                  className="px-6 py-3 text-[var(--color-70)] hover:bg-[var(--color-50)] transition-colors uppercase text-sm font-semibold tracking-wide"
                 >
                   {link.text}
                 </Link>

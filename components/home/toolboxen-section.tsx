@@ -57,73 +57,156 @@ interface Slide {
 const slides: Slide[] = [
   { 
     id: 1, 
-    video: `${basePath}/test_video.mp4`, 
-    title: 'CHEMIE VAN OVERLEGGEN', 
+    video: `${basePath}/test_video_2.mp4`, // TODO AANPASSEN VIDEO
+    title: 'CLOSING THE STRATEGY EXECUTIE GAP (JA ZEGGEN JA DOEN)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
-    price: '€ 149,-',
-    format: 'Fysieke Box',
-    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    price: '€ 1.900',
+    format: 'L',
+    details: '2 - 12 deelnemers - 8 onderwerpen - specifiek',
     content: [
-      '1x Handleiding',
-      '1x Set gesprekskaarten',
-      '1x Zandloper',
-      '1x Notitieblok'
+      'Beschrijving: Succesvolle organisaties slaan de brug tussen strategie en executie.  Elke organisatie heeft een formele kant — strategie, structuur en processen — en een informele kant — cultuur, gedrag, talenten, gewoonten en samenwerking.  Organisaties die deze twee kanten verbinden, maken niet alleen plannen, maar voeren ze ook echt uit.',
+      'Nu: Toch ontstaat in veel organisaties een kloof tussen strategie en uitvoering. Onderzoek laat zien dat leiders vooral letten op de formele, tastbare kant: structuur, processen en regels. De informele kant — de manier waarop mensen met elkaar samenwerken — krijgt veel minder aandacht.  Juist daar zitten de grootste barrières. Niet in het bedenken van plannen, maar in het waarmaken ervan. We zeggen vaak “ja”, maar doen “nee”. We bouwen nieuwe structuren, maar de echte samenwerking blijft uit. De menselijke kant is complex: talenten, gewoonten, gedrag en relaties lopen door elkaar heen.',
+      'Anders: Met deze toolbox krijg je als MT inzicht in alle knoppen die invloed hebben op jouw organisatie.  We creëren samen een helder beeld van het hele ecosysteem.  Daardoor zie je de interne en externe dynamiek, herken je de relaties tussen strategie, structuur, processen, way-of-working, cultuur, gedrag, talenten en interactie.  Met deze inzichten kun je gericht aan de juiste knoppen draaien om de strategie ook echt succesvol uit te voeren.',
     ]
   },
   { 
     id: 2, 
     video: `${basePath}/test_video_2.mp4`, 
-    title: 'SAMEN INNOVEREN', 
+    title: 'TACTISCH JAARPLAN (VAN  PLAN NAAR PRAKTIJK)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
-    price: '€ 199,-',
-    format: 'Digitaal & Fysiek',
-    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    price: '€ 250',
+    format: 'M',
+    details: '4-16 deelnemers - 1 onderwerp - generiek',
     content: [
-      '5x Innovatie canvassen',
-      '1x Brainstorm gids',
-      'Access tot online portal'
+      'Beschrijving: Samen dragen we de verantwoordelijkheid om de ambitie waar te maken. Jij, als tactische leiding, zorgt samen met je team voor een goede balans tussen het werk en de mensen die beschikbaar zijn.',
+      'Het nu: We maken veel plannen en schrijven veel memo’s, maar we overzien vaak niet wat de keuzes betekenen voor het werk. Daardoor ontstaat te veel werk, hoge werkdruk en veel ad‑hoc reparaties. Een deel van het werk voelt onvoorspelbaar en overkomt ons. We worden verrast in plaats van voorbereid.',
+      'Het anders: Met een tactisch capaciteit jaarplan maak je het onvoorspelbare voorspelbaar. Door je jaarplan op te stellen kun je beter inschatten wat er op je afkomt. Je stuurt hierop, zodat de uitvoering aansluit bij wat nodig is. In de check kijk je terug en leer je van wat er is gebeurd. In de act stuur je bij waar dat nodig is. Met deze toolbox ben jij in staat om samen met je team het plan af te stemmen, de rollen duidelijk te krijgen en het CM‑proces effectief te implementeren. Zo groeit een jaarplan van een papieren document naar een praktisch instrument dat echt impact heeft in het dagelijks werk.',
     ]
   },
   { 
     id: 3, 
-    video: `${basePath}/test_video.mp4`, 
-    title: 'GROWTH HACKING', 
+    video: `${basePath}/Box_Chemie_van_overleggen.mp4`, // TODO AANPASSEN VIDEO 
+    title: 'CHEMIE VAN OVERLEGGEN', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
-    price: '€ 129,-',
-    format: 'Online Course',
-    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    price: '€ 1.900',
+    format: 'L',
+    details: '1- 8 deelnemers - 1 onderwerp - generiek',
     content: [
-      'Toegang tot 10 modules',
-      'Werkboeken',
-      'Growth templates'
+      'Beschrijving: MT‑overleg werkt als een chemische reactie: kennis zet ideeën, als kleine atomen, in beweging. Wanneer de temperatuur stijgt door betrokkenheid, scherpe vragen of urgente situaties, gaan die ideeën sneller en krachtiger bewegen. Op het juiste moment botsen ze op elkaar en reageren ze, waardoor nieuwe inzichten, betere keuzes en gedeelde overtuigingen ontstaan. In zo’n reactie ontstaat richting, daadkracht en gezamenlijke verantwoordelijkheid.',
+      'Het nu: De chemie is nu vaak te zwak. Overleggen duren lang, deelnemers haken af en besluiten komen moeizaam tot stand. Afspraken worden niet altijd nagekomen en de energie lekt weg. Het overleg voelt soms meer als een herhaling dan als een plek waar iets nieuws ontstaat.',
+      'Het anders: Deze toolbox helpt om de chemie terug te brengen. Door helder te maken wie waarvan is, scherp te krijgen wat we samen willen bereiken en elkaar actief te helpen, ontstaat weer beweging en energie. Zo wordt het MT-overleg opnieuw een plek waar ideeën botsen, energie vrijkomt en gezamenlijke vooruitgang ontstaat.',
     ]
   },
   { 
     id: 4, 
-    video: `${basePath}/test_video_2.mp4`, 
-    title: 'TEAM BUILDING', 
+    video: `${basePath}/test_video_2.mp4`, // TODO AANPASSEN VIDEO 
+    title: 'DNA VAN TEAMS', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
-    price: '€ 249,-',
-    format: 'Event Box',
-    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    price: '€ 3.900',
+    format: 'XL',
+    details: '4-16 deelnemers - 1 onderwerp - generiek',
     content: [
-      'Spelmaterialen',
-      'Teamgids',
-      'Nabesprekingsvragen'
+      'Beschrijving: Teaming betekent dat je samen een doel bereikt én samen impact maakt. Het is zowel inhoudelijk samenwerken als een proces van geven en nemen. In een team haal je soms het beste in elkaar naar boven, en soms ook het minder mooie. Dat hoort erbij. Een sterk team leert hiermee omgaan en blijft samen in beweging.',
+      'Het nu: Vaak staat de veranderbereidheid en de samenwerking in het MT onder druk. Target druk, tegenvallende resultaten, aandeelhouders etc. Deze druk uit zich in langs elkaar werken, risicomijdend gedrag: bij lastige besluiten kijkt iedereen naar de CEO met de houding “besluit jij maar”. Dit heeft gevolgen: Minder werkplezier, Een onveilige en weinig lerende omgeving, het MT werkt niet op zijn best.',
+      'Het anders: In deze toolbox leer je als team werken aan de bovenstroom én de onderstroom. In de bovenstroom zorgen we voor duidelijke kaders en transparantie, gunnen en begrenzen we elkaar, koppelen we taken aan talent en sturen we op prestaties terwijl we blijven ontdekken wat beter kan. In de onderstroom vergroten we ons zelfinzicht, creëren we veiligheid door naar elkaars perspectief te kijken, herkennen we groepspatronen en oefenen we nieuw, helpend gedrag dat we stap voor stap inslijpen. Zo groei je naar een team dat duidelijk, veilig, lerend en effectief samenwerkt — een team met een sterk DNA.',
     ]
   },
   { 
     id: 5, 
-    video: `${basePath}/test_video.mp4`, 
-    title: 'LEADERSHIP', 
+    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    title: 'VEILIG TEAM (having each other’s back)', 
     desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
-    price: '€ 299,-',
-    format: 'Masterclass',
-    details: '20+ deelnemers.  -   1 onderwerp   -   generiek',
+    price: '€ 1.900',
+    format: 'L',
+    details: '4-16 deelnemers - 1 onderwerp - specifiek',
     content: [
-      'Reflectiekaarten',
-      'Leiderschapsboek',
-      '1-op-1 coachingsessie'
+      'Beschrijving:  Een veilig team begint met vertrouwen. Teamleden voelen ruimte om conflicten op te lossen en moeilijke onderwerpen te bespreken. We kunnen gebeurtenissen uit het verleden een plek geven en samen bouwen aan een gezamenlijke toekomst.',
+      'Nu:  Op dit moment vinden teamleden veel van elkaar. Er wordt achter elkaars rug om gepraat en iedereen werkt op zijn eigen manier. Verantwoordelijkheid nemen voor het eigen werk én voor het team staat op pauze. Dat kost energie en werkplezier. De manager moet het vaak oplossen, omdat het team er samen niet meer uitkomt.',
+      'Anders:  Met deze toolbox leer je hoe je jouw team veilig en sterk maakt. Je werkt doelgericht samen, praat open en functioneel met elkaar en weet wat iedereen nodig heeft om goed te kunnen werken. We zeggen alleen “ja” als we het ook echt doen, en als er iets speelt, spreken we het meteen uit. Zo ontstaat ruimte om jezelf te zijn, erbij te horen en op elkaar te kunnen vertrouwen — ook als het even tegenzit.',
+    ]
+  },
+  { 
+    id: 6, 
+    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    title: 'LEREN VAN DE TOEKOMST (EXPERIMENTEREN)', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 1.900',
+    format: 'L',
+    details: '1-8 deelnemers - 1 onderwerp - generiek',
+    content: [
+      'Beschrijving: Tijdreizen lijkt soms echt: hoe sneller je beweegt, hoe trager je tijd ervaart. Einstein liet met E = mc² zien dat energie en massa kunnen veranderen, en dat beweging invloed heeft op hoe we tijd beleven. Leren werkt eigenlijk hetzelfde. Uit het verleden halen we stabiliteit en bewezen werkwijzen. In het heden zoeken we efficiëntie en controle, bijvoorbeeld met PDCA of lean. En richting de toekomst kijken we naar nieuwe mogelijkheden, zoals design thinking, het U‑model en co‑creatie. Zo vormen verleden, heden en toekomst samen een reis van kennis en groei.',
+      'Het nu: In veel projectteams gaat die reis stroef. Het team wil iets nieuws bedenken, maar elk idee wordt meteen tegengehouden met “ja maar”, “vroeger deden we het zo” of “dat heb ik al geprobeerd”. De energie zakt weg en innovatie komt niet van de grond.',
+      'Het anders: Deze toolbox helpt je om anders te kijken en anders te werken. Je leert een eenvoudige cyclus van bouwen – meten – leren in te richten. Je ontdekt hoe je snel kleine experimenten bedenkt, duidelijke keuzes maakt, leert van ervaringen en succesvolle ideeën stap voor stap opschaalt. Zo beweeg je als team weer vooruit — met meer energie, meer lef en meer ruimte om te groeien.',
+    ]
+  },
+  { 
+    id: 7, 
+    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    title: 'SAMEN ROOSTEREN, VRIJHEID EN VERANTWOORDELIJKHEID', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 1.900',
+    format: 'L',
+    details: '2-16  deelnemers - 1 onderwerp - specifiek',
+    content: [
+      'Beschrijving: Samenroosteren gaat over vrijheid. Niet vrijheid om te doen wat je wilt, maar vrijheid die ontstaat als je samen verantwoordelijkheid neemt. Je krijgt meer invloed op je rooster, kunt beter omgaan met privé‑situaties en werkt in een team dat elkaar helpt en versterkt.',
+      'Het nu: Nu voelt die vrijheid vaak ver weg. Medewerkers klagen dat ze wéér met kerst moeten werken, hun voetbalavond missen of niet naar een verjaardag kunnen. Ze hebben het gevoel dat het rooster vooral wordt opgelegd. Als er gaten vallen, moeten ze extra werken, maar als zij iets nodig hebben, lijkt er weinig mogelijk. Het voelt alsof het rooster vóór hen wordt gemaakt, niet mét hen.',
+      'Het anders: In deze toolbox zit en ervaar je een duidelijke aanpak voor samenroosteren, gebouwd op helderheid, afspraken en teamwork.  Je ontdekt eerst het waarom en het basiskader: wat ligt vast, welke ruimte is er, en wie bewaakt dat.  Daarna werk je stap voor stap aan een gemeenschappelijk game‑plan met concrete afspraken, praktische hulpmiddelen en een manier van werken die voor iedereen klopt. We gaan vervolgens oefenen in de praktijk: uitproberen, kijken wat werkt, bijsturen waar nodig.  Zo ontstaat een speelveld waarin vrijheid, verantwoordelijkheid en samenwerking samenkomen.  Het kader staat, het team is voorbereid — ready, set, go.',
+    ]
+  },
+  { 
+    id: 8, 
+    video: `${basePath}/test_video_2.mp4`, 
+    title: 'KERSTPAKKET', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 200',
+    format: 'M',
+    details: '1- 12 deelnemers - 4 onderwerpen - specifiek',
+    content: [
+      'Beschrijving:  Aan het eind van het jaar staan we stil bij alles wat mensen het hele jaar hebben gedaan. Het is een moment om samen af te sluiten en met een goed gevoel het nieuwe jaar in te gaan. Daarom krijgen 7,4 miljoen werknemers in Nederland een kerstpakket.',
+      'Nu: Toch voelt een kerstpakket vaak te standaard en onpersoonlijk. Je krijgt kortingsbonnen waarbij je moet bijbetalen, of producten die je nooit gebruikt. Het gebaar is mooi, maar het raakt je niet echt.',
+      'Anders: Dit pakket is anders. Het is met zorg samengesteld om alles wat de feestdagen soms zwaar maakt te verlichten en samen de mooiste periode mogelijk te maken.  Vanaf nu staat jullie nieuwsgierigheid centraal. Je vindt cadeaus die je kunnen verwonderen, je iets nieuws laten ontdekken en je helpen om te bouwen aan wat voor jou werkt.  Alle cadeaus zijn gemaakt om te delen met je dierbaren — oud, jong, mens en dier — zodat jullie samen kunnen vragen, helpen, spelen en bouwen. Er is altijd een vonkje nodig om tot vuurwerk te komen. Knallen maar.',
+    ]
+  },
+  { 
+    id: 9, 
+    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    title: 'CURIOUSITY CABINET/CAMPUS', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 15.990',
+    format: 'XXL',
+    details: '20+ deelnemers - 12 onderwerpen - generiek & specifiek',
+    content: [
+      'Beschrijving: Iedere persoon, elk team en elke organisatie loopt wel eens vast. Er gebeuren onverwachte dingen en soms heb je niet de kennis of kunde in huis om het op te lossen. Dan heb je iemand nodig die je verder kan helpen.',
+      'Nu: Maar er zijn zóveel coaches en consultants dat je door de bomen het bos niet meer ziet. Ze bieden allemaal iets anders aan, ze zijn vaak twee tot drie keer zo duur als je eigen personeel, en de oplossingen die ze geven helpen niet genoeg. Het blijft lastig, en je merkt dat je energie langzaam wegstroomt.',
+      'Anders: Daarom is er nu een in‑house Kennis Kast: een Knowledge Cupboard met 12 werkvormen die de 8 meest voorkomende én 4 meest specifieke uitdagingen in jouw organisatie kunnen ondersteunen. Geen duur adviesbureau, geen brainstormmarathon, geen groepsuitje. Wel een uitnodiging om zelf aan de slag te gaan — DIY‑style. Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje.',
+    ]
+  },
+  { 
+    id: 10, 
+    video: `${basePath}/test_video_2.mp4`, 
+    title: 'RADI(C)AL', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 99',
+    format: 'S',
+    details: '1 deelnemer - 1 onderwerp - specifiek',
+    content: [
+      'Beschrijving: Iedereen werkt in de basis hetzelfde. Je lichaam vangt signalen op uit de buitenwereld. Emoties zijn als een schakelbak: ze helpen je sneller te gaan of terug te schakelen. Je hersenen sturen je gedrag aan. Maar ieder brein verwerkt signalen op zijn eigen manier, terwijl we vaak denken dat iedereen denkt zoals wij.',
+      'Het nu: Een tiener die “ anders denkt” (ADHD, Dyslexie, Dyscalculie, Asperger) loopt daardoor snel vast op school, thuis en soms op werk. Overal verwachten mensen dat hij zich “vierkant” normaal gedraagt. Maar hij denkt rond en past niet precies in wat anderen vragen. Dat kost veel energie en voelt vaak alsof het nooit eens goed gaat.',
+      'Het anders:  Met deze toolbox krijg je handvatten om in elkaars hoofd, hart en lijf te kijken, waardoor we dieper inzicht krijgen in elkaars denken en doen — en door even in elkaars schoenen te staan kan je blik op de werkelijkheid radicaal verschuiven.',
+    ]
+  },
+  { 
+    id: 11, 
+    video: `${basePath}/test_video_2.mp4`, // TODO VIDEO AANPASSEN
+    title: 'NOWAY ABBONNEMENT', 
+    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    price: '€ 149',
+    format: 'S',
+    details: '1 deelnemer - 4 onderwerpen - specifiek',
+    content: [
+      'Beschrijving: Iedereen maakt het wel eens mee. Er gebeuren onverwachte dingen en soms heb je niet de kennis of kunde in huis om het op te lossen. Dan heb je iemand nodig die je verder kan helpen.',
+      'Nu:  Maar wie vraag je dan. En durf je dat wel te delen. Wat als iemand er iets van vindt. Vaak laten we het daarom maar zitten, tot we er echt niet meer omheen kunnen. Zo kunnen werkproblemen, hobby’s, vriendschappen of relaties langzaam bij je weglopen.',
+      'Anders: Met een Knowei‑abonnement krijg je ieder kwartaal een verrassingspakket dat past bij jouw situatie.  Geen leraar, dokter of coach, maar een uitnodiging om zelf aan de slag te gaan — DIY‑style.  Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje. Dan merk je: wat vastzat komt los, waar energie lekte stroomt weer, en je droom komt dichterbij.  Je ontdekt dat je niet gek bent, maar slim op weg.',
     ]
   },
 ]
@@ -165,10 +248,22 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
 
           <div className="mb-4 md:mb-8">
             <span className="block text-sm md:text-md font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
-            <ul className="list-disc list-inside text-[var(--color-90)] pl-2 text-sm md:text-base">
-              {slide.content.map((item, index) => (
-                <li key={index} className="leading-snug">{item}</li>
-              ))}
+            <ul className="list-disc text-[var(--color-90)] ml-4 md:ml-6 text-sm md:text-base space-y-4">
+              {slide.content.map((item, index) => {
+                const colonIndex = item.indexOf(':');
+                if (colonIndex !== -1) {
+                  const label = item.substring(0, colonIndex);
+                  const content = item.substring(colonIndex + 1);
+                  return (
+                    <li key={index}>
+                      <span className="font-bold">{label}:</span>{content}
+                    </li>
+                  );
+                }
+                return (
+                  <li key={index}>{item}</li>
+                );
+              })}
             </ul>
           </div>
           
@@ -188,7 +283,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
             </div>
 
             <div>
-              <p className="text-xs md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande toolboxen of laten we samen een toolbox op maat ontwerpen.</p>
+              <p className="text-xs md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="/#toolboxen" className="underline cursor-pointer" onClick={onClose}>toolboxen</a> of laten we samen een <a href="/#toolbox_op_maat" className="underline cursor-pointer" onClick={onClose}>toolbox op maat</a> ontwerpen.</p>
             </div>
           </div>
         </div>
