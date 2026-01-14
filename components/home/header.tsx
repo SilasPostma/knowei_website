@@ -54,6 +54,14 @@ export default function Header() {
     setMobileMenuOpen(false);
   };
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Update URL without jump if desired, or just leave it. 
+    // Usually standard behavior is fine but explicit scroll ensures action.
+    window.history.pushState(null, '', '/#home');
+  };
+
   return (
     <>
       <motion.header 
@@ -65,7 +73,7 @@ export default function Header() {
         
         {/* Logo Left */}
         <div className="z-10">
-          <Link href="/#home">
+          <Link href="/#home" onClick={scrollToTop}>
             <Image src={W70} alt="KNOWEI" width={120} height={80} className="w-24 md:w-[120px]" />
           </Link>
         </div>
@@ -83,7 +91,7 @@ export default function Header() {
 
         {/* Logo Right - Desktop */}
         <div className="hidden md:block ml-auto z-10">
-          <Link href="/#home">
+          <Link href="/#home" onClick={scrollToTop}>
             <Image src={L70} alt="LOGO" width={35} height={35} />
           </Link>
         </div>
