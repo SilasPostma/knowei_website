@@ -89,7 +89,7 @@ export default function HeroSection() {
               className="absolute -top-20 text-left text-[var(--color-90)] max-w-3xl space-y-6"
             >
               <p className="text-lg md:text-xl leading-relaxed ">
-                Je loopt vast. Op school, thuis of op je werk gaat iets niet zoals je wilt. 
+                <a className="bg-[var(--color-30)] p-1">Je loopt vast. Op school, thuis of op je werk gaat iets niet</a> zoals je wilt. 
                 Je voelt dat het anders kan, maar je weet niet hoe. Je vraagt hulp aan leraren, coaches of consultants. 
                 Hun antwoorden helpen niet genoeg. Het blijft lastig en je energie stroomt weg.
               </p>
@@ -97,19 +97,19 @@ export default function HeroSection() {
                 Maar het moet toch kunnen!
               </p>
               <p className="text-lg leading-relaxed">
-                Je blijft nieuwsgierig zoeken hoe het wél kan. Soms te weinig: standaardoplossingen die niet werken. 
+                <a className="bg-[var(--color-30)] p-1">Je blijft nieuwsgierig zoeken hoe het wél kan.</a> Soms te weinig: standaardoplossingen die niet werken. 
                 Soms te veel: verdwalen in ideeën zonder richting en dan precies goed: 
                 <span className="italic block mt-2">nieuwsgierigheid die jou laat bouwen met wat er wél is.</span>
               </p>
               <p className="text-lg leading-relaxed">
                 Geen adviesbureau, geen brainstorm, geen groepsuitje. Wel een uitnodiging om zelf kennis te maken—DIY style. 
-                Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje.
+                Zoals IKEA voor know‑how: <a className="bg-[var(--color-30)] p-1">bouwt, wij geven de onderdelen en het zetje.</a>
               </p>
               <p className="text-lg leading-relaxed">
                 Dan merk je: wat vastzat komt los, waar energie lekte stroomt weer, en je droom komt dichterbij. 
                 Je ontdekt dat je niet gek bent, maar slim op weg.
               </p>
-              <p className="text-xl font-bold mt-4">
+              <p className="text-xl font-bold mt-4 bg-[var(--color-30)] px-1">
                 Jouw ‘anders’? Jij vindt het. Niet omdat wij het weten, maar omdat jij het bouwt.
               </p>
             </motion.div>
