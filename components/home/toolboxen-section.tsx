@@ -365,7 +365,7 @@ export default function VideoCarousel() {
           {/* Prev Button */}
           <button 
             onClick={scrollPrev}
-            className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors hidden md:block"
+            className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors md:block"
             aria-label="Previous slide"
           >
             <ArrowLeftIcon />
@@ -385,7 +385,7 @@ export default function VideoCarousel() {
           {/* Next Button */}
           <button 
             onClick={scrollNext}
-            className="p-3  rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors hidden md:block"
+            className="p-3  rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors md:block"
             aria-label="Next slide"
           >
             <ArrowRightIcon />
