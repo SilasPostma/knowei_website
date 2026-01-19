@@ -5,8 +5,23 @@ import React, { useState } from "react";
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
 
-  const handleMailClick = async (e: React.MouseEvent) => {
     const email = "info@knowei.nl";
+    const subject = `Een andere oplossing`;
+    
+    const bodyText = `Beste Knowei,
+
+Ik ben nieuwsgierig naar … en wil graag beter begrijpen hoe jij/ jullie daarin werkt of denkt.
+
+Groet,
+
+[Naam]
+[Organisatie]
+[Telefoonnummer]
+[E-mailadres]`;
+
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+  const handleMailClick = async (e: React.MouseEvent) => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
@@ -100,7 +115,7 @@ export default function ContactSection() {
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Rustig op papier zetten</p>
             </div>
-            <a href="mailto:info@knowei.nl" onClick={handleMailClick} target="_blank" rel="noopener noreferrer">
+            <a href={mailtoLink} onClick={handleMailClick} target="_blank" rel="noopener noreferrer">
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 {copied ? "GEKOPIEERD" : "STARTEN"}
               </button>
