@@ -62,7 +62,7 @@ Groet,
           
           {/* Chat Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">
-            <div className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
+            <a href="https://wa.me/31640393757" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
               <div className="mb-6">
                 <svg width="80" height="80" viewBox="0 0 120 120" fill="none" className="text-white">
                   <rect x="30" y="15" width="60" height="90" rx="8" stroke="currentColor" strokeWidth="3" fill="none" />
@@ -72,7 +72,7 @@ Groet,
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Chat</h3>
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Kort en direct afstemmen.</p>
-            </div>
+            </a>
             <a href="https://wa.me/31640393757" target="_blank" rel="noopener noreferrer">
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 START CHAT
@@ -82,7 +82,7 @@ Groet,
 
           {/* Persoonlijk Gesprek Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">
-            <div className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
               <div className="mb-6">
                 <svg width="80" height="80" viewBox="0 0 120 120" fill="none" className="text-white">
                   <rect x="25" y="30" width="70" height="60" rx="4" stroke="currentColor" strokeWidth="3" fill="none" />
@@ -95,7 +95,7 @@ Groet,
               </div>
               <h3 className="text-xl font-bold text-white mb-2 text-center">Persoonlijk gesprek</h3>
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Eerst even samen overleggen</p>
-            </div>
+            </a>
             <a href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake" target="_blank" rel="noopener noreferrer">
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 INPLANNEN
@@ -105,7 +105,7 @@ Groet,
 
           {/* Email Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">
-            <div className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
+            <a href={mailtoLink} onClick={handleMailClick} target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
               <div className="mb-6">
                 <svg width="80" height="80" viewBox="0 0 120 120" fill="none" className="text-white">
                   <rect x="20" y="35" width="80" height="50" rx="4" stroke="currentColor" strokeWidth="3" fill="currentColor" />
@@ -114,7 +114,7 @@ Groet,
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
               <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Rustig op papier zetten</p>
-            </div>
+            </a>
             <a href={mailtoLink} onClick={handleMailClick} target="_blank" rel="noopener noreferrer">
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 {copied ? "GEKOPIEERD" : "STARTEN"}
