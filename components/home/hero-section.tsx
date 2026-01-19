@@ -144,7 +144,7 @@ export default function HeroSection() {
               style={{ y: l10Y }}
               className={`flex-1 flex ${
                 isMobile ? "justify-center order-1" : "justify-end pr-12"
-              } z-30`}
+              } -z-30`}
             >
               <Image
                 src={L10}
