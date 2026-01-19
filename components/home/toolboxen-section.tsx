@@ -47,9 +47,9 @@ interface Slide {
 const slides: Slide[] = [
   { 
     id: 1, 
-    video: 'z83nU-3uCe8', 
-    title: 'CLOSING THE STRATEGY EXECUTIE GAP (JA ZEGGEN JA DOEN)', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: 'z83nU-3uCe8', // NEED TO UPDATE VIDEO
+    title: 'CLOSING THE STRATEGY EXECUTION GAP', 
+    desc: 'Deze box zet je aan om de kloof tussen zeggen en doen te dichten, zodat ‘ja zeggen’ ook echt ‘ja doen’ wordt.',
     price: '€ 1.900',
     format: 'L',
     details: '2 - 12 deelnemers - 8 onderwerpen - specifiek',
@@ -61,9 +61,9 @@ const slides: Slide[] = [
   },
   { 
     id: 2, 
-    video: 'Y7cpCDlRfV0', 
-    title: 'TACTISCH JAARPLAN (VAN  PLAN NAAR PRAKTIJK)', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: '7Tg44FATRPA',
+    title: 'TACTISCH JAARPLAN', 
+    desc: 'Deze box helpt je om van plan naar praktijk te gaan, zodat je jaarplan echt gaat werken in je dagelijks werk.',
     price: '€ 250',
     format: 'M',
     details: '4-16 deelnemers - 1 onderwerp - generiek',
@@ -75,9 +75,9 @@ const slides: Slide[] = [
   },
   { 
     id: 3, 
-    video: 'IxRVa1DbSAg', 
+    video: 'h3-h0J-ynUk', 
     title: 'CHEMIE VAN OVERLEGGEN', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    desc: 'Deze box helpt je om van overleg waar energie weglekt naar echte chemie te gaan, zodat ideeën weer botsen en vooruitgang ontstaat.',
     price: '€ 1.900',
     format: 'L',
     details: '1- 8 deelnemers - 1 onderwerp - generiek',
@@ -89,9 +89,9 @@ const slides: Slide[] = [
   },
   { 
     id: 4, 
-    video: 'BOG_CbEDhag', 
+    video: 'BOG_CbEDhag', // NEED TO UPDATE VIDEO
     title: 'DNA VAN TEAMS', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    desc: 'Deze box helpt je om van langs elkaar werken naar echt team‑DNA te gaan, zodat samenwerking veilig, lerend en effectief wordt.',
     price: '€ 3.900',
     format: 'XL',
     details: '4-16 deelnemers - 1 onderwerp - generiek',
@@ -103,9 +103,9 @@ const slides: Slide[] = [
   },
   { 
     id: 5, 
-    video: 'D0wAVPZVJ2A', 
-    title: 'VEILIG TEAM (having each other’s back)', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: 'D0wAVPZVJ2A', // NEED TO UPDATE VIDEO
+    title: 'VEILIG TEAM', 
+    desc: 'Deze box helpt je om van roddel en langs elkaar heen werken naar openheid, veiligheid en vertrouwen te gaan, zodat jullie op elkaar kunnen leunen en samen sterk staan.',
     price: '€ 1.900',
     format: 'L',
     details: '4-16 deelnemers - 1 onderwerp - specifiek',
@@ -117,9 +117,9 @@ const slides: Slide[] = [
   },
   { 
     id: 6, 
-    video: 'oAD8KLoeIzI', 
-    title: 'LEREN VAN DE TOEKOMST (EXPERIMENTEREN)', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: 'GlcdzoO09bI', 
+    title: 'LEREN VAN DE TOEKOMST', 
+    desc: 'Deze box helpt je om van “ja‑maar” naar “ wat-als” te gaan, met experimenten en kleine stappen uitgroeien tot echte vooruitgang.',
     price: '€ 1.900',
     format: 'L',
     details: '1-8 deelnemers - 1 onderwerp - generiek',
@@ -131,9 +131,9 @@ const slides: Slide[] = [
   },
   { 
     id: 7, 
-    video: '2DDk0e7gduw', 
-    title: 'SAMEN ROOSTEREN, VRIJHEID EN VERANTWOORDELIJKHEID', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: 'RJyWo-2tTvo',
+    title: 'SAMEN ROOSTEREN', 
+    desc: 'Deze box ondersteunt je om van gestuurd worden naar zelf sturen te gaan: samen bouwen aan een rooster dat vrijheid geeft en de werk‑privébalans versterkt.',
     price: '€ 1.900',
     format: 'L',
     details: '2-16  deelnemers - 1 onderwerp - specifiek',
@@ -145,9 +145,9 @@ const slides: Slide[] = [
   },
   { 
     id: 8, 
-    video: 'wPHZctJ6NAA', 
+    video: 'VUgebN2Y8go', 
     title: 'KERSTPAKKET', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    desc: 'Deze box laat je waardering voelen en helpt je om van standaard naar speciaal te gaan, met cadeaus die écht raken en de feestdagen mooier maken.',
     price: '€ 200',
     format: 'M',
     details: '1- 12 deelnemers - 4 onderwerpen - specifiek',
@@ -159,9 +159,9 @@ const slides: Slide[] = [
   },
   { 
     id: 9, 
-    video: 'E-B10EVjw0M', 
-    title: 'CURIOUSITY CABINET/CAMPUS', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: 'E-B10EVjw0M', // NEED TO UPDATE VIDEO
+    title: 'CURIOUSITY CAMPUS', 
+    desc: 'Deze kast ondersteunt je om van reactief oplossen met consultants naar proactief bouwen aan eigen oplossingen te gaan, met meer grip, meer kennis en minder kosten.',
     price: '€ 15.990',
     format: 'XXL',
     details: '20+ deelnemers - 12 onderwerpen - generiek & specifiek',
@@ -173,9 +173,9 @@ const slides: Slide[] = [
   },
   { 
     id: 10, 
-    video: 'rHuCs12BSZE8', 
+    video: 'I-I12EajRjE', 
     title: 'RADI(C)AL', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    desc: 'Deze box helpt je om van aannames naar begrip te gaan, door echt te zien hoe verschillend we denken',
     price: '€ 99',
     format: 'S',
     details: '1 deelnemer - 1 onderwerp - specifiek',
@@ -187,9 +187,9 @@ const slides: Slide[] = [
   },
   { 
     id: 11, 
-    video: 'lCMntOPnkL4', 
-    title: 'NOWAY ABBONNEMENT', 
-    desc: 'Deze box daagt je uit en maakt je actief op het gebied van overleggen enzo.',
+    video: 'lCMntOPnkL4', // NEED TO UPDATE VIDEO
+    title: 'NOWAY SURPRISE', 
+    desc: 'Deze box helpt je om van vastlopen, piekeren en zorgen maken naar zelf inzicht krijgen, ermee aan de slag gaan en stap voor stap je eigen oplossingen te bouwen — zodat wat vastzat weer loskomt en jij vooruit beweegt.',
     price: '€ 149',
     format: 'S',
     details: '1 deelnemer - 4 onderwerpen - specifiek',
@@ -271,7 +271,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
           
           <div className="flex flex-col mt-auto">
             <div>
-              <p className="text-sm md:text-md text-[var(--color-90)] font-medium">Is dit precies wat je nodig hebt?</p>
+              <p className="text-sm md:text-md text-[var(--color-90)] font-medium mb-1">Is dit precies wat je nodig hebt?</p>
             </div>
 
             <div className="flex items-end justify-between my-1 relative">
@@ -285,7 +285,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
             </div>
 
             <div>
-              <p className="text-xs md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="/#toolboxen" className="underline cursor-pointer" onClick={onClose}>toolboxen</a> of laten we samen een <a href="/#toolbox_op_maat" className="underline cursor-pointer" onClick={onClose}>toolbox op maat</a> ontwerpen.</p>
+              <p className="text-sm md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="/#toolboxen" className="underline cursor-pointer" onClick={onClose}>toolboxen</a> of laten we samen een <a href="/#toolbox_op_maat" className="underline cursor-pointer" onClick={onClose}>toolbox op maat</a> ontwerpen.</p>
             </div>
           </div>
         </div>
@@ -314,8 +314,8 @@ const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) =>
 
       {/* Text Section */}
       <div className="p-6 flex flex-col grow">
-        <h3 className="text-lg font-bold mb-2 line-clamp-3 min-h-[3.5rem] text-[var(--color-70)]">{slide.title}</h3>
-        <p className="text-sm mb-6 line-clamp-2 text-[var(--color-70)]">{slide.desc}</p>
+        <h3 className="text-lg font-bold mb-2 line-clamp-1 min-h-[1.5rem] text-[var(--color-70)]">{slide.title}</h3>
+        <p className="text-sm mb-6 text-[var(--color-70)]">{slide.desc}</p>
         
         {/* Button */}
         <div className="flex justify-center mt-auto">
