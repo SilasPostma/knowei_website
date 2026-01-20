@@ -33,13 +33,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // Show header after scrolling past 2.5 viewports (Hero is 300vh)
     const threshold = typeof window !== 'undefined' ? window.innerHeight * 1.4 : 2000;
     if (latest > threshold && !isVisible) {
       setIsVisible(true);
     } else if (latest <= threshold && isVisible) {
       setIsVisible(false);
-      setMobileMenuOpen(false); // Close menu when header hides
+      setMobileMenuOpen(false);
     }
   });
 
@@ -74,7 +73,7 @@ export default function Header() {
         {/* Logo Left */}
         <div className="z-10">
           <Link href="/#home" onClick={scrollToTop}>
-            <Image src={W70} alt="KNOWEI" width={120} height={80} className="w-24 md:w-[120px]" />
+            <Image src={W70} alt="KNOWEI" width={120} height={80} className="w-24 md:w-[80px] lg:w-[120px]" />
           </Link>
         </div>
 

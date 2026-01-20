@@ -178,7 +178,7 @@ export default function HeroSection() {
           <motion.div
             style={{ opacity: narrativeTextOpacity }}
             className={`${
-              isMobile ? "relative mt-10 pb-10" : "absolute -top-20"
+              isMobile ? "relative mt-10 pb-10" : "absolute -top-25"
             } text-left text-[var(--color-90)] max-w-3xl space-y-6 px-4 z-10`}
           >
             {isMobile ? (
@@ -247,7 +247,7 @@ export default function HeroSection() {
         {/* Scroll Indicator */}
         <motion.div
           style={{ opacity: scrollOpacity }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-[var(--color-70)] font-semibold">
             SCROLL
