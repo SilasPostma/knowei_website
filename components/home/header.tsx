@@ -34,7 +34,7 @@ export default function Header() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     // Show header after scrolling past 2.5 viewports (Hero is 300vh)
-    const threshold = typeof window !== 'undefined' ? window.innerHeight * 2.5 : 2000;
+    const threshold = typeof window !== 'undefined' ? window.innerHeight * 1.4 : 2000;
     if (latest > threshold && !isVisible) {
       setIsVisible(true);
     } else if (latest <= threshold && isVisible) {
