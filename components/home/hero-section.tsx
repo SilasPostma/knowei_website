@@ -136,7 +136,7 @@ export default function HeroSection() {
                 alt="Logo"
                 width={500}
                 height={175}
-                className="w-auto h-20 md:h-56 lg:h-64 max-w-none"
+                className="w-auto h-20 md:h-32 lg:h-48 xl:h-64 max-w-none"
               />
             </motion.div>
 
@@ -152,7 +152,7 @@ export default function HeroSection() {
                 alt="Logo"
                 width={500}
                 height={175}
-                className="w-auto h-20 md:h-56 lg:h-64 max-w-none"
+                className="w-auto h-20 md:h-32 lg:h-48 xl:h-64 max-w-none"
               />
             </motion.div>
           </div>
