@@ -58,7 +58,7 @@ Groet,
 
       {/* Cards Grid - centered in the screen */}
       <div className="w-full max-w-6xl shrink-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-5xl mx-auto justify-items-center">
+        <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
           
           {/* Chat Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">

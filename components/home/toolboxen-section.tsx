@@ -375,7 +375,7 @@ export default function VideoCarousel() {
           <div className="overflow-hidden flex-1" ref={emblaRef}>
             <div className="flex -ml-4">
               {slides.map((slide) => (
-                <div key={slide.id} className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_25%] min-w-0 pl-4">
+                <div key={slide.id} className="flex-[0_0_80%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_25%] min-w-0 pl-4">
                   <VideoCard slide={slide} onClick={() => setSelectedSlide(slide)} />
                 </div>
               ))}

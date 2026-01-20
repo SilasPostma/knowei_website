@@ -7,6 +7,7 @@ import W10 from "@/public/W_10.png";
 import L10 from "@/public/L_10.png";
 import BgFade from "@/public/bg_fade.jpg";
 
+
 const ScrollArrowIcon = () => (
   <svg
     width="24"
@@ -73,7 +74,7 @@ export default function HeroSection() {
 
   // Logic Selectors
   // Mobile-specific transform for L10 logo to move up as soon as main text reaches full opacity
-  const l10YMB = useTransform(scrollYProgress, [0.5, 0.55], ["0%", "-150%"]);
+  const l10YMB = useTransform(scrollYProgress, [0.9, 1.0], ["0%", "-150%"]);
 
   const introTextOpacity = isMobile ? introTextOpacityMB : introTextOpacityDT;
   const bgOpacity = isMobile ? bgOpacityMB : bgOpacityDT;
@@ -89,7 +90,7 @@ export default function HeroSection() {
       id="home"
       ref={containerRef}
       className={`${
-        isMobile ? "h-auto min-h-[150vh]" : "h-[300vh]"
+        isMobile ? "h-auto min-h-[100vh]" : "h-[300vh]"
       } w-full relative bg-[var(--color-50)]`}
     >
       {/* Sticky container handles the animation phase */}
@@ -120,7 +121,7 @@ export default function HeroSection() {
             className={`flex ${
               isMobile
                 ? "sticky top-10 flex-col gap-2 mb-12 z-40"
-                : "relative flex-row gap-8 mb-12 bottom-25 z-20"
+                : "relative flex-row gap-8 mb-12 bottom-25"
             } items-center justify-between w-full`}
           >
             {/* W10 (Text Logo) - Left on Desktop, Bottom on Mobile */}
@@ -160,10 +161,10 @@ export default function HeroSection() {
           <motion.div
             style={{ opacity: introTextOpacity }}
             className={`${
-              isMobile ? "relative mb-20" : "absolute top-[70%]"
+              isMobile ? "relative mb-10" : "absolute top-[70%]"
             } text-center text-[var(--color-90)] max-w-2xl px-4 z-10`}
           >
-            <p className="text-base md:text-xl font-light leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
               Je voelt dat het anders kan.
               <br />
               Je wil geen standaard advies, maar zelf doorbouwen op wat werkt.
@@ -199,7 +200,7 @@ export default function HeroSection() {
             ) : (
               // Desktop Text (Original)
               <>
-                <p className="text-lg md:text-xl leading-relaxed ">
+                <p className="text-lg md:text-lg lg:text-xl leading-relaxed ">
                   <span className="bg-[var(--color-30)] p-1">
                     Je loopt vast. Op school, thuis of op je werk gaat iets niet
                   </span>{" "}
@@ -208,7 +209,7 @@ export default function HeroSection() {
                   antwoorden helpen niet genoeg. Het blijft lastig en je energie
                   stroomt weg.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed font-semibold">
+                <p className="text-lg md:text-lg lg:text-xl leading-relaxed font-semibold">
                   Maar het moet toch kunnen!
                 </p>
                 <p className="text-lg leading-relaxed">
