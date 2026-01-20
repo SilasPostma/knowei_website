@@ -365,7 +365,7 @@ export default function VideoCarousel() {
           {/* Prev Button */}
           <button 
             onClick={scrollPrev}
-            className="absolute left-2 z-20 md:static p-3 rounded-full bg-[rgba(0,0,0,0.3)] md:bg-transparent hover:bg-[var(--color-30)] text-white md:text-[var(--color-70)] transition-colors block"
+            className="absolute left-2 z-20 md:static p-3 rounded-full bg-[rgba(0,0,0,0.3)] md:bg-transparent hover:bg-[var(--color-50)] text-white md:text-[var(--color-70)] transition-colors block"
             aria-label="Previous slide"
           >
             <ArrowLeftIcon />
@@ -385,7 +385,7 @@ export default function VideoCarousel() {
           {/* Next Button */}
           <button 
             onClick={scrollNext}
-            className="absolute right-2 z-20 md:static p-3 rounded-full bg-[rgba(0,0,0,0.3)] md:bg-transparent hover:bg-[var(--color-30)] text-white md:text-[var(--color-70)] transition-colors block"
+            className="absolute right-2 z-20 md:static p-3 rounded-full bg-[rgba(0,0,0,0.3)] md:bg-transparent hover:bg-[var(--color-50)] text-white md:text-[var(--color-70)] transition-colors block"
             aria-label="Next slide"
           >
             <ArrowRightIcon />
