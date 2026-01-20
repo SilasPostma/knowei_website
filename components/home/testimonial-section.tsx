@@ -35,9 +35,9 @@ const vids = [
 const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
   return (
     <div className="overflow-hidden flex flex-col h-full relative group">
-      <div className="pt-6 px-2 w-full shrink-0 relative">
+      <div className="pt-6 pr-4 w-full shrink-0 relative">
         <div className="relative w-full bg-black aspect-video">
-          <iframe 
+          <iframe   
             src={`https://www.youtube.com/embed/${slide.video}`}
             title={slide.name}
             className="absolute top-0 left-0 w-full h-full"
@@ -48,7 +48,7 @@ const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
       </div>
 
       {/* Text Section */}
-      <div className="pt-2 px-2 flex flex-col grow items-end">
+      <div className="pt-2 pr-4 flex flex-col grow items-end">
         <h3 className="text-l font-semibold mb-2 truncate text-[var(--color-90)]">{slide.name}</h3>
       </div>
     </div>
@@ -85,12 +85,12 @@ export default function VideoCarousel() {
         </div>
       
       {/* Carousel Area - Centered in screen */}
-      <div className="flex items-center gap-4 w-full max-w-[95%] shrink-0">
+      <div className="flex relative items-center justify-center md:gap-4 w-full max-w-[95%] shrink-0">
         
         {/* Prev Button */}
         <button 
           onClick={scrollPrev}
-          className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors md:block"
+          className="absolute left-2 z-20 md:static p-3 rounded-full bg-[var(--color-30)] md:bg-transparent hover:bg-[var(--color-30)] text-[var(--color-70)] md:text-[var(--color-70)] transition-colors block"
           aria-label="Previous slide"
         >
           <ArrowLeftIcon />
@@ -110,7 +110,7 @@ export default function VideoCarousel() {
         {/* Next Button */}
         <button 
           onClick={scrollNext}
-          className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors md:block"
+          className="absolute right-2 z-20 md:static p-3 rounded-full bg-[var(--color-30)] md:bg-transparent hover:bg-[var(--color-30)] text-[var(--color-70)] md:text-[var(--color-70)] transition-colors block"
           aria-label="Next slide"
         >
           <ArrowRightIcon />

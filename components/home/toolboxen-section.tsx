@@ -360,12 +360,12 @@ export default function VideoCarousel() {
         </div>
 
         {/* Carousel - centered in the screen */}
-        <div className="flex items-center gap-4 w-full max-w-[95%] shrink-0">
+        <div className="flex relative items-center justify-center md:gap-4 w-full max-w-[95%] shrink-0">
           
           {/* Prev Button */}
           <button 
             onClick={scrollPrev}
-            className="p-3 rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors md:block"
+            className="absolute left-2 z-20 md:static p-3 rounded-full bg-[rgba(0,0,0,0.3)] md:bg-transparent hover:bg-[var(--color-30)] text-white md:text-[var(--color-70)] transition-colors block"
             aria-label="Previous slide"
           >
             <ArrowLeftIcon />
@@ -385,7 +385,7 @@ export default function VideoCarousel() {
           {/* Next Button */}
           <button 
             onClick={scrollNext}
-            className="p-3  rounded-full hover:bg-[var(--color-30)] text-[var(--color-70)] transition-colors md:block"
+            className="absolute right-2 z-20 md:static p-3 rounded-full bg-[rgba(0,0,0,0.3)] md:bg-transparent hover:bg-[var(--color-30)] text-white md:text-[var(--color-70)] transition-colors block"
             aria-label="Next slide"
           >
             <ArrowRightIcon />
