@@ -60,7 +60,7 @@ export default function HeroSection() {
   const bgOpacityDT = useTransform(scrollYProgress, [0.05, 0.35, 0.6, 0.8], [0, 1, 1, 0]);
   const w10OpacityDT = useTransform(scrollYProgress, [0.4, 0.6], [1, 0]);
   const narrativeTextOpacityDT = useTransform(scrollYProgress, [0.7, 0.85], [0, 1]);
-  const l10YDT = useTransform(scrollYProgress, [0.6, 0.85], ["20%", "-20%"]);
+  const l10YDT = useTransform(scrollYProgress, [0.6, 0.85], ["20%", "-50%"]);
 
   // MOBILE TRANSFORMS
   const introTextOpacityMB = useTransform(scrollYProgress, [0.1, 0.25], [1, 0]);
@@ -204,7 +204,7 @@ export default function HeroSection() {
       {/* Scroll Indicator */}
       <motion.div
         style={{ opacity: scrollOpacity }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none [@media(max-height:600px)]:hidden"
       >
         <span className="text-sm uppercase tracking-[0.2em] text-[var(--color-70)] font-semibold">
           SCROLL
