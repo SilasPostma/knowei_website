@@ -224,7 +224,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
         </button>
 
         <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar flex flex-col h-full no-scrollbar">
-          <h2 className="text-lg md:text-2xl font-bold text-[var(--color-70)] uppercase mb-2 pr-10">{slide.title}</h2>
+          <h2 className="text-lg md:text-2xl font-bold text-[var(--color-70)] uppercase mb-2 md:mb-4 pr-10">{slide.title}</h2>
           
           <div>
             <p className="text-sm md:text-lg text-[var(--color-90)] font-medium">Prijs: {slide.price}</p>
@@ -237,7 +237,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
           </div>
 
           <div className="mb-4 md:mb-8">
-            <span className="block text-sm md:text-base font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
+            <span className="block text-md md:text-lg font-bold text-[var(--color-90)] uppercase mb-2">Inhoud</span>
             <ul className="list-disc text-[var(--color-90)] ml-4 md:ml-6 text-sm md:text-base space-y-4">
               {slide.content.map((item, index) => {
                 const colonIndex = item.indexOf(':');
@@ -319,8 +319,6 @@ const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) =>
         
         {/* Button */}
         <div className="flex justify-center mt-auto">
-          {/* Prevent opening popup when directly clicking buy, or let it happen? 
-              Assuming user intends to navigate. */}
           <div onClick={(e) => e.stopPropagation()}>
             <BestellenButton/>
           </div>
