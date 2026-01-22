@@ -26,6 +26,8 @@ export default function AboutSection() {
             <p className="mb-3">
               Ik zocht altijd hoe het anders kon. Vaak liep ik vast of verloor ik
               energie, geduwd in het keurslijf van ‘zoals het hoort’(No Way!).
+            </p>
+            <p className="mb-3">
               Tot nieuwsgierigheid me liet ontdekken wat wél werkt. Niet door
               oplossingen te geven, maar door mensen zelf te laten ervaren en
               bouwen.
