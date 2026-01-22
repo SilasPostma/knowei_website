@@ -66,7 +66,7 @@ export default function HeroSection() {
   const bgOpacityMB = useTransform(scrollYProgress, [0.1, 0.35, 0.5, 0.65], [0, 1, 1, 0]);
   const w10OpacityMB = useTransform(scrollYProgress, [0.45, 0.6], [1, 0]);
   const narrativeTextOpacityMB = useTransform(scrollYProgress, [0.7, 1.0], [0, 1]);
-  const l10YMB = useTransform(scrollYProgress, [0.4, 0.7], ["0%", "-160%"]);
+  const l10YMB = useTransform(scrollYProgress, [0.4, 1.0], ["0%", "-160%"]);
 
   // Logic Selectors
   const introTextOpacity = isMobile ? introTextOpacityMB : introTextOpacityDT;
