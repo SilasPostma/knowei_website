@@ -314,8 +314,8 @@ const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) =>
 
       {/* Text Section */}
       <div className="p-6 flex flex-col grow">
-        <h3 className="text-lg font-bold mb-2 line-clamp-1 min-h-[1.5rem] text-[var(--color-70)]">{slide.title}</h3>
-        <p className="text-sm mb-6 text-[var(--color-70)]">{slide.desc}</p>
+        <h3 className="sm:text-md xl:text-lg font-bold mb-2 line-clamp-1 min-h-[1.5rem] text-[var(--color-70)]">{slide.title}</h3>
+        <p className="text-sm xl:text-base mb-6 text-[var(--color-70)]">{slide.desc}</p>
         
         {/* Button */}
         <div className="flex justify-center mt-auto">
