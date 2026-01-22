@@ -33,7 +33,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const threshold = typeof window !== 'undefined' ? window.innerHeight * 2.25 : 2000;
+    let threshold = 2000;
+    
+    if (typeof window !== 'undefined') {
+      const toolboxenElement = document.getElementById('toolboxen');
+      if (toolboxenElement) {
+        threshold = toolboxenElement.offsetTop - window.innerHeight + 100;
+      } else {
+        threshold = window.innerHeight * 2.25;
+      }
+    }
+
     if (latest > threshold && !isVisible) {
       setIsVisible(true);
     } else if (latest <= threshold && isVisible) {

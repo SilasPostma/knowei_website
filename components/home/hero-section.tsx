@@ -38,8 +38,6 @@ export default function HeroSection() {
         const textHeight = narrativeRef.current.offsetHeight;
         const vh = window.innerHeight;
         
-        // Logic: 2 screens of scroll for intro + the actual height of the text content
-        // Adding a buffer (e.g., 400px) ensures the text doesn't hit the bottom of the section immediately
         const totalHeight = (vh * 2) + textHeight + 400;
         setDynamicHeight(`${totalHeight}px`);
       }
@@ -99,7 +97,7 @@ export default function HeroSection() {
         <div className={`relative flex flex-col items-center justify-center w-full px-6 md:px-16`}>
           
           {/* Logos Container */}
-          <div className={`flex w-full items-center justify-between ${isMobile ? "relative flex-col gap-6 mb-8 z-40" : "absolute top-[40%] -translate-y-1/2 flex-row gap-8 z-40 px-8 max-w-7xl mx-auto left-0 right-0"}`}>
+          <div className={`flex w-full items-center justify-between ${isMobile ? "relative flex-col gap-6 mb-8" : "absolute top-[40%] -translate-y-1/2 flex-row gap-8 px-8 max-w-7xl mx-auto left-0 right-0"}`}>
             <motion.div
               style={{ opacity: w10Opacity }}
               className={`flex-1 flex ${isMobile ? "justify-center order-2" : "justify-start lg:pl-12" } z-20`}
@@ -136,7 +134,7 @@ export default function HeroSection() {
             className={`text-[var(--color-90)] max-w-3xl space-y-6 px-8 z-10 ${
               isMobile 
                 ? "absolute top-1/2 -translate-y-1/2 text-left" 
-                : "relative mt-12 text-left md:pr-20"
+                : "relative mt-12 text-left md:pr-20 mb-4"
             }`}
           >
           {isMobile ? (
