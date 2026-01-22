@@ -156,7 +156,7 @@ export default function HeroSection() {
             </>
           ) : (
             <>
-              <p className="text-base md:text-lg xl:text-xl leading-relaxed ">
+              <p className="text-base md:text-md 2xl:text-lg leading-relaxed ">
                 <span className="bg-[var(--color-30)] p-1">
                   Je loopt vast. Op school, thuis of op je werk gaat iets niet
                 zoals je wilt. 
@@ -166,10 +166,10 @@ export default function HeroSection() {
                 antwoorden helpen niet genoeg. Het blijft lastig en je energie
                 stroomt weg.
               </p>
-              <p className="text-base md:text-lg xl:text-xl leading-relaxed font-semibold">
+              <p className="text-base md:text-md 2xl:text-lg leading-relaxed font-semibold">
                 Maar het moet toch kunnen!
               </p>
-              <p className="text-base md:text-lg xl:text-xl leading-relaxed">
+              <p className="text-base md:text-md 2xl:text-lg leading-relaxed">
                 <span className="bg-[var(--color-30)] p-1">
                   Je blijft nieuwsgierig zoeken hoe het wél kan.
                 </span>{" "}
@@ -179,7 +179,7 @@ export default function HeroSection() {
                   nieuwsgierigheid die jou laat bouwen met what er wél is.
                 </span>
               </p>
-              <p className="text-base md:text-lg xl:text-xl leading-relaxed">
+              <p className="text-base md:text-md 2xl:text-lg leading-relaxed">
                 Geen adviesbureau, geen brainstorm, geen groepsuitje. Wel een
                 uitnodiging om zelf kennis te maken—DIY style. Zoals IKEA voor
                 know‑how:{" "}
@@ -187,12 +187,12 @@ export default function HeroSection() {
                   bouwt, wij geven de onderdelen en het zetje.
                 </span>
               </p>
-              <p className="text-base md:text-lg xl:text-xl leading-relaxed">
+              <p className="text-base md:text-md 2xl:text-lg leading-relaxed">
                 Dan merk je: what vastzat komt los, waar energie lekte stroomt
                 weer, en je droom komt dichterbij. Je ontdekt dat je niet gek
                 bent, maar slim op weg.
               </p>
-              <p className="text-base md:text-lg xl:text-xl font-bold mt-4 bg-[var(--color-30)] p-1">
+              <p className="text-base md:text-md 2xl:text-lg font-bold mt-4 bg-[var(--color-30)] p-1">
                 Jouw ‘anders’? Jij vindt het. Niet omdat wij het weten, maar
                 omdat jij het bouwt.
               </p>

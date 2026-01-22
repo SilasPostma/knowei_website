@@ -33,7 +33,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const threshold = typeof window !== 'undefined' ? window.innerHeight * 1.4 : 2000;
+    const threshold = typeof window !== 'undefined' ? window.innerHeight * 2.25 : 2000;
     if (latest > threshold && !isVisible) {
       setIsVisible(true);
     } else if (latest <= threshold && isVisible) {

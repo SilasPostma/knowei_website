@@ -20,7 +20,7 @@ export default function AboutSection() {
         </div>
 
         {/* Text Content */}
-        <div className="flex-1 p-4 md:p-6 md:pt-15 lg:p-8 lg:pt-20 text-[var(--color-90)] text-sm md:text-base lg:text-lg">
+        <div className="flex-1 p-4 md:p-6 md:pt-15 lg:p-8 lg:pt-20 text-[var(--color-90)] text-base md:text-base lg:text-lg">
           {/* Mobile Text (Visible only on mobile) */}
           <div className="block md:hidden">
             <p className="mb-3">
