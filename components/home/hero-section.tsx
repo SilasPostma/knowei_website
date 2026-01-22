@@ -38,7 +38,8 @@ export default function HeroSection() {
         const textHeight = narrativeRef.current.offsetHeight;
         const vh = window.innerHeight;
         
-        const totalHeight = (vh * 2) + textHeight + 400;
+        const scrollFactor = mobile ? 1.2 : 2; 
+        const totalHeight = (vh * scrollFactor) + textHeight + 400;
         setDynamicHeight(`${totalHeight}px`);
       }
     };
@@ -61,10 +62,10 @@ export default function HeroSection() {
   const l10YDT = useTransform(scrollYProgress, [0.6, 0.85], ["20%", "-50%"]);
 
   // MOBILE TRANSFORMS
-  const introTextOpacityMB = useTransform(scrollYProgress, [0.1, 0.25], [1, 0]);
-  const bgOpacityMB = useTransform(scrollYProgress, [0.2, 0.35, 0.5, 0.65], [0, 1, 1, 0]);
+  const introTextOpacityMB = useTransform(scrollYProgress, [0.05, 0.25], [1, 0]);
+  const bgOpacityMB = useTransform(scrollYProgress, [0.1, 0.35, 0.5, 0.65], [0, 1, 1, 0]);
   const w10OpacityMB = useTransform(scrollYProgress, [0.45, 0.6], [1, 0]);
-  const narrativeTextOpacityMB = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
+  const narrativeTextOpacityMB = useTransform(scrollYProgress, [0.7, 1.0], [0, 1]);
   const l10YMB = useTransform(scrollYProgress, [0.4, 0.7], ["0%", "-160%"]);
 
   // Logic Selectors
