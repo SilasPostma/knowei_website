@@ -129,12 +129,12 @@ export default function HeroSection() {
 
           {/* Frame 3: Narrative Text */}
           <motion.div
-            ref={narrativeRef} // Attach ref here to measure height
+            ref={narrativeRef}
             style={{ opacity: narrativeTextOpacity }}
             className={`text-[var(--color-90)] max-w-3xl space-y-6 px-8 z-10 ${
               isMobile 
                 ? "absolute top-1/2 -translate-y-1/2 text-left" 
-                : "relative mt-12 text-left md:pr-20" // Changed from absolute to relative to allow natural height expansion
+                : "relative mt-12 text-left md:pr-20"
             }`}
           >
           {isMobile ? (

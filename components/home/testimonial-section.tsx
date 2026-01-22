@@ -25,11 +25,11 @@ const ArrowRightIcon = () => (
 
 const vids = [
   { id: 1, video: '9Ce3vN64AhQ', name: 'Henk Janssen' },
-  { id: 2, video: 'mW9rH9eG8LA', name: 'Johny van der Weesp' }, // AANPASSEN
-  { id: 3, video: 'KJ3F-XlnPo8', name: 'Hachmid Youra' }, // AANPASSEN
-  { id: 4, video: 'G6f3eFd8gHs', name: 'Janny de Vries' }, // AANPASSEN
-  { id: 5, video: 'A5VN9Kp8Lvs', name: 'Johny van der Weesp' }, // AANPASSEN
-  { id: 6, video: 'p65-3IFFk40', name: 'Hachmid Youra' }, // AANPASSEN
+  // { id: 2, video: 'mW9rH9eG8LA', name: 'Johny van der Weesp' }, // AANPASSEN
+  // { id: 3, video: 'KJ3F-XlnPo8', name: 'Hachmid Youra' }, // AANPASSEN
+  // { id: 4, video: 'G6f3eFd8gHs', name: 'Janny de Vries' }, // AANPASSEN
+  // { id: 5, video: 'A5VN9Kp8Lvs', name: 'Johny van der Weesp' }, // AANPASSEN
+  // { id: 6, video: 'p65-3IFFk40', name: 'Hachmid Youra' }, // AANPASSEN
 ]
 
 const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {

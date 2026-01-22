@@ -45,20 +45,20 @@ interface Slide {
 
 // Updated slides data
 const slides: Slide[] = [
-  { 
-    id: 1, 
-    video: 'z83nU-3uCe8', // NEED TO UPDATE VIDEO
-    title: 'CLOSING THE STRATEGY EXECUTION GAP', 
-    desc: 'Deze box zet je aan om de kloof tussen zeggen en doen te dichten, zodat ‘ja zeggen’ ook echt ‘ja doen’ wordt.',
-    price: '€ 1.900',
-    format: 'L',
-    details: '2 - 12 deelnemers - 8 onderwerpen - specifiek',
-    content: [
-      'Beschrijving: Succesvolle organisaties slaan de brug tussen strategie en executie.  Elke organisatie heeft een formele kant — strategie, structuur en processen — en een informele kant — cultuur, gedrag, talenten, gewoonten en samenwerking.  Organisaties die deze twee kanten verbinden, maken niet alleen plannen, maar voeren ze ook echt uit.',
-      'Nu: Toch ontstaat in veel organisaties een kloof tussen strategie en uitvoering. Onderzoek laat zien dat leiders vooral letten op de formele, tastbare kant: structuur, processen en regels. De informele kant — de manier waarop mensen met elkaar samenwerken — krijgt veel minder aandacht.  Juist daar zitten de grootste barrières. Niet in het bedenken van plannen, maar in het waarmaken ervan. We zeggen vaak “ja”, maar doen “nee”. We bouwen nieuwe structuren, maar de echte samenwerking blijft uit. De menselijke kant is complex: talenten, gewoonten, gedrag en relaties lopen door elkaar heen.',
-      'Anders: Met deze toolbox krijg je als MT inzicht in alle knoppen die invloed hebben op jouw organisatie.  We creëren samen een helder beeld van het hele ecosysteem.  Daardoor zie je de interne en externe dynamiek, herken je de relaties tussen strategie, structuur, processen, way-of-working, cultuur, gedrag, talenten en interactie.  Met deze inzichten kun je gericht aan de juiste knoppen draaien om de strategie ook echt succesvol uit te voeren.',
-    ]
-  },
+  // { 
+  //   id: 1, 
+  //   video: 'z83nU-3uCe8', // NEED TO UPDATE VIDEO
+  //   title: 'CLOSING THE STRATEGY EXECUTION GAP', 
+  //   desc: 'Deze box zet je aan om de kloof tussen zeggen en doen te dichten, zodat ‘ja zeggen’ ook echt ‘ja doen’ wordt.',
+  //   price: '€ 1.900',
+  //   format: 'L',
+  //   details: '2 - 12 deelnemers - 8 onderwerpen - specifiek',
+  //   content: [
+  //     'Beschrijving: Succesvolle organisaties slaan de brug tussen strategie en executie.  Elke organisatie heeft een formele kant — strategie, structuur en processen — en een informele kant — cultuur, gedrag, talenten, gewoonten en samenwerking.  Organisaties die deze twee kanten verbinden, maken niet alleen plannen, maar voeren ze ook echt uit.',
+  //     'Nu: Toch ontstaat in veel organisaties een kloof tussen strategie en uitvoering. Onderzoek laat zien dat leiders vooral letten op de formele, tastbare kant: structuur, processen en regels. De informele kant — de manier waarop mensen met elkaar samenwerken — krijgt veel minder aandacht.  Juist daar zitten de grootste barrières. Niet in het bedenken van plannen, maar in het waarmaken ervan. We zeggen vaak “ja”, maar doen “nee”. We bouwen nieuwe structuren, maar de echte samenwerking blijft uit. De menselijke kant is complex: talenten, gewoonten, gedrag en relaties lopen door elkaar heen.',
+  //     'Anders: Met deze toolbox krijg je als MT inzicht in alle knoppen die invloed hebben op jouw organisatie.  We creëren samen een helder beeld van het hele ecosysteem.  Daardoor zie je de interne en externe dynamiek, herken je de relaties tussen strategie, structuur, processen, way-of-working, cultuur, gedrag, talenten en interactie.  Met deze inzichten kun je gericht aan de juiste knoppen draaien om de strategie ook echt succesvol uit te voeren.',
+  //   ]
+  // },
   { 
     id: 2, 
     video: '7Tg44FATRPA',
@@ -87,34 +87,34 @@ const slides: Slide[] = [
       'Het anders: Deze toolbox helpt om de chemie terug te brengen. Door helder te maken wie waarvan is, scherp te krijgen wat we samen willen bereiken en elkaar actief te helpen, ontstaat weer beweging en energie. Zo wordt het MT-overleg opnieuw een plek waar ideeën botsen, energie vrijkomt en gezamenlijke vooruitgang ontstaat.',
     ]
   },
-  { 
-    id: 4, 
-    video: 'BOG_CbEDhag', // NEED TO UPDATE VIDEO
-    title: 'DNA VAN TEAMS', 
-    desc: 'Deze box helpt je om van langs elkaar werken naar echt team‑DNA te gaan, zodat samenwerking veilig, lerend en effectief wordt.',
-    price: '€ 3.900',
-    format: 'XL',
-    details: '4-16 deelnemers - 1 onderwerp - generiek',
-    content: [
-      'Beschrijving: Teaming betekent dat je samen een doel bereikt én samen impact maakt. Het is zowel inhoudelijk samenwerken als een proces van geven en nemen. In een team haal je soms het beste in elkaar naar boven, en soms ook het minder mooie. Dat hoort erbij. Een sterk team leert hiermee omgaan en blijft samen in beweging.',
-      'Het nu: Vaak staat de veranderbereidheid en de samenwerking in het MT onder druk. Target druk, tegenvallende resultaten, aandeelhouders etc. Deze druk uit zich in langs elkaar werken, risicomijdend gedrag: bij lastige besluiten kijkt iedereen naar de CEO met de houding “besluit jij maar”. Dit heeft gevolgen: Minder werkplezier, Een onveilige en weinig lerende omgeving, het MT werkt niet op zijn best.',
-      'Het anders: In deze toolbox leer je als team werken aan de bovenstroom én de onderstroom. In de bovenstroom zorgen we voor duidelijke kaders en transparantie, gunnen en begrenzen we elkaar, koppelen we taken aan talent en sturen we op prestaties terwijl we blijven ontdekken wat beter kan. In de onderstroom vergroten we ons zelfinzicht, creëren we veiligheid door naar elkaars perspectief te kijken, herkennen we groepspatronen en oefenen we nieuw, helpend gedrag dat we stap voor stap inslijpen. Zo groei je naar een team dat duidelijk, veilig, lerend en effectief samenwerkt — een team met een sterk DNA.',
-    ]
-  },
-  { 
-    id: 5, 
-    video: 'D0wAVPZVJ2A', // NEED TO UPDATE VIDEO
-    title: 'VEILIG TEAM', 
-    desc: 'Deze box helpt je om van roddel en langs elkaar heen werken naar openheid, veiligheid en vertrouwen te gaan, zodat jullie op elkaar kunnen leunen en samen sterk staan.',
-    price: '€ 1.900',
-    format: 'L',
-    details: '4-16 deelnemers - 1 onderwerp - specifiek',
-    content: [
-      'Beschrijving:  Een veilig team begint met vertrouwen. Teamleden voelen ruimte om conflicten op te lossen en moeilijke onderwerpen te bespreken. We kunnen gebeurtenissen uit het verleden een plek geven en samen bouwen aan een gezamenlijke toekomst.',
-      'Nu:  Op dit moment vinden teamleden veel van elkaar. Er wordt achter elkaars rug om gepraat en iedereen werkt op zijn eigen manier. Verantwoordelijkheid nemen voor het eigen werk én voor het team staat op pauze. Dat kost energie en werkplezier. De manager moet het vaak oplossen, omdat het team er samen niet meer uitkomt.',
-      'Anders:  Met deze toolbox leer je hoe je jouw team veilig en sterk maakt. Je werkt doelgericht samen, praat open en functioneel met elkaar en weet wat iedereen nodig heeft om goed te kunnen werken. We zeggen alleen “ja” als we het ook echt doen, en als er iets speelt, spreken we het meteen uit. Zo ontstaat ruimte om jezelf te zijn, erbij te horen en op elkaar te kunnen vertrouwen — ook als het even tegenzit.',
-    ]
-  },
+  // { 
+  //   id: 4, 
+  //   video: 'BOG_CbEDhag', // NEED TO UPDATE VIDEO
+  //   title: 'DNA VAN TEAMS', 
+  //   desc: 'Deze box helpt je om van langs elkaar werken naar echt team‑DNA te gaan, zodat samenwerking veilig, lerend en effectief wordt.',
+  //   price: '€ 3.900',
+  //   format: 'XL',
+  //   details: '4-16 deelnemers - 1 onderwerp - generiek',
+  //   content: [
+  //     'Beschrijving: Teaming betekent dat je samen een doel bereikt én samen impact maakt. Het is zowel inhoudelijk samenwerken als een proces van geven en nemen. In een team haal je soms het beste in elkaar naar boven, en soms ook het minder mooie. Dat hoort erbij. Een sterk team leert hiermee omgaan en blijft samen in beweging.',
+  //     'Het nu: Vaak staat de veranderbereidheid en de samenwerking in het MT onder druk. Target druk, tegenvallende resultaten, aandeelhouders etc. Deze druk uit zich in langs elkaar werken, risicomijdend gedrag: bij lastige besluiten kijkt iedereen naar de CEO met de houding “besluit jij maar”. Dit heeft gevolgen: Minder werkplezier, Een onveilige en weinig lerende omgeving, het MT werkt niet op zijn best.',
+  //     'Het anders: In deze toolbox leer je als team werken aan de bovenstroom én de onderstroom. In de bovenstroom zorgen we voor duidelijke kaders en transparantie, gunnen en begrenzen we elkaar, koppelen we taken aan talent en sturen we op prestaties terwijl we blijven ontdekken wat beter kan. In de onderstroom vergroten we ons zelfinzicht, creëren we veiligheid door naar elkaars perspectief te kijken, herkennen we groepspatronen en oefenen we nieuw, helpend gedrag dat we stap voor stap inslijpen. Zo groei je naar een team dat duidelijk, veilig, lerend en effectief samenwerkt — een team met een sterk DNA.',
+  //   ]
+  // },
+  // { 
+  //   id: 5, 
+  //   video: 'D0wAVPZVJ2A', // NEED TO UPDATE VIDEO
+  //   title: 'VEILIG TEAM', 
+  //   desc: 'Deze box helpt je om van roddel en langs elkaar heen werken naar openheid, veiligheid en vertrouwen te gaan, zodat jullie op elkaar kunnen leunen en samen sterk staan.',
+  //   price: '€ 1.900',
+  //   format: 'L',
+  //   details: '4-16 deelnemers - 1 onderwerp - specifiek',
+  //   content: [
+  //     'Beschrijving:  Een veilig team begint met vertrouwen. Teamleden voelen ruimte om conflicten op te lossen en moeilijke onderwerpen te bespreken. We kunnen gebeurtenissen uit het verleden een plek geven en samen bouwen aan een gezamenlijke toekomst.',
+  //     'Nu:  Op dit moment vinden teamleden veel van elkaar. Er wordt achter elkaars rug om gepraat en iedereen werkt op zijn eigen manier. Verantwoordelijkheid nemen voor het eigen werk én voor het team staat op pauze. Dat kost energie en werkplezier. De manager moet het vaak oplossen, omdat het team er samen niet meer uitkomt.',
+  //     'Anders:  Met deze toolbox leer je hoe je jouw team veilig en sterk maakt. Je werkt doelgericht samen, praat open en functioneel met elkaar en weet wat iedereen nodig heeft om goed te kunnen werken. We zeggen alleen “ja” als we het ook echt doen, en als er iets speelt, spreken we het meteen uit. Zo ontstaat ruimte om jezelf te zijn, erbij te horen en op elkaar te kunnen vertrouwen — ook als het even tegenzit.',
+  //   ]
+  // },
   { 
     id: 6, 
     video: 'GlcdzoO09bI', 
@@ -157,20 +157,20 @@ const slides: Slide[] = [
       'Anders: Dit pakket is anders. Het is met zorg samengesteld om alles wat de feestdagen soms zwaar maakt te verlichten en samen de mooiste periode mogelijk te maken.  Vanaf nu staat jullie nieuwsgierigheid centraal. Je vindt cadeaus die je kunnen verwonderen, je iets nieuws laten ontdekken en je helpen om te bouwen aan wat voor jou werkt.  Alle cadeaus zijn gemaakt om te delen met je dierbaren — oud, jong, mens en dier — zodat jullie samen kunnen vragen, helpen, spelen en bouwen. Er is altijd een vonkje nodig om tot vuurwerk te komen. Knallen maar.',
     ]
   },
-  { 
-    id: 9, 
-    video: 'E-B10EVjw0M', // NEED TO UPDATE VIDEO
-    title: 'CURIOUSITY CAMPUS', 
-    desc: 'Deze kast ondersteunt je om van reactief oplossen met consultants naar proactief bouwen aan eigen oplossingen te gaan, met meer grip, meer kennis en minder kosten.',
-    price: '€ 15.990',
-    format: 'XXL',
-    details: '20+ deelnemers - 12 onderwerpen - generiek & specifiek',
-    content: [
-      'Beschrijving: Iedere persoon, elk team en elke organisatie loopt wel eens vast. Er gebeuren onverwachte dingen en soms heb je niet de kennis of kunde in huis om het op te lossen. Dan heb je iemand nodig die je verder kan helpen.',
-      'Nu: Maar er zijn zóveel coaches en consultants dat je door de bomen het bos niet meer ziet. Ze bieden allemaal iets anders aan, ze zijn vaak twee tot drie keer zo duur als je eigen personeel, en de oplossingen die ze geven helpen niet genoeg. Het blijft lastig, en je merkt dat je energie langzaam wegstroomt.',
-      'Anders: Daarom is er nu een in‑house Kennis Kast: een Knowledge Cupboard met 12 werkvormen die de 8 meest voorkomende én 4 meest specifieke uitdagingen in jouw organisatie kunnen ondersteunen. Geen duur adviesbureau, geen brainstormmarathon, geen groepsuitje. Wel een uitnodiging om zelf aan de slag te gaan — DIY‑style. Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje.',
-    ]
-  },
+  // { 
+  //   id: 9, 
+  //   video: 'E-B10EVjw0M', // NEED TO UPDATE VIDEO
+  //   title: 'CURIOUSITY CAMPUS', 
+  //   desc: 'Deze kast ondersteunt je om van reactief oplossen met consultants naar proactief bouwen aan eigen oplossingen te gaan, met meer grip, meer kennis en minder kosten.',
+  //   price: '€ 15.990',
+  //   format: 'XXL',
+  //   details: '20+ deelnemers - 12 onderwerpen - generiek & specifiek',
+  //   content: [
+  //     'Beschrijving: Iedere persoon, elk team en elke organisatie loopt wel eens vast. Er gebeuren onverwachte dingen en soms heb je niet de kennis of kunde in huis om het op te lossen. Dan heb je iemand nodig die je verder kan helpen.',
+  //     'Nu: Maar er zijn zóveel coaches en consultants dat je door de bomen het bos niet meer ziet. Ze bieden allemaal iets anders aan, ze zijn vaak twee tot drie keer zo duur als je eigen personeel, en de oplossingen die ze geven helpen niet genoeg. Het blijft lastig, en je merkt dat je energie langzaam wegstroomt.',
+  //     'Anders: Daarom is er nu een in‑house Kennis Kast: een Knowledge Cupboard met 12 werkvormen die de 8 meest voorkomende én 4 meest specifieke uitdagingen in jouw organisatie kunnen ondersteunen. Geen duur adviesbureau, geen brainstormmarathon, geen groepsuitje. Wel een uitnodiging om zelf aan de slag te gaan — DIY‑style. Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje.',
+  //   ]
+  // },
   { 
     id: 10, 
     video: 'I-I12EajRjE', 
@@ -185,20 +185,20 @@ const slides: Slide[] = [
       'Het anders:  Met deze toolbox krijg je handvatten om in elkaars hoofd, hart en lijf te kijken, waardoor we dieper inzicht krijgen in elkaars denken en doen — en door even in elkaars schoenen te staan kan je blik op de werkelijkheid radicaal verschuiven.',
     ]
   },
-  { 
-    id: 11, 
-    video: 'lCMntOPnkL4', // NEED TO UPDATE VIDEO
-    title: 'NOWAY SURPRISE', 
-    desc: 'Deze box helpt je om van vastlopen, piekeren en zorgen maken naar zelf inzicht krijgen, ermee aan de slag gaan en stap voor stap je eigen oplossingen te bouwen — zodat wat vastzat weer loskomt en jij vooruit beweegt.',
-    price: '€ 149',
-    format: 'S',
-    details: '1 deelnemer - 4 onderwerpen - specifiek',
-    content: [
-      'Beschrijving: Iedereen maakt het wel eens mee. Er gebeuren onverwachte dingen en soms heb je niet de kennis of kunde in huis om het op te lossen. Dan heb je iemand nodig die je verder kan helpen.',
-      'Nu:  Maar wie vraag je dan. En durf je dat wel te delen. Wat als iemand er iets van vindt. Vaak laten we het daarom maar zitten, tot we er echt niet meer omheen kunnen. Zo kunnen werkproblemen, hobby’s, vriendschappen of relaties langzaam bij je weglopen.',
-      'Anders: Met een Knowei‑abonnement krijg je ieder kwartaal een verrassingspakket dat past bij jouw situatie.  Geen leraar, dokter of coach, maar een uitnodiging om zelf aan de slag te gaan — DIY‑style.  Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje. Dan merk je: wat vastzat komt los, waar energie lekte stroomt weer, en je droom komt dichterbij.  Je ontdekt dat je niet gek bent, maar slim op weg.',
-    ]
-  },
+  // { 
+  //   id: 11, 
+  //   video: 'lCMntOPnkL4', // NEED TO UPDATE VIDEO
+  //   title: 'NOWAY SURPRISE', 
+  //   desc: 'Deze box helpt je om van vastlopen, piekeren en zorgen maken naar zelf inzicht krijgen, ermee aan de slag gaan en stap voor stap je eigen oplossingen te bouwen — zodat wat vastzat weer loskomt en jij vooruit beweegt.',
+  //   price: '€ 149',
+  //   format: 'S',
+  //   details: '1 deelnemer - 4 onderwerpen - specifiek',
+  //   content: [
+  //     'Beschrijving: Iedereen maakt het wel eens mee. Er gebeuren onverwachte dingen en soms heb je niet de kennis of kunde in huis om het op te lossen. Dan heb je iemand nodig die je verder kan helpen.',
+  //     'Nu:  Maar wie vraag je dan. En durf je dat wel te delen. Wat als iemand er iets van vindt. Vaak laten we het daarom maar zitten, tot we er echt niet meer omheen kunnen. Zo kunnen werkproblemen, hobby’s, vriendschappen of relaties langzaam bij je weglopen.',
+  //     'Anders: Met een Knowei‑abonnement krijg je ieder kwartaal een verrassingspakket dat past bij jouw situatie.  Geen leraar, dokter of coach, maar een uitnodiging om zelf aan de slag te gaan — DIY‑style.  Zoals IKEA voor know‑how: jij bouwt, wij geven de onderdelen en het zetje. Dan merk je: wat vastzat komt los, waar energie lekte stroomt weer, en je droom komt dichterbij.  Je ontdekt dat je niet gek bent, maar slim op weg.',
+  //   ]
+  // },
 ]
 
 const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void }) => {
@@ -285,7 +285,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
             </div>
 
             <div>
-              <p className="text-sm md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="/#toolboxen" className="underline cursor-pointer" onClick={onClose}>toolboxen</a> of laten we samen een <a href="/#toolbox_op_maat" className="underline cursor-pointer" onClick={onClose}>toolbox op maat</a> ontwerpen.</p>
+              <p className="text-sm md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="#toolboxen" className="underline cursor-pointer" onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => { document.getElementById('toolboxen')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>toolboxen</a> of laten we samen een <a href="#toolbox_op_maat" className="underline cursor-pointer" onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => { document.getElementById('toolbox_op_maat')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>toolbox op maat</a> ontwerpen.</p>
             </div>
           </div>
         </div>
