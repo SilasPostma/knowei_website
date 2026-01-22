@@ -237,7 +237,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
           </div>
 
           <div className="mb-4 md:mb-8">
-            <span className="block text-sm md:text-md font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
+            <span className="block text-sm md:text-base font-bold text-[var(--color-70)] uppercase mb-2">Inhoud</span>
             <ul className="list-disc text-[var(--color-90)] ml-4 md:ml-6 text-sm md:text-base space-y-4">
               {slide.content.map((item, index) => {
                 const colonIndex = item.indexOf(':');
@@ -271,7 +271,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
           
           <div className="flex flex-col mt-auto">
             <div>
-              <p className="text-sm md:text-md text-[var(--color-90)] font-medium mb-1">Is dit precies wat je nodig hebt?</p>
+              <p className="text-sm md:text-base text-[var(--color-90)] font-medium mb-1">Is dit precies wat je nodig hebt?</p>
             </div>
 
             <div className="flex items-end justify-between my-1 relative">
@@ -285,7 +285,7 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
             </div>
 
             <div>
-              <p className="text-sm md:text-md mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="#toolboxen" className="underline cursor-pointer" onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => { document.getElementById('toolboxen')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>toolboxen</a> of laten we samen een <a href="#toolbox_op_maat" className="underline cursor-pointer" onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => { document.getElementById('toolbox_op_maat')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>toolbox op maat</a> ontwerpen.</p>
+              <p className="text-sm md:text-base mt-1 text-[var(--color-90)] font-medium">Of kijk verder naar bestaande <a href="#toolboxen" className="underline cursor-pointer" onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => { document.getElementById('toolboxen')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>toolboxen</a> of laten we samen een <a href="#toolbox_op_maat" className="underline cursor-pointer" onClick={(e) => { e.preventDefault(); onClose(); setTimeout(() => { document.getElementById('toolbox_op_maat')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>toolbox op maat</a> ontwerpen.</p>
             </div>
           </div>
         </div>
@@ -347,13 +347,16 @@ export default function VideoCarousel() {
       <div id="toolboxen" className="w-full bg-[var(--color-10)] flex flex-col items-center min-h-screen pb-12 md:pb-20 pt-8 md:pt-16">
         {/* Top half area - centers text between top and carousel */}
         <div className="flex-1 flex flex-col justify-center overflow-hidden w-full">
-          <div className="w-full px-4">
-              <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-2">
+          <div className="w-full px-4 text-[var(--color-90)]">
+              <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
                   Ontdek de toolboxen van anderen.
               </h2>
-              <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
-                <p className="text-sm md:text-lg leading-relaxed text-center text-[var(--color-90)] pb-4">
-                  In deze shop vind je toolboxen van mensen zoals jij. Blader, kies en ontdek welke toolboxen voor anderen werken en misschien ook voor jou.
+              <div className="text-center max-w-3xl mx-auto space-y-2">
+                <p className="text-sm md:text-lg leading-relaxed text-center">
+                  In deze shop vind je toolboxen van mensen zoals jij.
+                </p>
+                <p className="text-sm md:text-lg leading-relaxed text-center">
+                  Blader, kies en ontdek welke toolboxen voor anderen werken en misschien ook voor jou.
                 </p>
               </div>
           </div>

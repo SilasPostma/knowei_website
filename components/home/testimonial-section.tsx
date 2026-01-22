@@ -49,7 +49,7 @@ const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
 
       {/* Text Section */}
       <div className="pt-2 pr-4 flex flex-col grow items-end">
-        <h3 className="text-l font-semibold mb-2 truncate text-[var(--color-90)]">{slide.name}</h3>
+        <h3 className="text-lg font-semibold mb-2 truncate text-[var(--color-90)]">{slide.name}</h3>
       </div>
     </div>
   );
