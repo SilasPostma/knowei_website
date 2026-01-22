@@ -10,8 +10,7 @@ import BgFade from "@/public/bg_fade.jpg";
 
 const ScrollArrowIcon = () => (
   <svg
-    width="24"
-    height="64"
+    className="w-4 h-8 md:w-6 md:h-16"
     viewBox="0 0 24 64"
     fill="none"
     stroke="currentColor"
@@ -97,7 +96,7 @@ export default function HeroSection() {
           ></div>
         </motion.div>
 
-        <div className={`relative flex flex-col items-center justify-center w-full px-6 md:px-16 ${isMobile ? "pt-12" : ""}`}>
+        <div className={`relative flex flex-col items-center justify-center w-full px-6 md:px-16`}>
           
           {/* Logos Container */}
           <div className={`flex w-full items-center justify-between ${isMobile ? "relative flex-col gap-6 mb-8 z-40" : "absolute top-[40%] -translate-y-1/2 flex-row gap-8 z-40 px-8 max-w-7xl mx-auto left-0 right-0"}`}>
@@ -121,11 +120,11 @@ export default function HeroSection() {
             style={{ opacity: introTextOpacity }}
             className={`text-center text-[var(--color-90)] max-w-2xl px-8 z-10 ${isMobile ? "relative mt-4" : "absolute top-[60%]"}`}
           >
-            <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
-              Je voelt dat het anders kan. <br />
-              Je wil geen standaard advies, maar zelf doorbouwen op wat werkt. <br />
-              Jij bouwt, wij geven de onderdelen en het zetje.
-            </p>
+            <div className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
+              <p className="mb-1">Je voelt dat het anders kan.</p>
+              <p className="mb-1">Je wil geen standaard advies, maar zelf doorbouwen op wat werkt.</p>
+              <p>Jij bouwt, wij geven de onderdelen en het zetje.</p>
+            </div>
           </motion.div>
 
           {/* Frame 3: Narrative Text */}
