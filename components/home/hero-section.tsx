@@ -109,7 +109,7 @@ export default function HeroSection() {
 
             <motion.div
               style={{ y: l10Y }}
-              className={`flex-1 flex ${isMobile ? "justify-center order-1" : "justify-end lg:pr-8" } z-20`}
+              className={`flex-1 flex ${isMobile ? "justify-center order-1" : "justify-end lg:pr-8" } -z-20`}
             >
               <Image src={L10} alt="Logo Icon" width={500} height={175} className="w-auto h-20 md:h-32 lg:h-48 max-w-none" />
             </motion.div>
@@ -118,13 +118,15 @@ export default function HeroSection() {
           {/* Frame 1: Intro Text */}
           <motion.div
             style={{ opacity: introTextOpacity }}
-            className={`text-center text-[var(--color-90)] max-w-2xl px-8 z-10 ${isMobile ? "relative mt-4" : "absolute top-[60%]"}`}
+            className={`text-center text-[var(--color-90)] max-w-2xl px-8 z-10  mt-4 ${isMobile ? "relative" : "absolute top-[60%]"}`}
           >
-            <div className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
-              <p className="mb-1">Je voelt dat het anders kan.</p>
-              <p className="mb-1">Je wil geen standaard advies, maar zelf doorbouwen op wat werkt.</p>
-              <p>Jij bouwt, wij geven de onderdelen en het zetje.</p>
-            </div>
+            <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
+              <span className="mb-1">Je voelt dat het anders kan.</span>
+              <br />
+              <span className="mb-1">Je wil geen standaard advies, maar zelf doorbouwen op wat werkt.</span>
+              <br />
+              <span>Jij bouwt, wij geven de onderdelen en het zetje.</span>
+            </p>
           </motion.div>
 
           {/* Frame 3: Narrative Text */}
@@ -147,26 +149,27 @@ export default function HeroSection() {
                 Een uitnodiging om zelf kennis te maken — DIY‑style. Jij
                 bouwt, wij geven de onderdelen en het zetje.
               </p>
-              <p className="text-xl font-bold mt-4 bg-[var(--color-30)] px-1">
+              <p className="text-lg font-bold mt-4 bg-[var(--color-30)] px-1">
                 Jouw ‘anders’ vind jij zelf — niet omdat wij het weten, maar
                 omdat jij het stap voor stap bouwt.
               </p>
             </>
           ) : (
             <>
-              <p className="text-lg md:text-lg lg:text-xl leading-relaxed ">
+              <p className="text-lg md:text-lg xl:text-xl leading-relaxed ">
                 <span className="bg-[var(--color-30)] p-1">
                   Je loopt vast. Op school, thuis of op je werk gaat iets niet
+                zoals je wilt. 
                 </span>{" "}
-                zoals je wilt. Je voelt dat het anders kan, maar je weet niet
+                Je voelt dat het anders kan, maar je weet niet
                 hoe. Je vraagt hulp aan leraren, coaches of consultants. Hun
                 antwoorden helpen niet genoeg. Het blijft lastig en je energie
                 stroomt weg.
               </p>
-              <p className="text-lg md:text-lg lg:text-xl leading-relaxed font-semibold">
+              <p className="text-lg md:text-lg xl:text-xl leading-relaxed font-semibold">
                 Maar het moet toch kunnen!
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg md:text-lg xl:text-xl leading-relaxed">
                 <span className="bg-[var(--color-30)] p-1">
                   Je blijft nieuwsgierig zoeken hoe het wél kan.
                 </span>{" "}
@@ -176,7 +179,7 @@ export default function HeroSection() {
                   nieuwsgierigheid die jou laat bouwen met what er wél is.
                 </span>
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg md:text-lg xl:text-xl leading-relaxed">
                 Geen adviesbureau, geen brainstorm, geen groepsuitje. Wel een
                 uitnodiging om zelf kennis te maken—DIY style. Zoals IKEA voor
                 know‑how:{" "}
@@ -184,12 +187,12 @@ export default function HeroSection() {
                   bouwt, wij geven de onderdelen en het zetje.
                 </span>
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg md:text-lg xl:text-xl leading-relaxed">
                 Dan merk je: what vastzat komt los, waar energie lekte stroomt
                 weer, en je droom komt dichterbij. Je ontdekt dat je niet gek
                 bent, maar slim op weg.
               </p>
-              <p className="text-xl font-bold mt-4 bg-[var(--color-30)] px-1">
+              <p className="text-lg md:text-lg xl:text-xl font-bold mt-4 bg-[var(--color-30)] px-1">
                 Jouw ‘anders’? Jij vindt het. Niet omdat wij het weten, maar
                 omdat jij het bouwt.
               </p>
