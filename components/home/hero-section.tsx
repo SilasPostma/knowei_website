@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useLayoutEffect } from "react";
 import Image from "next/image";
 
 import W10 from "@/public/W_10.png";
@@ -25,13 +25,30 @@ const ScrollArrowIcon = () => (
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const narrativeRef = useRef<HTMLDivElement>(null); // Ref to measure text
   const [isMobile, setIsMobile] = useState(false);
+  const [dynamicHeight, setDynamicHeight] = useState("300vh");
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+  // Handle Mobile Check and Dynamic Height Calculation
+  useLayoutEffect(() => {
+    const calculateHeight = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+
+      if (narrativeRef.current) {
+        const textHeight = narrativeRef.current.offsetHeight;
+        const vh = window.innerHeight;
+        
+        // Logic: 2 screens of scroll for intro + the actual height of the text content
+        // Adding a buffer (e.g., 400px) ensures the text doesn't hit the bottom of the section immediately
+        const totalHeight = (vh * 2) + textHeight + 400;
+        setDynamicHeight(`${totalHeight}px`);
+      }
+    };
+
+    calculateHeight();
+    window.addEventListener("resize", calculateHeight);
+    return () => window.removeEventListener("resize", calculateHeight);
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -40,147 +57,87 @@ export default function HeroSection() {
   });
 
   // DESKTOP TRANSFORMS
-  const introTextOpacityDT = useTransform(
-    scrollYProgress,
-    [0.05, 0.25],
-    [1, 0]
-  );
-  const bgOpacityDT = useTransform(
-    scrollYProgress,
-    [0.05, 0.35, 0.5, 0.75],
-    [0, 1, 1, 0]
-  );
-  const w10OpacityDT = useTransform(scrollYProgress, [0.5, 0.7], [1, 0]);
-  const narrativeTextOpacityDT = useTransform(
-    scrollYProgress,
-    [0.75, 0.9],
-    [0, 1]
-  );
-  const l10YDT = useTransform(scrollYProgress, [0.7, 0.9], ["20%", "-20%"]);
+  const introTextOpacityDT = useTransform(scrollYProgress, [0.05, 0.2], [1, 0]);
+  const bgOpacityDT = useTransform(scrollYProgress, [0.05, 0.35, 0.6, 0.8], [0, 1, 1, 0]);
+  const w10OpacityDT = useTransform(scrollYProgress, [0.4, 0.6], [1, 0]);
+  const narrativeTextOpacityDT = useTransform(scrollYProgress, [0.7, 0.85], [0, 1]);
+  const l10YDT = useTransform(scrollYProgress, [0.6, 0.85], ["20%", "-20%"]);
 
-  // MOBILE TRANSFORMS - Adjusted for longer scroll (h-[250vh])
+  // MOBILE TRANSFORMS
   const introTextOpacityMB = useTransform(scrollYProgress, [0.1, 0.25], [1, 0]);
-  const bgOpacityMB = useTransform(
-    scrollYProgress,
-    [0.2, 0.35, 0.5, 0.65],
-    [0, 1, 1, 0]
-  );
+  const bgOpacityMB = useTransform(scrollYProgress, [0.2, 0.35, 0.5, 0.65], [0, 1, 1, 0]);
   const w10OpacityMB = useTransform(scrollYProgress, [0.45, 0.6], [1, 0]);
-  const narrativeTextOpacityMB = useTransform(
-    scrollYProgress,
-    [0.6, 0.8],
-    [0, 1]
-  );
-
-  // Logic Selectors
-  // Mobile-specific transform for L10 logo to move up as soon as main text reaches full opacity
+  const narrativeTextOpacityMB = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
   const l10YMB = useTransform(scrollYProgress, [0.4, 0.7], ["0%", "-160%"]);
 
+  // Logic Selectors
   const introTextOpacity = isMobile ? introTextOpacityMB : introTextOpacityDT;
   const bgOpacity = isMobile ? bgOpacityMB : bgOpacityDT;
   const w10Opacity = isMobile ? w10OpacityMB : w10OpacityDT;
-  const narrativeTextOpacity = isMobile
-    ? narrativeTextOpacityMB
-    : narrativeTextOpacityDT;
+  const narrativeTextOpacity = isMobile ? narrativeTextOpacityMB : narrativeTextOpacityDT;
   const l10Y = isMobile ? l10YMB : l10YDT;
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
-return (
-  <div
-    id="home"
-    ref={containerRef}
-    className={`${
-      isMobile ? "h-[250vh]" : "h-[300vh]"
-    } w-full relative bg-[var(--color-50)]`}
-  >
-    {/* Sticky container handles the animation phase */}
+  return (
     <div
-      className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-visible"
+      id="home"
+      ref={containerRef}
+      style={{ height: dynamicHeight }} // Applied calculated height
+      className="w-full relative bg-[var(--color-50)]"
     >
-      {/* Background Fade Layer */}
-      <motion.div
-        style={{ opacity: bgOpacity }}
-        className="absolute inset-0 w-full h-full pointer-events-none z-0"
-      >
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url('${BgFade.src}')` }}
-        ></div>
-      </motion.div>
-
-      <div
-        className={`relative flex flex-col items-center justify-center w-full px-6 md:px-16 ${
-          isMobile ? "pt-12" : "" 
-        }`}
-      >
-        {/* Logos Container */}
-        <div
-          className={`flex w-full items-center justify-between ${
-            isMobile
-              ? "relative flex-col gap-6 mb-8 z-40" 
-              : "relative flex-row gap-8 mb-12 bottom-25" // Restored desktop bottom-25
-          }`}
-        >
-          {/* W10 (Text Logo) - Bottom on Mobile, Left on Desktop */}
-          <motion.div
-            style={{ opacity: w10Opacity }}
-            className={`flex-1 flex ${
-              isMobile ? "justify-center order-2" : "justify-start pl-12"
-            } z-20`}
-          >
-            <Image
-              src={W10}
-              alt="Logo Text"
-              width={500}
-              height={175}
-              className="w-auto h-16 md:h-32 lg:h-48 xl:h-64 max-w-none"
-            />
-          </motion.div>
-
-          {/* L10 (Icon Logo) - Top on Mobile, Right on Desktop */}
-          <motion.div
-            style={{ y: l10Y }}
-            className={`flex-1 flex ${
-              isMobile ? "justify-center order-1" : "justify-end pr-12"
-            } z-20`}
-          >
-            <Image
-              src={L10}
-              alt="Logo Icon"
-              width={500}
-              height={175}
-              className="w-auto h-20 md:h-32 lg:h-48 xl:h-64 max-w-none"
-            />
-          </motion.div>
-        </div>
-
-        {/* Frame 1: Intro Text */}
+      <div className="sticky top-0 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+        {/* Background Fade Layer */}
         <motion.div
-          style={{ opacity: introTextOpacity }}
-          className={`text-center text-[var(--color-90)] max-w-2xl px-4 z-10 ${
-            isMobile 
-              ? "relative mt-4" // Flow positioning for mobile to prevent overlap
-              : "absolute top-[70%]" // Restored original desktop absolute position
-          }`}
+          style={{ opacity: bgOpacity }}
+          className="absolute inset-0 w-full h-full pointer-events-none z-0"
         >
-          <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
-            Je voelt dat het anders kan.
-            <br />
-            Je wil geen standaard advies, maar zelf doorbouwen op what werkt.
-            <br />
-            Jij bouwt, wij geven de onderdelen en het zetje.
-          </p>
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-20"
+            style={{ backgroundImage: `url('${BgFade.src}')` }}
+          ></div>
         </motion.div>
 
-        {/* Frame 3: Narrative Text */}
-        <motion.div
-          style={{ opacity: narrativeTextOpacity }}
-          className={`text-[var(--color-90)] max-w-3xl space-y-6 px-4 z-10 ${
-            isMobile 
-              ? "absolute top-1/2 -translate-y-1/2 text-left" 
-              : "absolute -top-25 text-left" // Restored desktop -top-25
-          }`}
-        >
+        <div className={`relative flex flex-col items-center justify-center w-full px-6 md:px-16 ${isMobile ? "pt-12" : ""}`}>
+          
+          {/* Logos Container */}
+          <div className={`flex w-full items-center justify-between ${isMobile ? "relative flex-col gap-6 mb-8 z-40" : "absolute top-[40%] -translate-y-1/2 flex-row gap-8 z-40 px-8 max-w-7xl mx-auto left-0 right-0"}`}>
+            <motion.div
+              style={{ opacity: w10Opacity }}
+              className={`flex-1 flex ${isMobile ? "justify-center order-2" : "justify-start lg:pl-12" } z-20`}
+            >
+              <Image src={W10} alt="Logo Text" width={500} height={175} className="w-auto h-16 md:h-32 lg:h-48 max-w-none" />
+            </motion.div>
+
+            <motion.div
+              style={{ y: l10Y }}
+              className={`flex-1 flex ${isMobile ? "justify-center order-1" : "justify-end lg:pr-8" } z-20`}
+            >
+              <Image src={L10} alt="Logo Icon" width={500} height={175} className="w-auto h-20 md:h-32 lg:h-48 max-w-none" />
+            </motion.div>
+          </div>
+
+          {/* Frame 1: Intro Text */}
+          <motion.div
+            style={{ opacity: introTextOpacity }}
+            className={`text-center text-[var(--color-90)] max-w-2xl px-8 z-10 ${isMobile ? "relative mt-4" : "absolute top-[60%]"}`}
+          >
+            <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
+              Je voelt dat het anders kan. <br />
+              Je wil geen standaard advies, maar zelf doorbouwen op wat werkt. <br />
+              Jij bouwt, wij geven de onderdelen en het zetje.
+            </p>
+          </motion.div>
+
+          {/* Frame 3: Narrative Text */}
+          <motion.div
+            ref={narrativeRef} // Attach ref here to measure height
+            style={{ opacity: narrativeTextOpacity }}
+            className={`text-[var(--color-90)] max-w-3xl space-y-6 px-8 z-10 ${
+              isMobile 
+                ? "absolute top-1/2 -translate-y-1/2 text-left" 
+                : "relative mt-12 text-left md:pr-20" // Changed from absolute to relative to allow natural height expansion
+            }`}
+          >
           {isMobile ? (
             <>
               <p className="text-lg leading-relaxed">
