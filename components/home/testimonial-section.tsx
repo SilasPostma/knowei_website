@@ -3,8 +3,7 @@
 import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/knowei_website' : '';
+
 
 // SVG Icons
 

@@ -21,7 +21,7 @@ Groet,
 
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
 
-  const handleMailClick = async (e: React.MouseEvent) => {
+  const handleMailClick = async () => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);

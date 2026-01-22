@@ -1,4 +1,4 @@
-import Section from "@/components/home/section";
+
 import Header from "@/components/home/header";
 import HeroSection from "@/components/home/hero-section";
 import ToolboxenSection from "@/components/home/toolboxen-section";

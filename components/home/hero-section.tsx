@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect, useState, useLayoutEffect } from "react";
+import { useRef, useState, useLayoutEffect } from "react";
 import Image from "next/image";
 
 import W10 from "@/public/W_10.png";
@@ -63,7 +63,7 @@ export default function HeroSection() {
 
   // MOBILE TRANSFORMS
   const introTextOpacityMB = useTransform(scrollYProgress, [0.05, 0.25], [1, 0]);
-  const bgOpacityMB = useTransform(scrollYProgress, [0.1, 0.35, 0.5, 0.65], [0, 1, 1, 0]);
+  const bgOpacityMB = useTransform(scrollYProgress, () => 0);
   const w10OpacityMB = useTransform(scrollYProgress, [0.45, 0.6], [1, 0]);
   const narrativeTextOpacityMB = useTransform(scrollYProgress, [0.7, 1.0], [0, 1]);
   const l10YMB = useTransform(scrollYProgress, [0.4, 1.0], ["0%", "-160%"]);

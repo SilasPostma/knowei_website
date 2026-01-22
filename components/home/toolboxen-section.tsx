@@ -3,9 +3,9 @@
 import React, { useCallback, useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import BestellenButton from '@/components/ui/bestellenButton'
+import Image from 'next/image';
 
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/knowei_website' : '';
+
 
 // SVG Icons
 
@@ -212,9 +212,12 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-2 md:p-4 transition-opacity animate-in fade-in duration-200" onClick={onClose}>
-      <div 
+      <div
         className="bg-[var(--color-30)] w-full max-w-[95%] md:max-w-[80%] relative flex flex-col shadow-2xl overflow-hidden border-[4px] md:border-[8px] border-[var(--color-70)] h-[90%] md:h-[80%]" 
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        title="Toolbox Bestellen"
       >
         <button 
           onClick={onClose}
@@ -278,8 +281,8 @@ const ToolboxPopup = ({ slide, onClose }: { slide: Slide; onClose: () => void })
               <BestellenButton/>
               
               {slide.image && (
-                <div className="hidden md:block w-32 h-32 ml-4">
-                    <img src={slide.image} alt="" className="w-full h-full object-contain" />
+                <div className="hidden md:block w-32 h-32 ml-4 relative">
+                    <Image src={slide.image} alt="" fill className="object-contain" />
                 </div>
               )}
             </div>
@@ -299,6 +302,14 @@ const VideoCard = ({ slide, onClick }: { slide: Slide; onClick: () => void }) =>
     <div 
       className="bg-[var(--color-30)] hover:bg-[var(--color-50)] overflow-hidden flex flex-col h-full relative group cursor-pointer transition-colors duration-300"
       onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      }}
     >
       <div className="pt-6 px-6 w-full shrink-0 relative">
         <div className="relative h-48 w-full bg-black">

@@ -58,8 +58,8 @@ export default function AboutSection() {
               Vaak voelde ik me te zwak. Studeren en werken waren saai. Ik kreeg
               ruzie omdat ik gelijk wilde hebben. Ik werd de boeman, de verkoper
               van standaardoplossingen. Steeds weer stroomde mijn energie weg.
-              Het leek alsof de donkere gedachte won: "Zo doen we dat hier,
-              gedraag je zoals het hoort."
+              Het leek alsof de donkere gedachte won: &quot;Zo doen we dat hier,
+              gedraag je zoals het hoort.&quot;
             </p>
             <p className="mb-3">
               Toch was er steeds één sleutel: nieuwsgierigheid. Nieuwsgierigheid
