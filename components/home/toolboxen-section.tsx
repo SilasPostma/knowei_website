@@ -39,7 +39,7 @@ interface Slide {
   price: string; 
   format: string;
   details: string; 
-  content: string[]; // Changed to array for bullet points
+  content: string[];
   image?: string; 
 }
 
@@ -181,7 +181,7 @@ const slides: Slide[] = [
     details: '1 deelnemer - 1 onderwerp - specifiek',
     content: [
       'Beschrijving: Iedereen werkt in de basis hetzelfde. Je lichaam vangt signalen op uit de buitenwereld. Emoties zijn als een schakelbak: ze helpen je sneller te gaan of terug te schakelen. Je hersenen sturen je gedrag aan. Maar ieder brein verwerkt signalen op zijn eigen manier, terwijl we vaak denken dat iedereen denkt zoals wij.',
-      'Het nu: Een tiener die “ anders denkt” (ADHD, Dyslexie, Dyscalculie, Asperger) loopt daardoor snel vast op school, thuis en soms op werk. Overal verwachten mensen dat hij zich “vierkant” normaal gedraagt. Maar hij denkt rond en past niet precies in wat anderen vragen. Dat kost veel energie en voelt vaak alsof het nooit eens goed gaat.',
+      'Het nu: Een tiener die “anders denkt” (ADHD, Dyslexie, Dyscalculie, Asperger) loopt daardoor snel vast op school, thuis en soms op werk. Overal verwachten mensen dat hij zich “vierkant” normaal gedraagt. Maar hij denkt rond en past niet precies in wat anderen vragen. Dat kost veel energie en voelt vaak alsof het nooit eens goed gaat.',
       'Het anders:  Met deze toolbox krijg je handvatten om in elkaars hoofd, hart en lijf te kijken, waardoor we dieper inzicht krijgen in elkaars denken en doen — en door even in elkaars schoenen te staan kan je blik op de werkelijkheid radicaal verschuiven.',
     ]
   },
