@@ -16,9 +16,11 @@ export default function headerButton({ text, href }: buttonProps) {
       const element = document.getElementById(id);
       if (element) {
         e.preventDefault();
-        element.scrollIntoView({ behavior: 'smooth' });
-        // Update URL hash without full reload
-        window.history.pushState(null, '', `#${id}`);
+        const headerHeight = 64; // h-16 = 64px
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
+        // Preserve current pathname when updating hash
+        window.history.pushState(null, '', `${window.location.pathname}#${id}`);
       }
     }
   };

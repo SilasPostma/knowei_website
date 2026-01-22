@@ -49,16 +49,28 @@ export default function Header() {
     { href: "/#mijn_verhaal", text: "mijn verhaal" },
   ];
 
-  const handleNavClick = () => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Handle scroll with offset for fixed header
+    if (href.includes('#')) {
+      const id = href.split('#')[1];
+      const element = document.getElementById(id);
+      if (element) {
+        e.preventDefault();
+        const headerHeight = 64; // h-16 = 64px
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
+        // Preserve current pathname when updating hash
+        window.history.pushState(null, '', `${window.location.pathname}#${id}`);
+      }
+    }
     setMobileMenuOpen(false);
   };
 
   const scrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Update URL without jump if desired, or just leave it. 
-    // Usually standard behavior is fine but explicit scroll ensures action.
-    window.history.pushState(null, '', '/#home');
+    // Preserve current pathname when updating hash
+    window.history.pushState(null, '', `${window.location.pathname}#home`);
   };
 
   return (
@@ -121,7 +133,7 @@ export default function Header() {
                 <Link 
                   key={link.href}
                   href={link.href}
-                  onClick={handleNavClick}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="px-6 py-3 text-[var(--color-70)] hover:bg-[var(--color-50)] transition-colors uppercase text-md font-semibold tracking-wide"
                 >
                   {link.text}
