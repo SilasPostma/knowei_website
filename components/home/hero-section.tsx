@@ -38,7 +38,7 @@ export default function HeroSection() {
         const textHeight = narrativeRef.current.offsetHeight;
         const vh = window.innerHeight;
         
-        const scrollFactor = mobile ? 1.2 : 2; 
+        const scrollFactor = mobile ? 1 : 2; 
         const totalHeight = (vh * scrollFactor) + textHeight + 400;
         setDynamicHeight(`${totalHeight}px`);
       }
