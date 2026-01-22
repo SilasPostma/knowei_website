@@ -113,7 +113,7 @@ export default function Header() {
         {/* Logo Right - Desktop */}
         <div className="hidden md:block ml-auto z-10">
           <Link href="/#home" onClick={scrollToTop}>
-            <Image src={L70} alt="LOGO" width={35} height={35} />
+            <Image src={L70} alt="LOGO" width={35} height={35} className="w-12 md:w-[30px] lg:w-[35px]"/>
           </Link>
         </div>
 
