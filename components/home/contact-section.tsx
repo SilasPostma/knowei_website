@@ -84,7 +84,7 @@ Groet,
           <div className="flex flex-col items-center w-full max-w-[300px]">
             <a href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
               <div className="mb-6">
-                <svg width="80" height="80" viewBox="0 0 120 120" fill="none" className="text-white">
+                <svg width="80" height="80" viewBox="10 10 100 100" fill="none" className="text-white">
                   <rect x="25" y="30" width="70" height="60" rx="4" stroke="currentColor" strokeWidth="3" fill="none" />
                   <line x1="25" y1="45" x2="95" y2="45" stroke="currentColor" strokeWidth="3" />
                   <line x1="40" y1="25" x2="40" y2="35" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
@@ -107,9 +107,12 @@ Groet,
           <div className="flex flex-col items-center w-full max-w-[300px]">
             <a href={mailtoLink} onClick={handleMailClick} target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
               <div className="mb-6">
-                <svg width="80" height="80" viewBox="0 0 120 120" fill="none" className="text-white">
-                  <rect x="20" y="35" width="80" height="50" rx="4" stroke="currentColor" strokeWidth="3" fill="currentColor" />
-                  <path d="M20 35 L60 60 L100 35" stroke="var(--color-90)" strokeWidth="3" fill="none" />
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="15" width="70" height="50" rx="4" stroke="white" stroke-width="2"/>
+                  <rect x="5" y="15" width="70" height="46" rx="4" stroke="white" stroke-width="2"/>
+                  
+                  <path d="M6 15L40 42L74 15" stroke="white" stroke-width="2" fill="none"/>
+                  <path d="M5 19L40 47L75 19" stroke="white" stroke-width="2" fill="none"/>
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
