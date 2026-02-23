@@ -1,46 +1,57 @@
 "use client";
 
-import React, { useCallback } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-
-
+import React, { useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 // SVG Icons
 
-
 const ArrowLeftIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="4"
+  >
     <line x1="23" y1="4" x2="8" y2="19"></line>
     <line x1="23" y1="28" x2="7" y2="14"></line>
   </svg>
-)
+);
 
 const ArrowRightIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="4">
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="4"
+  >
     <line x1="9" y1="4" x2="24" y2="19"></line>
     <line x1="9" y1="28" x2="25" y2="14"></line>
   </svg>
-)
+);
 
 const vids = [
-  { id: 1, video: '9Ce3vN64AhQ', name: 'Henk Janssen' },
-  // { id: 2, video: 'mW9rH9eG8LA', name: 'Johny van der Weesp' }, // AANPASSEN
-  // { id: 3, video: 'KJ3F-XlnPo8', name: 'Hachmid Youra' }, // AANPASSEN
-  // { id: 4, video: 'G6f3eFd8gHs', name: 'Janny de Vries' }, // AANPASSEN
+  { id: 1, video: "9Ce3vN64AhQ", name: "Henk Janssen" },
+  { id: 2, video: "RQksZUZ0sfk", name: "Pim & Karolien" },
+  { id: 3, video: "b66JW7cOHmk", name: "Tom Gilein" }, // AANPASSEN
+  { id: 4, video: "kQi4-HuzjkA", name: "Marissa & Paula" }, // AANPASSEN
   // { id: 5, video: 'A5VN9Kp8Lvs', name: 'Johny van der Weesp' }, // AANPASSEN
   // { id: 6, video: 'p65-3IFFk40', name: 'Hachmid Youra' }, // AANPASSEN
-]
+];
 
-const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
+const VideoCard = ({ slide }: { slide: (typeof vids)[0] }) => {
   return (
     <div className="overflow-hidden flex flex-col h-full relative group">
       <div className="pt-6 pr-4 w-full shrink-0 relative">
         <div className="relative w-full bg-black aspect-video">
-          <iframe   
+          <iframe
             src={`https://www.youtube.com/embed/${slide.video}`}
             title={slide.name}
             className="absolute top-0 left-0 w-full h-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>
@@ -48,46 +59,50 @@ const VideoCard = ({ slide }: { slide: typeof vids[0] }) => {
 
       {/* Text Section */}
       <div className="pt-2 pr-4 flex flex-col grow items-end">
-        <h3 className="text-lg font-semibold mb-2 truncate text-[var(--color-90)]">{slide.name}</h3>
+        <h3 className="text-lg font-semibold mb-2 truncate text-[var(--color-90)]">
+          {slide.name}
+        </h3>
       </div>
     </div>
   );
 };
 
 export default function VideoCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
-    <div id="voorbeelden" className="w-full bg-[var(--color-10)] flex flex-col items-center min-h-screen pb-12 md:pb-20 pt-8 md:pt-16">
-        {/* Top half area - centers text between top and carousel */}
-        <div className="flex-1 flex flex-col justify-center w-full">
-          <div className="w-full px-4">
-              <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-4">
-                  Zie hoe onze toolboxen gebruikt worden. 
-              </h2>
+    <div
+      id="voorbeelden"
+      className="w-full bg-[var(--color-10)] flex flex-col items-center min-h-screen pb-12 md:pb-20 pt-8 md:pt-16"
+    >
+      {/* Top half area - centers text between top and carousel */}
+      <div className="flex-1 flex flex-col justify-center w-full">
+        <div className="w-full px-4">
+          <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-4">
+            Zie hoe onze toolboxen gebruikt worden.
+          </h2>
 
-              {/* Description Text */}
-              <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
-              <p className="text-sm md:text-lg leading-relaxed">
-                  Wie kan het beter vertellen dan wie het zelf mee heeft gemaakt?
-              </p>
-              </div>
+          {/* Description Text */}
+          <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
+            <p className="text-sm md:text-lg leading-relaxed">
+              Wie kan het beter vertellen dan wie het zelf mee heeft gemaakt?
+            </p>
           </div>
         </div>
-      
+      </div>
+
       {/* Carousel Area - Centered in screen */}
       <div className="flex relative items-center justify-center md:gap-4 w-full max-w-[95%] shrink-0">
-        
         {/* Prev Button */}
-        <button 
+        <button
           onClick={scrollPrev}
           className="absolute left-2 z-20 md:static p-3 rounded-full bg-[var(--color-30)] md:bg-transparent hover:bg-[var(--color-30)] text-[var(--color-70)] md:text-[var(--color-70)] transition-colors block"
           aria-label="Previous slide"
@@ -99,7 +114,10 @@ export default function VideoCarousel() {
         <div className="overflow-hidden flex-1" ref={emblaRef}>
           <div className="flex">
             {vids.map((slide) => (
-              <div key={slide.id} className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_35%] min-w-0">
+              <div
+                key={slide.id}
+                className="flex-[0_0_80%] md:flex-[0_0_40%] lg:flex-[0_0_35%] min-w-0"
+              >
                 <VideoCard slide={slide} />
               </div>
             ))}
@@ -107,7 +125,7 @@ export default function VideoCarousel() {
         </div>
 
         {/* Next Button */}
-        <button 
+        <button
           onClick={scrollNext}
           className="absolute right-2 z-20 md:static p-3 rounded-full bg-[var(--color-30)] md:bg-transparent hover:bg-[var(--color-30)] text-[var(--color-70)] md:text-[var(--color-70)] transition-colors block"
           aria-label="Next slide"
@@ -119,5 +137,5 @@ export default function VideoCarousel() {
       {/* Bottom balancing space */}
       <div className="flex-1" />
     </div>
-  )
+  );
 }

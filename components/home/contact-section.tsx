@@ -5,10 +5,10 @@ import React, { useState } from "react";
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
 
-    const email = "info@knowei.nl";
-    const subject = `Een andere oplossing`;
-    
-    const bodyText = `Beste Knowei,
+  const email = "info@knowei.nl";
+  const subject = `Een andere oplossing`;
+
+  const bodyText = `Beste Knowei,
 
 Ik ben nieuwsgierig naar … en wil graag beter begrijpen hoe jij/ jullie daarin werkt of denkt.
 
@@ -19,7 +19,7 @@ Groet,
 [Telefoonnummer]
 [E-mailadres]`;
 
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
 
   const handleMailClick = async () => {
     try {
@@ -32,7 +32,10 @@ Groet,
   };
 
   return (
-    <div id="toolbox_op_maat" className="bg-[var(--color-50)] min-h-screen flex flex-col items-center pb-12 md:pb-20 pt-8 md:pt-16">
+    <div
+      id="toolbox_op_maat"
+      className="bg-[var(--color-50)] min-h-screen flex flex-col items-center pb-12 md:pb-20 pt-8 md:pt-16"
+    >
       {/* Top half area - centers text between top and grid */}
       <div className="flex-1 flex flex-col justify-center w-full">
         <div className="max-w-6xl w-full mx-auto pb-4 px-4">
@@ -44,10 +47,12 @@ Groet,
           {/* Description Text */}
           <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
             <p className="text-sm md:text-lg leading-relaxed">
-              Daarom gaan we graag met jou in gesprek om jouw anders scherp te krijgen.
+              Daarom gaan we graag met jou in gesprek om jouw anders scherp te
+              krijgen.
             </p>
             <p className="text-sm md:text-lg leading-relaxed">
-              Zo kunnen we een toolbox op maat samenstellen die echt past bij jouw vraag.
+              Zo kunnen we een toolbox op maat samenstellen die echt past bij
+              jouw vraag.
             </p>
             <p className="text-sm md:text-lg leading-relaxed">
               Wat helpt jou om met energie te beginnen?
@@ -59,21 +64,53 @@ Groet,
       {/* Cards Grid - centered in the screen */}
       <div className="w-full max-w-6xl shrink-0">
         <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
-          
           {/* Chat Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">
-            <a href="https://wa.me/31640393757" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
+            <a
+              href="https://wa.me/31640393757"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6"
+            >
               <div className="mb-6">
-                <svg width="80" height="80" viewBox="0 0 120 120" fill="none" className="text-white">
-                  <rect x="30" y="15" width="60" height="90" rx="8" stroke="currentColor" strokeWidth="3" fill="none" />
+                <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 120 120"
+                  fill="none"
+                  className="text-white"
+                >
+                  <rect
+                    x="30"
+                    y="15"
+                    width="60"
+                    height="90"
+                    rx="8"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    fill="none"
+                  />
                   <circle cx="60" cy="95" r="3" fill="currentColor" />
-                  <line x1="45" y1="25" x2="75" y2="25" stroke="currentColor" strokeWidth="2" />
+                  <line
+                    x1="45"
+                    y1="25"
+                    x2="75"
+                    y2="25"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Chat</h3>
-              <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Kort en direct afstemmen.</p>
+              <p className="text-white text-center text-sm md:text-base opacity-90 px-2">
+                Kort en direct afstemmen.
+              </p>
             </a>
-            <a href="https://wa.me/31640393757" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/31640393757"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 START CHAT
               </button>
@@ -82,21 +119,74 @@ Groet,
 
           {/* Persoonlijk Gesprek Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
+            <a
+              href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6"
+            >
               <div className="mb-6">
-                <svg width="80" height="80" viewBox="10 10 100 100" fill="none" className="text-white">
-                  <rect x="25" y="30" width="70" height="60" rx="4" stroke="currentColor" strokeWidth="3" fill="none" />
-                  <line x1="25" y1="45" x2="95" y2="45" stroke="currentColor" strokeWidth="3" />
-                  <line x1="40" y1="25" x2="40" y2="35" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="80" y1="25" x2="80" y2="35" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-                  <circle cx="40" cy="60" r="2" fill="currentColor" /><circle cx="52" cy="60" r="2" fill="currentColor" />
-                  <circle cx="64" cy="60" r="2" fill="currentColor" /><circle cx="76" cy="60" r="2" fill="currentColor" />
+                <svg
+                  width="80"
+                  height="80"
+                  viewBox="10 10 100 100"
+                  fill="none"
+                  className="text-white"
+                >
+                  <rect
+                    x="25"
+                    y="30"
+                    width="70"
+                    height="60"
+                    rx="4"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    fill="none"
+                  />
+                  <line
+                    x1="25"
+                    y1="45"
+                    x2="95"
+                    y2="45"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                  />
+                  <line
+                    x1="40"
+                    y1="25"
+                    x2="40"
+                    y2="35"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                  <line
+                    x1="80"
+                    y1="25"
+                    x2="80"
+                    y2="35"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="40" cy="60" r="2" fill="currentColor" />
+                  <circle cx="52" cy="60" r="2" fill="currentColor" />
+                  <circle cx="64" cy="60" r="2" fill="currentColor" />
+                  <circle cx="76" cy="60" r="2" fill="currentColor" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 text-center">Persoonlijk gesprek</h3>
-              <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Eerst even samen overleggen</p>
+              <h3 className="text-xl font-bold text-white mb-2 text-center">
+                Persoonlijk gesprek
+              </h3>
+              <p className="text-white text-center text-sm md:text-base opacity-90 px-2">
+                Eerst even samen overleggen
+              </p>
             </a>
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://app.acuityscheduling.com/schedule.php?owner=38056795&appointmentType=category:intake"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 INPLANNEN
               </button>
@@ -105,26 +195,70 @@ Groet,
 
           {/* Email Card */}
           <div className="flex flex-col items-center w-full max-w-[300px]">
-            <a href={mailtoLink} onClick={handleMailClick} target="_blank" rel="noopener noreferrer" className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6">
+            <a
+              href={mailtoLink}
+              onClick={handleMailClick}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-90)] w-full aspect-square flex flex-col items-center justify-center p-6 mb-6"
+            >
               <div className="mb-6">
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="15" width="70" height="50" rx="4" stroke="white" stroke-width="2"/>
-                  <rect x="5" y="15" width="70" height="46" rx="4" stroke="white" stroke-width="2"/>
-                  
-                  <path d="M6 15L40 42L74 15" stroke="white" stroke-width="2" fill="none"/>
-                  <path d="M5 19L40 47L75 19" stroke="white" stroke-width="2" fill="none"/>
+                <svg
+                  width="80"
+                  height="80"
+                  viewBox="0 0 80 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5"
+                    y="15"
+                    width="70"
+                    height="50"
+                    rx="4"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+                  <rect
+                    x="5"
+                    y="15"
+                    width="70"
+                    height="46"
+                    rx="4"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+
+                  <path
+                    d="M6 15L40 42L74 15"
+                    stroke="white"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M5 19L40 47L75 19"
+                    stroke="white"
+                    strokeWidth="2"
+                    fill="none"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-              <p className="text-white text-center text-sm md:text-base opacity-90 px-2">Rustig op papier zetten</p>
+              <p className="text-white text-center text-sm md:text-base opacity-90 px-2">
+                Rustig op papier zetten
+              </p>
             </a>
-            <a href={mailtoLink} onClick={handleMailClick} target="_blank" rel="noopener noreferrer">
+            <a
+              href={mailtoLink}
+              onClick={handleMailClick}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="bg-[var(--color-30)] text-[var(--color-70)] px-8 py-2 text-sm font-semibold tracking-wide hover:bg-[var(--color-10)] transition-colors cursor-pointer">
                 {copied ? "GEKOPIEERD" : "STARTEN"}
               </button>
             </a>
           </div>
-
         </div>
       </div>
 
