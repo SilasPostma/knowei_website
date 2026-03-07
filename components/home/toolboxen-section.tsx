@@ -479,7 +479,7 @@ export default function VideoCarousel() {
               {slides.map((slide) => (
                 <div
                   key={slide.id}
-                  className="flex-[0_0_80%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0 pl-4"
+                  className="flex-[0_0_60%] md:flex-[0_0_40%] lg:flex-[0_0_30%] 2xl:flex-[0_0_25%] min-w-0 pl-4"
                 >
                   <VideoCard
                     slide={slide}
