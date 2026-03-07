@@ -86,13 +86,13 @@ export default function VideoCarousel() {
       {/* Top half area - centers text between top and carousel */}
       <div className="flex-1 flex flex-col justify-center w-full">
         <div className="w-full px-4">
-          <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--color-90)] mb-4 tablet-text">
             Zie hoe onze toolboxen gebruikt worden.
           </h2>
 
           {/* Description Text */}
           <div className="text-center text-[var(--color-90)] max-w-3xl mx-auto space-y-2">
-            <p className="text-sm md:text-lg leading-relaxed">
+            <p className="text-sm md:text-lg leading-relaxed tablet-text">
               Wie kan het beter vertellen dan wie het zelf mee heeft gemaakt?
             </p>
           </div>
