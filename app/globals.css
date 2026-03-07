@@ -25,11 +25,21 @@
   /* Firefox */
 }
 
-@media (min-width: 768px) {
+/* Tablet-specific text sizing */
+@media (min-width: 768px) and (max-width: 1025px) {
+  .tablet-text {
+    font-size: 1.25rem;
+  }
+  h2.tablet-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* @media (min-width: 1023px) {
   :root {
     --header-button-gap: 25px;
   }
-}
+} */
 
 @media (min-width: 1200px) {
   :root {
@@ -42,6 +52,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --breakpoint-md: 1025px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1600px;
 }
 
 @media (prefers-color-scheme: dark) {

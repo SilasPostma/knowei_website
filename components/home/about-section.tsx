@@ -1,20 +1,22 @@
-import PortraitPhoto from '@/public/Nicolas.png'
-import Signature from '@/public/krabbel_transparant.png'
+import PortraitPhoto from "@/public/Nicolas.png";
+import Signature from "@/public/krabbel_transparant.png";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function AboutSection() {
-    return (
-    <div id="mijn_verhaal" className="bg-[var(--color-30)] min-h-screen flex flex-col items-center justify-center px-4 md:px-12 lg:px-20 py-12 md:py-20">
+  return (
+    <div
+      id="mijn_verhaal"
+      className="bg-[var(--color-30)] min-h-screen flex flex-col items-center justify-center px-4 md:px-12 lg:px-20 py-12 md:py-20"
+    >
       <div className="bg-[var(--color-10)] w-full grow min-h-[50vh] flex flex-col md:flex-row">
-        
         {/* Portrait Photo - stacks on top for mobile, left side for tablet+ */}
         <div className="flex-shrink-0 flex justify-center md:justify-start p-4 md:p-6 lg:p-8">
-          <Image 
-            src={PortraitPhoto} 
-            alt="Nicolas" 
-            width={200} 
-            height={200} 
+          <Image
+            src={PortraitPhoto}
+            alt="Nicolas"
+            width={200}
+            height={200}
             className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover"
           />
         </div>
@@ -23,19 +25,20 @@ export default function AboutSection() {
         <div className="flex-1 p-4 md:p-6 md:pt-15 lg:p-8 lg:pt-20 text-[var(--color-90)] text-base md:text-base lg:text-lg">
           {/* Mobile Text (Visible only on mobile) */}
           <div className="block md:hidden">
-            <p className="mb-3">
-              Ik zocht altijd hoe het anders kon. Vaak liep ik vast of verloor ik
-              energie, geduwd in het keurslijf van ‘zoals het hoort’(No Way!).
+            <p className="mb-3 tablet-text">
+              Ik zocht altijd hoe het anders kon. Vaak liep ik vast of verloor
+              ik energie, geduwd in het keurslijf van ‘zoals het hoort’(No
+              Way!).
             </p>
-            <p className="mb-3">
+            <p className="mb-3 tablet-text">
               Tot nieuwsgierigheid me liet ontdekken wat wél werkt. Niet door
               oplossingen te geven, maar door mensen zelf te laten ervaren en
               bouwen.
             </p>
-            <p className="mb-3">
+            <p className="mb-3 tablet-text">
               Dat werd Knowei: begrijpen (KNOW) én ervaren(WEI).
             </p>
-            <p>Ik ben benieuwd wat jouw Knowei is.</p>
+            <p className="tablet-text">Ik ben benieuwd wat jouw Knowei is.</p>
             <Image
               src={Signature}
               alt="Signature"
@@ -48,11 +51,12 @@ export default function AboutSection() {
           {/* Desktop Text (Visible only on desktop/tablet) */}
           <div className="hidden md:block">
             <p className="mb-3">
-              Als jongste van vijf jongens vroeg ik me af hoe ik iets kon krijgen
-              als ik de zwakste was. Als student wilde ik iets doen dat leuk
-              was. Als partner zocht ik balans tussen mijn wensen en die van de
-              ander. Als vader wilde ik opvoeden dat leuk, gezond en veilig was.
-              Als consultant wilde ik mensen en bedrijven helpen groeien.
+              Als jongste van vijf jongens vroeg ik me af hoe ik iets kon
+              krijgen als ik de zwakste was. Als student wilde ik iets doen dat
+              leuk was. Als partner zocht ik balans tussen mijn wensen en die
+              van de ander. Als vader zocht ik naar een manier van opvoeden die
+              leuk, gezond en veilig was. Als consultant wilde ik mensen en
+              bedrijven helpen groeien.
             </p>
             <p className="mb-3">
               Vaak voelde ik me te zwak. Studeren en werken waren saai. Ik kreeg
@@ -66,9 +70,9 @@ export default function AboutSection() {
               om te begrijpen hoe het anders kan, om te onderzoeken wat mogelijk
               is, om te ervaren wat wel en niet werkt. Ik probeerde oplossingen
               te vinden. De eerste keer probeerde ik de corporate ladder te
-              beklimmen om macht te krijgen en het anders vorm te geven. Maar hoe
-              hoger ik kwam, hoe meer ik vastzat in het keurslijf van de top:
-              macht, politiek spel en 24/7 werken. De tweede keer wilde ik
+              beklimmen om macht te krijgen en het anders vorm te geven. Maar
+              hoe hoger ik kwam, hoe meer ik vastzat in het keurslijf van de
+              top: macht, politiek spel en 24/7 werken. De tweede keer wilde ik
               werken leuk maken en als consultant van buiten naar binnen
               verandering brengen. Mensen willen wel veranderen, maar niet
               veranderd worden. Ik leek succesvol, maar de veranderingen bleven
@@ -101,8 +105,7 @@ export default function AboutSection() {
             </p>
           </div>
         </div>
-        
       </div>
     </div>
-  )
+  );
 }

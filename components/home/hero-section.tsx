@@ -30,7 +30,7 @@ export default function HeroSection() {
   // Handle Mobile Check and Dynamic Height Calculation
   useLayoutEffect(() => {
     const calculateHeight = () => {
-      const mobile = window.innerWidth < 768;
+      const mobile = window.innerWidth < 1025;
       setIsMobile(mobile);
 
       if (narrativeRef.current) {
@@ -151,7 +151,7 @@ export default function HeroSection() {
             style={{ opacity: introTextOpacity }}
             className={`text-center text-[var(--color-90)] max-w-2xl px-8 z-10  mt-12 ${isMobile ? "relative" : "absolute top-[60%]"}`}
           >
-            <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed tablet-text">
               <span className="mb-1">Je voelt dat het anders kan.</span>
               <br />
               <span className="mb-1">
@@ -175,17 +175,20 @@ export default function HeroSection() {
           >
             {isMobile ? (
               <>
-                <p className="text-lg leading-relaxed custom-medium-plus">
+                <p className="text-lg leading-relaxed custom-medium-plus tablet-text">
                   Je voelt dat het anders kan, maar je weet nog niet hoe. Je
                   weet wel, je wilt geen advies, geen coach, geen leraar. Wat
                   dan wél?
                 </p>
-                <p className="text-lg leading-relaxed mt-4 custom-medium-plus">
+                <p className="text-lg leading-relaxed mt-4 custom-medium-plus tablet-text">
                   Een uitnodiging om zelf kennis te maken — DIY‑style. Jij
                   bouwt, wij geven de onderdelen en het zetje.
                 </p>
-                <p className="text-lg mt-4 leading-relaxed custom-medium-plus">
-                  <span className="font-bold bg-white p-1 box-decoration-clone">Jouw ‘anders’ vind jij zelf — niet omdat wij het weten, maar omdat jij het stap voor stap bouwt.</span>
+                <p className="text-lg mt-4 leading-relaxed custom-medium-plus tablet-text">
+                  <span className="font-bold bg-white p-1 box-decoration-clone">
+                    Jouw ‘anders’ vind jij zelf — niet omdat wij het weten, maar
+                    omdat jij het stap voor stap bouwt.
+                  </span>
                 </p>
               </>
             ) : (
@@ -206,7 +209,8 @@ export default function HeroSection() {
                     Je blijft nieuwsgierig zoeken hoe het wél kan.
                   </span>{" "}
                   Soms te weinig: standaardoplossingen die niet werken. Soms te
-                  veel: verdwalen in ideeën zonder richting. En dan precies goed:
+                  veel: verdwalen in ideeën zonder richting. En dan precies
+                  goed:
                   <span className="italic block mt-2">
                     nieuwsgierigheid die jou laat bouwen met wat er wél is.
                   </span>
@@ -225,7 +229,10 @@ export default function HeroSection() {
                   gek bent, maar slim op weg.
                 </p>
                 <p className="text-base md:text-md 2xl:text-lg leading-relaxed custom-medium-plus mt-4">
-                  <span className="font-bold bg-white p-1 box-decoration-clone">Jouw ‘anders’? Jij vindt het. Niet omdat wij het weten, maar omdat jij het bouwt.</span>
+                  <span className="font-bold bg-white p-1 box-decoration-clone">
+                    Jouw ‘anders’? Jij vindt het. Niet omdat wij het weten, maar
+                    omdat jij het bouwt.
+                  </span>
                 </p>
               </>
             )}
