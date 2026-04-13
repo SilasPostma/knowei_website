@@ -65,6 +65,66 @@ interface Slide {
 // Updated slides data
 const slides: Slide[] = [
   {
+    id: 7,
+    video: "JWd-iQHdjOo",
+    title: "ZWARTE DOOS van ORGANISATIES",
+    desc: "Waar groei en grip elkaar vinden, ligt precies de uitdaging waar jij dagelijks doorheen navigeert. Ontdek jouw blinde vlekken.",
+    price: "€ 25",
+    format: "S",
+    details: "1-8 deelnemers - 1 onderwerp - generiek",
+    content: [
+      "Beschrijving: Blinde vlekken in organisaties zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
+      "Het nu: Je bedrijf groeit — en dat is prachtig, maar het maakt alles ook ingewikkelder. Meer klanten, meer mensen, meer keuzes. En ondertussen moet jij het overzicht houden, terwijl de complexiteit toeneemt en de schaalbaarheid onder druk staat. Waar groei en grip elkaar vinden, ligt precies de uitdaging waar jij dagelijks doorheen navigeert.",
+      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
+    ],
+    bg_color: "#9b9fba",
+  },
+  {
+    id: 8,
+    video: "qDYY-MStyBg",
+    title: "ZWARTE DOOS van SAMENWERKEN",
+    desc: "Precies daar waar vrijheid en verantwoordelijkheid elkaar raken, ontstaat jullie echte uitdaging. Ontdek jouw blinde vlekken.",
+    price: "€ 25",
+    format: "S",
+    details: "1-8 deelnemers - 1 onderwerp - generiek",
+    content: [
+      "Beschrijving: Blinde vlekken in de samenwerking zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
+      "Het nu: Elke dag zoeken jullie naar een goede balans tussen werk en privé, terwijl je gemotiveerd wilt blijven in een omgeving waar de inspraak soms beperkt is. Tegelijk moet het werk efficiënter, maar wil je het werkplezier behouden. En ergens tussendoor wil je ook nog kansen om je te ontwikkelen, door verschillende taken op te pakken en mee te denken over hoe het beter kan. Precies daar, waar vrijheid en verantwoordelijkheid elkaar raken, ontstaan jullie echte uitdaging.",
+      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
+    ],
+    bg_color: "#d0b189",
+  },
+  {
+    id: 9,
+    video: "fCI8pbTX4to",
+    title: "ZWARTE DOOS van ONTWIKKELEN",
+    desc: "Precies daar waar organisaties vastlopen, ontstaat de kans om weer vooruit te komen. Ontdek jouw blinde vlekken.",
+    price: "€ 25",
+    format: "S",
+    details: "1-8 deelnemers - 1 onderwerp - generiek",
+    content: [
+      "Beschrijving: Blinde vlekken in de ontwikkeling/ leren zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
+      "Het nu: Een onduidelijke koers die schuift, KPI’s die niet haalbaar voelen, een structuur die vastloopt in silo’s of juist chaotisch is. Leiderschap dat soms te veel en soms te weinig eigenaarschap neemt. Teams waar onveiligheid, roddel of conflict onder de oppervlakte blijft. En overleggen die meer energie kosten dan opleveren. Precies daar, waar organisaties vastlopen, ontstaat de kans om weer vooruit te komen.",
+      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
+    ],
+    bg_color: "#de9889",
+  },
+  {
+    id: 10,
+    video: "9aywkjfnFJk",
+    title: "ZWARTE DOOS van MANAGEMENT",
+    desc: "Precies daar, waar mensen en meters elkaar raken, maak jij het verschil. Ontdek jouw blinde vlekken.",
+    price: "€ 25",
+    format: "S",
+    details: "1-8 deelnemers - 1 onderwerp - generiek",
+    content: [
+      "Beschrijving: Blinde vlekken in het management zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
+      "Het nu: In het midden zitten betekent elke dag balanceren: de top tevreden houden, je team ondersteunen, en ondertussen zelf overeind blijven. Middle management dat voortdurend schakelt tussen geluk en efficiëntie, tussen mens en resultaat.Precies daar, waar mensen en meters elkaar raken, maak jij het verschil.",
+      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
+    ],
+    bg_color: "#8fc9aa",
+  },
+  {
     id: 1,
     video: "7Tg44FATRPA",
     title: "TACTISCH JAARPLAN",
@@ -148,66 +208,6 @@ const slides: Slide[] = [
       "Het anders:  Met deze toolbox krijg je handvatten om in elkaars hoofd, hart en lijf te kijken, waardoor we dieper inzicht krijgen in elkaars denken en doen — en door even in elkaars schoenen te staan kan je blik op de werkelijkheid radicaal verschuiven.",
     ],
   },
-  {
-    id: 7,
-    video: "JWd-iQHdjOo",
-    title: "ZWARTE DOOS van ORGANISATIES",
-    desc: "Blinde vlekken in organisaties zijn de patronen die we zelf niet meer zien omdat we er middenin zitten.",
-    price: "€ 25",
-    format: "S",
-    details: "1-8 deelnemers - 1 onderwerp - generiek",
-    content: [
-      "Beschrijving: Blinde vlekken in organisaties zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
-      "Het nu: Je bedrijf groeit — en dat is prachtig, maar het maakt alles ook ingewikkelder. Meer klanten, meer mensen, meer keuzes. En ondertussen moet jij het overzicht houden, terwijl de complexiteit toeneemt en de schaalbaarheid onder druk staat. Waar groei en grip elkaar vinden, ligt precies de uitdaging waar jij dagelijks doorheen navigeert.",
-      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
-    ],
-    bg_color: "#de9889",
-  },
-  {
-    id: 8,
-    video: "qDYY-MStyBg",
-    title: "ZWARTE DOOS van SAMENWERKEN",
-    desc: "Blinde vlekken in de samenwerking zijn de patronen die we zelf niet meer zien omdat we er middenin zitten.",
-    price: "€ 25",
-    format: "S",
-    details: "1-8 deelnemers - 1 onderwerp - generiek",
-    content: [
-      "Beschrijving: Blinde vlekken in de samenwerking zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
-      "Het nu: Elke dag zoeken jullie naar een goede balans tussen werk en privé, terwijl je gemotiveerd wilt blijven in een omgeving waar de inspraak soms beperkt is. Tegelijk moet het werk efficiënter, maar wil je het werkplezier behouden. En ergens tussendoor wil je ook nog kansen om je te ontwikkelen, door verschillende taken op te pakken en mee te denken over hoe het beter kan. Precies daar, waar vrijheid en verantwoordelijkheid elkaar raken, ontstaan jullie echte uitdaging.",
-      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
-    ],
-    bg_color: "#8fc9aa",
-  },
-  {
-    id: 9,
-    video: "fCI8pbTX4to",
-    title: "ZWARTE DOOS van ONTWIKKELEN",
-    desc: "Blinde vlekken in de ontwikkeling/ leren zijn de patronen die we zelf niet meer zien omdat we er middenin zitten.",
-    price: "€ 25",
-    format: "S",
-    details: "1-8 deelnemers - 1 onderwerp - generiek",
-    content: [
-      "Beschrijving: Blinde vlekken in de ontwikkeling/ leren zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
-      "Het nu: Een onduidelijke koers die schuift, KPI’s die niet haalbaar voelen, een structuur die vastloopt in silo’s of juist chaotisch is. Leiderschap dat soms te veel en soms te weinig eigenaarschap neemt. Teams waar onveiligheid, roddel of conflict onder de oppervlakte blijft. En overleggen die meer energie kosten dan opleveren. Precies daar, waar organisaties vastlopen, ontstaat de kans om weer vooruit te komen.",
-      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
-    ],
-    bg_color: "#9b9fba",
-  },
-  {
-    id: 10,
-    video: "9aywkjfnFJk",
-    title: "ZWARTE DOOS van MANAGEMENT",
-    desc: "Blinde vlekken in het management zijn de patronen die we zelf niet meer zien omdat we er middenin zitten.",
-    price: "€ 25",
-    format: "S",
-    details: "1-8 deelnemers - 1 onderwerp - generiek",
-    content: [
-      "Beschrijving: Blinde vlekken in het management zijn de patronen die we zelf niet meer zien omdat we er middenin zitten. In veel organisaties noemen we dat al snel: “zo is het nu eenmaal hier”. We werken al jaren op een bepaalde manier en bij de koffieautomaat merken we steeds weer op dat het beter of anders kan, maar in de praktijk blijven dezelfde gewoontes terugkomen. Daardoor zien we niet altijd wat ons werkelijk tegenhoudt. De grootste obstakels zitten vaak in die onuitgesproken routines en aannames die iedereen voelt, maar niemand benoemt. Het is de zwarte doos waarvan we weten dat hij er is, maar die we zelden openen — precies daar liggen de patronen die ons als organisatie blijven vertragen.",
-      "Het nu: In het midden zitten betekent elke dag balanceren: de top tevreden houden, je team ondersteunen, en ondertussen zelf overeind blijven. Middle management dat voortdurend schakelt tussen geluk en efficiëntie, tussen mens en resultaat.Precies daar, waar mensen en meters elkaar raken, maak jij het verschil.",
-      "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
-    ],
-    bg_color: "#d0b189",
-  },
 ];
 
 const ToolboxPopup = ({
@@ -227,7 +227,6 @@ const ToolboxPopup = ({
 
   // Use slide.bg_color for border and title if present
   const borderColor = slide.bg_color || "var(--color-70)";
-  const titleColor = slide.bg_color || "var(--color-70)";
 
   return (
     <div
@@ -251,10 +250,7 @@ const ToolboxPopup = ({
         </button>
 
         <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar flex flex-col h-full no-scrollbar">
-          <h2
-            className="text-lg md:text-2xl font-bold uppercase mb-2 md:mb-4 pr-10"
-            style={{ color: titleColor }}
-          >
+          <h2 className="text-lg md:text-2xl font-bold uppercase mb-2 md:mb-4 pr-10 text-[var(--color-70)]">
             {slide.title}
           </h2>
 
