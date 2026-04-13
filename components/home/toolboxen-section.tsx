@@ -59,6 +59,7 @@ interface Slide {
   details: string;
   content: string[];
   image?: string;
+  bg_color?: string;
 }
 
 // Updated slides data
@@ -160,6 +161,7 @@ const slides: Slide[] = [
       "Het nu: Je bedrijf groeit — en dat is prachtig, maar het maakt alles ook ingewikkelder. Meer klanten, meer mensen, meer keuzes. En ondertussen moet jij het overzicht houden, terwijl de complexiteit toeneemt en de schaalbaarheid onder druk staat. Waar groei en grip elkaar vinden, ligt precies de uitdaging waar jij dagelijks doorheen navigeert.",
       "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
     ],
+    bg_color: "#de9889",
   },
   {
     id: 8,
@@ -174,6 +176,7 @@ const slides: Slide[] = [
       "Het nu: Elke dag zoeken jullie naar een goede balans tussen werk en privé, terwijl je gemotiveerd wilt blijven in een omgeving waar de inspraak soms beperkt is. Tegelijk moet het werk efficiënter, maar wil je het werkplezier behouden. En ergens tussendoor wil je ook nog kansen om je te ontwikkelen, door verschillende taken op te pakken en mee te denken over hoe het beter kan. Precies daar, waar vrijheid en verantwoordelijkheid elkaar raken, ontstaan jullie echte uitdaging.",
       "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
     ],
+    bg_color: "#8fc9aa",
   },
   {
     id: 9,
@@ -188,6 +191,7 @@ const slides: Slide[] = [
       "Het nu: Een onduidelijke koers die schuift, KPI’s die niet haalbaar voelen, een structuur die vastloopt in silo’s of juist chaotisch is. Leiderschap dat soms te veel en soms te weinig eigenaarschap neemt. Teams waar onveiligheid, roddel of conflict onder de oppervlakte blijft. En overleggen die meer energie kosten dan opleveren. Precies daar, waar organisaties vastlopen, ontstaat de kans om weer vooruit te komen.",
       "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
     ],
+    bg_color: "#9b9fba",
   },
   {
     id: 10,
@@ -202,6 +206,7 @@ const slides: Slide[] = [
       "Het nu: In het midden zitten betekent elke dag balanceren: de top tevreden houden, je team ondersteunen, en ondertussen zelf overeind blijven. Middle management dat voortdurend schakelt tussen geluk en efficiëntie, tussen mens en resultaat.Precies daar, waar mensen en meters elkaar raken, maak jij het verschil.",
       "Het anders: met deze toolbox krijg je in 5 minuten inzicht in de grootste obstakels in jouw werk, team of organisatie. Je ziet snel welke punten de meeste frustratie geven en welke impact het heeft als je ze oplost. Daarna stuur jij de foto door, en wij staan klaar om jouw uitbreidingsset op maat te maken. Zodat je precies de tools krijgt die je nodig hebt om verder te bouwen aan de oplossing die werkt.",
     ],
+    bg_color: "#d0b189",
   },
 ];
 
@@ -367,9 +372,23 @@ const VideoCard = ({
   slide: Slide;
   onClick: () => void;
 }) => {
+  const bgStyle = slide.bg_color
+    ? { backgroundColor: slide.bg_color }
+    : undefined;
+
+  const textColorClass = slide.bg_color
+    ? "text-white"
+    : "text-[var(--color-70)]";
+
   return (
     <div
-      className="bg-[var(--color-30)] hover:bg-[var(--color-50)] overflow-hidden flex flex-col h-full relative group cursor-pointer transition-colors duration-300"
+      className={`
+        overflow-hidden flex flex-col h-full relative group cursor-pointer 
+        transition-all duration-300 
+        hover:brightness-90 
+        ${!slide.bg_color ? "bg-[var(--color-30)] hover:bg-[var(--color-50)]" : ""}
+      `}
+      style={bgStyle}
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -393,18 +412,22 @@ const VideoCard = ({
       </div>
 
       {/* Text Section */}
-      <div className="p-6 flex flex-col grow">
-        <h3 className="sm:text-md xl:text-lg font-bold mb-2 line-clamp-2 min-h-[3rem] text-[var(--color-70)]">
+      <div
+        className={`p-6 flex flex-col grow ${slide.bg_color ? "text-[#fdf7ef]" : ""}`}
+      >
+        <h3
+          className={`sm:text-md xl:text-lg font-bold mb-2 line-clamp-2 min-h-[4rem] ${textColorClass}`}
+        >
           {slide.title}
         </h3>
-        <p className="text-sm xl:text-base mb-6 text-[var(--color-70)]">
+        <p className={`text-sm xl:text-base mb-6 ${textColorClass}`}>
           {slide.desc}
         </p>
 
         {/* Button */}
         <div className="flex justify-center mt-auto">
           <div onClick={(e) => e.stopPropagation()}>
-            <BestellenButton />
+            <BestellenButton variant={slide.bg_color ? "colored" : undefined} />
           </div>
         </div>
       </div>

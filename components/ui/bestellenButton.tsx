@@ -8,13 +8,17 @@ import { useState } from "react";
 
 interface buttonProps {
   toolboxNaam?: string; // Dynamische naam voor de toolbox
+  variant?: "colored" | undefined; // For colored card background
 }
 
-export default function BestellenButton({ toolboxNaam = "[naam]" }: buttonProps) {
+export default function BestellenButton({
+  toolboxNaam = "[naam]",
+  variant,
+}: buttonProps) {
   const [buttonText, setButtonText] = useState("BESTELLEN");
   const email = "info@knowei.nl";
   const subject = `Interesse in Toolbox ${toolboxNaam}`;
-  
+
   const bodyText = `Beste Knowei,
 
 Ik heb interesse in de Toolbox ${toolboxNaam} en ontvang graag meer informatie over het plaatsen van een bestelling.
@@ -35,12 +39,12 @@ Met vriendelijke groet,
   const handleClick = () => {
     // Kopieer het e-mailadres naar het klembord
     const textArea = document.createElement("textarea");
-    textArea.value = email + '\n\n' + subject + '\n\n' + bodyText;
+    textArea.value = email + "\n\n" + subject + "\n\n" + bodyText;
     document.body.appendChild(textArea);
     textArea.select();
     try {
-      document.execCommand('copy');
-      
+      document.execCommand("copy");
+
       // Update de knoptekst tijdelijk
       setButtonText("EMAIL GEKOPIEERD");
       setTimeout(() => {
@@ -52,13 +56,19 @@ Met vriendelijke groet,
     document.body.removeChild(textArea);
   };
 
+  // Style for colored card variant
+  const coloredClass =
+    "bg-[#fdf7ef] text-[#222] hover:bg-[#f5e7d6] hover:text-[#111]";
+  const defaultClass =
+    "text-[var(--color-10)] bg-[var(--color-70)] hover:text-[var(--color-50)] hover:bg-[var(--color-90)]";
+
   return (
-    <a 
+    <a
       href={mailtoLink}
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
-      className="inline-block font-semibold text-[var(--color-10)] bg-[var(--color-70)] hover:text-[var(--color-50)] hover:bg-[var(--color-90)] px-2 w-fit transition-all duration-200 cursor-pointer min-w-[140px] text-center"
+      className={`inline-block font-semibold px-2 w-fit transition-all duration-200 cursor-pointer min-w-[140px] text-center ${variant === "colored" ? coloredClass : defaultClass}`}
     >
       {buttonText}
     </a>
