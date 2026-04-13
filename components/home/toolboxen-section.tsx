@@ -225,13 +225,18 @@ const ToolboxPopup = ({
     };
   }, []);
 
+  // Use slide.bg_color for border and title if present
+  const borderColor = slide.bg_color || "var(--color-70)";
+  const titleColor = slide.bg_color || "var(--color-70)";
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-2 md:p-4 transition-opacity animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div
-        className="bg-[var(--color-30)] w-full max-w-[95%] md:max-w-[80%] relative flex flex-col shadow-2xl overflow-hidden border-[4px] md:border-[8px] border-[var(--color-70)] h-[90%] md:h-[80%]"
+        className="bg-[var(--color-30)] w-full max-w-[95%] md:max-w-[80%] relative flex flex-col shadow-2xl overflow-hidden border-[4px] md:border-[8px] h-[90%] md:h-[80%]"
+        style={{ borderColor }}
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -239,13 +244,17 @@ const ToolboxPopup = ({
       >
         <button
           onClick={onClose}
-          className="absolute -top-[4px] -right-[4px] md:-top-[8px] md:-right-[8px] w-10 h-10 md:w-14 md:h-14 flex items-center justify-center bg-[var(--color-70)] transition-all z-10 group text-[var(--color-30)] hover:text-[var(--color-50)]"
+          className="absolute -top-[4px] -right-[4px] md:-top-[8px] md:-right-[8px] w-10 h-10 md:w-14 md:h-14 flex items-center justify-center transition-all z-10 group text-[var(--color-30)] hover:text-[var(--color-50)]"
+          style={{ backgroundColor: borderColor }}
         >
           <CloseIcon color="currentColor" />
         </button>
 
         <div className="p-4 md:p-8 overflow-y-auto custom-scrollbar flex flex-col h-full no-scrollbar">
-          <h2 className="text-lg md:text-2xl font-bold text-[var(--color-70)] uppercase mb-2 md:mb-4 pr-10">
+          <h2
+            className="text-lg md:text-2xl font-bold uppercase mb-2 md:mb-4 pr-10"
+            style={{ color: titleColor }}
+          >
             {slide.title}
           </h2>
 
@@ -287,7 +296,10 @@ const ToolboxPopup = ({
             </ul>
 
             <div className="mt-8 mb-8 justify-center flex">
-              <div className="relative w-full md:w-[75%] lg:w-[50%] aspect-video bg-black shadow-lg border-2 border-[var(--color-70)]">
+              <div
+                className="relative w-full md:w-[75%] lg:w-[50%] aspect-video bg-black shadow-lg border-2"
+                style={{ borderColor }}
+              >
                 <iframe
                   src={`https://www.youtube.com/embed/${slide.video}?rel=0`}
                   title={slide.title}
